@@ -1,0 +1,13 @@
+{
+  "name": "my-resume-web",
+  "version": "1.0.0",
+  "description": "Hoja de vida personal - sitio estático HTML/CSS/JS",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "echo \"Abre index.html en tu navegador\"",
+    "build": "echo \"No hay paso de build (sitio estático)\"",
+    "review:ui": "echo \"Revisa con las skills de .claude/skills\""
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,145 @@
+/* Estilos base - Hoja de vida */
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #111827;
+  --color-suave: #6b7280;
+  --color-acento: #2563eb;
+  --fuente-principal: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--color-suave);
+}
+
+/* Hero: contenido de E2-02 */
+.hero__foto {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero__cargo {
+  color: var(--color-texto);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.hero__meta {
+  color: var(--color-suave);
+  font-size: 0.9375rem;
+}
+
+.hero__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.hero__acciones a {
+  color: var(--color-acento);
+  text-underline-offset: 3px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--color-acento);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background: #1d4ed8;
+}
+
+/* Certificaciones y texto secundario */
+.certificaciones {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+}
+
+.certificaciones h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.meta {
+  color: var(--color-suave);
+  font-size: 0.875rem;
+}
+
+/* Utilidad: texto solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-acento);
+  border-bottom: 2px solid var(--color-acento);
+  display: inline-block;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-suave);
+  margin-top: 3rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+}

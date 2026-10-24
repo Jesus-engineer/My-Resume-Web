@@ -1,0 +1,18 @@
+node_modules/
+.pnpm-store/
+dist/
+*.log
+.env
+.DS_Store
+
+# Reglas locales del agente: nunca se versionan
+AGENTS.md
+
+# Fuente de contenido personal: solo local, nunca se publica
+content.md
+
+# Export de LinkedIn con datos de contacto: solo local
+Profile*.pdf
+
+# Foto original sin optimizar: solo local (se publica assets/foto.webp)
+foto_950kb.jpg

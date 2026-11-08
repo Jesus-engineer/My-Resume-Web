@@ -57,6 +57,12 @@ header p {
   font-weight: 500;
 }
 
+.hero__valor {
+  color: var(--color-texto);
+  max-width: 42rem;
+  margin: 0 auto 0.5rem;
+}
+
 .hero__meta {
   color: var(--color-suave);
   font-size: 0.9375rem;
@@ -74,6 +80,10 @@ header p {
 .hero__acciones a {
   color: var(--color-acento);
   text-underline-offset: 3px;
+}
+
+.hero__acciones .boton {
+  color: #ffffff;
 }
 
 .boton {
@@ -149,6 +159,63 @@ header p {
 }
 
 .proyecto__enlace a {
+  color: var(--color-acento);
+  text-underline-offset: 3px;
+}
+
+.experiencia__puesto,
+.educacion__estudio {
+  margin-bottom: 1.25rem;
+}
+
+.experiencia__puesto h3,
+.educacion__estudio h3,
+.habilidades__grupo h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.experiencia__puesto p,
+.educacion__estudio p {
+  margin-top: 0.25rem;
+}
+
+.experiencia__puesto ul {
+  margin: 0.5rem 0 0 1.25rem;
+}
+
+.experiencia__puesto li {
+  margin-bottom: 0.25rem;
+}
+
+.habilidades__grupo {
+  margin-bottom: 1rem;
+}
+
+.habilidades__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.habilidades__lista li {
+  padding: 0.125rem 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  color: var(--color-suave);
+}
+
+.contacto__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.75rem;
+  list-style: none;
+}
+
+.contacto__lista a {
   color: var(--color-acento);
   text-underline-offset: 3px;
 }

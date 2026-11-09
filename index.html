@@ -4,10 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jesús David Velásquez Mercado | Desarrollador Full Stack</title>
+  <script>
+    (function () {
+      try {
+        var tema = localStorage.getItem("tema");
+        if (tema === "dark" || tema === "light") {
+          document.documentElement.dataset.theme = tema;
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <noscript><style>.tema-toggle { display: none; }</style></noscript>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="hero">
+    <div class="hero__barra">
+      <button class="tema-toggle" type="button" aria-label="Activar tema oscuro" aria-pressed="false">Tema oscuro</button>
+    </div>
     <img class="hero__foto" src="assets/foto.webp" alt="Jesús David Velásquez Mercado" width="128" height="128" decoding="async">
     <h1>Jesús David Velásquez Mercado</h1>
     <p class="hero__cargo">Desarrollador Full Stack | Estudiante de Ingeniería</p>

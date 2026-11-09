@@ -4,6 +4,8 @@
    Color: fondo, texto, suave, un unico acento, borde y superficie
    Radios: 6, 10 y pildora */
 :root {
+  color-scheme: light;
+
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -38,6 +40,36 @@
 
   --ancho-max: 60rem;
   --fuente-principal: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-fondo: #0b1120;
+    --color-texto: #e5e7eb;
+    --color-suave: #9ca3af;
+    --color-acento: #60a5fa;
+    --color-acento-hover: #93c5fd;
+    --color-sobre-acento: #0b1120;
+    --color-borde: #334155;
+    --color-superficie: #111827;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-fondo: #0b1120;
+  --color-texto: #e5e7eb;
+  --color-suave: #9ca3af;
+  --color-acento: #60a5fa;
+  --color-acento-hover: #93c5fd;
+  --color-sobre-acento: #0b1120;
+  --color-borde: #334155;
+  --color-superficie: #111827;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 * {
@@ -131,6 +163,30 @@ main {
 .hero__meta {
   color: var(--color-suave);
   font-size: var(--text-sm);
+}
+
+.hero__barra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.tema-toggle {
+  font: inherit;
+  font-size: var(--text-sm);
+  color: var(--color-texto);
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+}
+
+.tema-toggle:hover {
+  border-color: var(--color-acento);
+  color: var(--color-acento);
 }
 
 .hero__acciones {
@@ -289,7 +345,8 @@ main {
   text-underline-offset: 3px;
 }
 
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--color-acento);
   outline-offset: 2px;
 }

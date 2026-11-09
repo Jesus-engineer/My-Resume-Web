@@ -31,4 +31,9 @@ mediaOscuro.addEventListener('change', () => {
   if (!document.documentElement.dataset.theme) actualizarBotonTema();
 });
 
+const botonImprimir = document.querySelector('.boton-imprimir');
+if (botonImprimir) {
+  botonImprimir.addEventListener('click', () => window.print());
+}
+
 actualizarBotonTema();

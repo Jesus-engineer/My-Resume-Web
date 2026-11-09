@@ -189,6 +189,22 @@ main {
   color: var(--color-acento);
 }
 
+.boton-imprimir {
+  font: inherit;
+  font-size: var(--text-sm);
+  color: var(--color-sobre-acento);
+  background: var(--color-acento);
+  border: 1px solid var(--color-acento);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+}
+
+.boton-imprimir:hover {
+  background: var(--color-acento-hover);
+  border-color: var(--color-acento-hover);
+}
+
 .hero__acciones {
   display: flex;
   flex-wrap: wrap;
@@ -400,5 +416,189 @@ footer {
 @media (max-width: 640px) {
   body {
     padding: var(--space-4);
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm;
+  }
+
+  :root:not([data-theme="light"]),
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --color-fondo: #ffffff;
+    --color-texto: #000000;
+    --color-suave: #333333;
+    --color-acento: #000000;
+    --color-acento-hover: #000000;
+    --color-sobre-acento: #ffffff;
+    --color-borde: #cccccc;
+    --color-superficie: #ffffff;
+  }
+
+  html,
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  body {
+    max-width: none;
+    padding: 0;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  header {
+    max-width: none;
+    margin-bottom: 8pt;
+  }
+
+  main {
+    display: block;
+    max-width: none;
+  }
+
+  .contenido,
+  .lateral {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .hero__barra,
+  .hero__acciones,
+  .certificaciones__figura,
+  footer {
+    display: none;
+  }
+
+  .hero__foto {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 4pt;
+  }
+
+  section {
+    margin-bottom: 8pt;
+  }
+
+  section h2 {
+    font-size: 12pt;
+    margin-bottom: 4pt;
+  }
+
+  header h1 {
+    font-size: 20pt;
+    line-height: 1.2;
+  }
+
+  .hero__cargo {
+    font-size: 11pt;
+  }
+
+  .hero__valor,
+  .hero__meta {
+    font-size: 9pt;
+  }
+
+  h3 {
+    font-size: 10pt;
+  }
+
+  .experiencia__puesto,
+  .educacion__estudio,
+  .proyecto {
+    margin-bottom: 8pt;
+  }
+
+  .experiencia__puesto p,
+  .educacion__estudio p {
+    margin-top: 1pt;
+  }
+
+  .experiencia__puesto ul {
+    margin-top: 2pt;
+    margin-left: 14pt;
+  }
+
+  .experiencia__puesto li {
+    margin-bottom: 1pt;
+  }
+
+  .proyecto__aptitudes {
+    margin-top: 4pt;
+  }
+
+  .proyecto__enlace {
+    margin-top: 2pt;
+    font-size: 9pt;
+  }
+
+  .habilidades__grupo {
+    margin-bottom: 4pt;
+  }
+
+  .contacto__lista {
+    margin-top: 4pt;
+    font-size: 9pt;
+  }
+
+  .meta {
+    font-size: 9pt;
+  }
+
+  .habilidades__lista li,
+  .proyecto__aptitudes li {
+    padding: 1pt 4pt;
+    font-size: 8pt;
+    border-color: #cccccc;
+    color: #000000;
+  }
+
+  .experiencia__puesto,
+  .educacion__estudio,
+  .proyecto,
+  .certificaciones li,
+  .habilidades__grupo {
+    break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  p,
+  li {
+    orphans: 2;
+    widows: 2;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .contacto__lista {
+    display: block;
+  }
+
+  .contacto__lista li + li {
+    margin-top: 1pt;
+  }
+
+  .contacto__lista a::after,
+  .proyecto__enlace a::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #333333;
+    word-break: break-all;
+  }
+
+  .certificaciones {
+    gap: 4pt;
   }
 }

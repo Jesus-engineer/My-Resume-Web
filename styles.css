@@ -312,11 +312,16 @@ section {
 }
 
 section h2 {
-  font-size: var(--text-xl);
+  font-size: var(--text-h2);
+  line-height: var(--leading-tight);
   margin-bottom: var(--space-3);
   color: var(--color-acento);
   border-bottom: 2px solid var(--color-acento);
   display: inline-block;
+}
+
+time {
+  font-variant-numeric: tabular-nums;
 }
 
 footer {

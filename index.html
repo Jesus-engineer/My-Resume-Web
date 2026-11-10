@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
   <header class="hero">
     <div class="hero__barra">
       <button class="tema-toggle" type="button" aria-label="Activar tema oscuro" aria-pressed="false">Tema oscuro</button>
@@ -39,15 +41,15 @@
     </ul>
   </header>
 
-  <main>
+  <main id="contenido" tabindex="-1">
     <div class="contenido">
-    <section id="resumen">
-      <h2>Resumen</h2>
+    <section id="resumen" aria-labelledby="resumen-titulo">
+      <h2 id="resumen-titulo">Resumen</h2>
       <p>Estudiante de Ingeniería de Sistemas en la Universidad Tecnológica de Bolívar, enfocado en backend con Python, SQL y APIs. También trabajo con React y JavaScript. Contribuyo en una investigación académica sobre recomendaciones de contenido con IA para Savio, la plataforma de aprendizaje de mi universidad. Busco prácticas o una oportunidad de entrada en desarrollo backend con Python.</p>
     </section>
 
-    <section id="experiencia">
-      <h2>Experiencia</h2>
+    <section id="experiencia" aria-labelledby="experiencia-titulo">
+      <h2 id="experiencia-titulo">Experiencia</h2>
       <article class="experiencia__puesto">
         <h3>Mentor estudiantil (TEPAYA)</h3>
         <p class="meta">Universidad Tecnológica de Bolívar &middot; Jornada parcial &middot; Presencial</p>
@@ -60,8 +62,8 @@
       </article>
     </section>
 
-    <section id="educacion">
-      <h2>Educación</h2>
+    <section id="educacion" aria-labelledby="educacion-titulo">
+      <h2 id="educacion-titulo">Educación</h2>
       <article class="educacion__estudio">
         <h3>Ingeniería de Sistemas y Computación</h3>
         <p class="meta">Universidad Tecnológica de Bolívar</p>
@@ -71,8 +73,8 @@
       </article>
     </section>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
+    <section id="proyectos" aria-labelledby="proyectos-titulo">
+      <h2 id="proyectos-titulo">Proyectos</h2>
       <article class="proyecto">
         <h3>Intelligent IT Incident Prioritization System (SIPIIT)</h3>
         <p class="meta"><time datetime="2026-02">febrero de 2026</time> - <time datetime="2026-05">mayo de 2026</time></p>
@@ -87,8 +89,8 @@
       </article>
     </section>
 
-    <section id="certificaciones">
-      <h2>Certificaciones</h2>
+    <section id="certificaciones" aria-labelledby="certificaciones-titulo">
+      <h2 id="certificaciones-titulo">Certificaciones</h2>
       <ul class="certificaciones">
         <li>
           <h3>GCI World April 2026: Fundamental Theories and Implementations of Data Science</h3>
@@ -138,8 +140,8 @@
     </div>
 
     <aside class="lateral" aria-label="Habilidades y contacto">
-      <section id="habilidades">
-        <h2>Habilidades</h2>
+      <section id="habilidades" aria-labelledby="habilidades-titulo">
+        <h2 id="habilidades-titulo">Habilidades</h2>
         <div class="habilidades__grupo">
           <h3>Lenguajes</h3>
           <ul class="habilidades__lista">
@@ -179,8 +181,8 @@
         </div>
       </section>
 
-      <section id="contacto">
-        <h2>Contacto</h2>
+      <section id="contacto" aria-labelledby="contacto-titulo">
+        <h2 id="contacto-titulo">Contacto</h2>
         <p><a href="mailto:jvelasquez.dev@gmail.com">jvelasquez.dev@gmail.com</a></p>
         <ul class="contacto__lista">
           <li><a href="https://www.linkedin.com/in/jesus-david-velasquez-mercado-dev" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (abre en una pestaña nueva)</span></a></li>

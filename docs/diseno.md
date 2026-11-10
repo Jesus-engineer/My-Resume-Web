@@ -1,166 +1,226 @@
-# Brief de diseño: Cianotipo
+# Brief de diseño: Portfolio técnico nocturno
 
 Estado: **aprobado por el dueño el 2026-11-10** (issue D1, #42).
+Referencia elegida por el dueño: **`bchiang7/v4`** (Brittany Chiang).
 
 ## 1. Sujeto y trabajo del sitio
 
 - **Sujeto:** Jesús David Velásquez Mercado, estudiante de Ingeniería de Sistemas. Backend con Python, SQL y APIs. Proyecto de interfaces Flutter (SIPIIT). Investigación en recomendaciones con IA para Savio.
 - **Audiencia:** reclutadores técnicos y líderes de ingeniería que revisan el perfil en menos de un minuto.
 - **Trabajo principal:** que en 30 segundos entiendan qué hace, con qué tecnologías trabaja y cómo contactarlo.
-- **Vernáculo del sujeto:** planos técnicos, diagramas de sistemas, trazas de ejecución y esquemas de base de datos. De ahí sale la dirección: el cianotipo era el papel azul con el que se copiaban los planos técnicos.
+- **Vernáculo del sujeto:** terminal, editor de código, documentación técnica y tableros de proyecto. La referencia traduce ese mundo a una pieza editorial: fondo navy, acento teal y etiquetas monoespaciadas.
 
 ## 2. Concepto
 
-Una frase: *un plano técnico de alguien que construye sistemas: claro, medido, sin decoración.*
+Una frase: *un portfolio de desarrollador que se lee como una consola bien cuidada: oscuro, ordenado y con un acento que guía la lectura.*
 
-Tres adjetivos: preciso, sobrio, con un solo punto memorable.
+Tres adjetivos: preciso, nocturno, directo.
 
-## 3. Rasgos genéricos que se evitan
+La dirección toma la estructura y el lenguaje visual de `bchiang7/v4` porque el dueño la eligió de forma explícita. No es una copia: se reescribe el contenido, se adapta a un CV con educación, certificaciones y habilidades, y se agregan tema claro, impresión A4 y accesibilidad AA.
 
-Basado en la skill `frontend-design` (anthropics/skills):
+## 3. Qué se toma y qué no
 
-- Fondo crema con serif y acento terracota.
-- Fondo casi negro con acento lima o ácido. **Retira la propuesta anterior "Signal dossier"**, que lo usaba.
-- Tarjetas idénticas con sombra suave y gradientes decorativos.
-- Etiquetas en mayúsculas encima de cada título.
-- Fuente monoespaciada en etiquetas pequeñas. **También retirada de "Signal dossier".**
-- Punto medio entre datos (`A · B · C`). Se usan saltos de línea o separación.
-- Flecha `→` en enlaces y botones.
-- Numeración `01 / 02 / 03` en secciones. Solo sería válida en una secuencia real; la línea de tiempo se marca con fechas.
-- Resaltar una sola palabra del titular.
+Se toma de la referencia:
+
+- Rail izquierdo fijo en escritorio con identidad, navegación y contacto.
+- Fondo navy, superficies un escalón más claras y un único acento teal.
+- Etiquetas de sección en monoespaciada con numeración `01.`, `02.`.
+- Enlaces con subrayado fino y botones de contorno.
+- Etiquetas tipo píldora para tecnologías.
+- Spotlight radial muy tenue que sigue al puntero.
+
+No se toma:
+
+- El texto de la referencia ("Hello, my name is", "I build things for the web") ni sus datos.
+- Su paleta exacta en el tema claro: la referencia no tiene tema claro; aquí se construye uno con el mismo matiz y contraste AA.
+- Animaciones de entrada por sección, parallax ni carruseles.
+- Iconos de redes dibujados a mano: se usan SVG propios con etiqueta accesible.
+
+### Nota sobre los rasgos genéricos
+
+La skill `frontend-design` marca como cliché el fondo navy con acento teal, las etiquetas monoespaciadas y la numeración de secciones. Esta dirección los usa porque el dueño eligió la referencia de forma consciente. La decisión queda documentada y se mitiga así:
+
+- No se copia el copy ni la composición exacta.
+- El tema claro es propio y no un invertido automático.
+- El movimiento se limita a una entrada y al spotlight; sin animaciones por sección.
+- El elemento memorable es el retrato y la portada real de SIPIIT, no un efecto.
 
 ## 4. Paleta
+
+### Oscuro (tema canónico)
+
+| Token | Valor | Uso |
+|---|---|---|
+| noche | `#0a192f` | fondo |
+| capa | `#112240` | superficies, tarjetas y etiquetas |
+| tinta | `#ccd6f6` | texto principal y títulos |
+| pizarra | `#8892b0` | texto secundario |
+| teal | `#64ffda` | acento: enlaces, foco, números y botones |
+| borde | `#233554` | líneas y bordes |
+| sobre-acento | `#0a192f` | texto sobre botón teal |
 
 ### Claro
 
 | Token | Valor | Uso |
 |---|---|---|
-| papel | `#f3f5f7` | fondo |
-| tinta | `#1b2330` | texto principal |
-| cianotipo | `#1f4e8c` | acento: enlaces, foco y botón |
-| niebla | `#5b6573` | texto secundario |
-| superficie | `#e6ebf1` | bloques y fondo del retrato |
-| trazo | `#d5dce4` | líneas y bordes |
-
-### Oscuro
-
-| Token | Valor | Uso |
-|---|---|---|
-| noche | `#0c2238` | fondo |
-| luz | `#e6eef7` | texto principal |
-| azul claro | `#8ec5ff` | acento: enlaces, foco y botón |
-| bruma | `#a9b8c9` | texto secundario |
-| capa | `#132d48` | superficies |
-| trazo | `#24415e` | líneas y bordes |
+| papel | `#f7fafc` | fondo |
+| capa | `#e8eef6` | superficies, tarjetas y etiquetas |
+| tinta | `#0a192f` | texto principal y títulos |
+| pizarra | `#475569` | texto secundario |
+| teal oscuro | `#0b7263` | acento: enlaces, foco, números y botones |
+| borde | `#cbd5e1` | líneas y bordes |
+| sobre-acento | `#ffffff` | texto sobre botón teal |
 
 ### Contraste medido (WCAG)
 
 | Par | Ratio | Requisito | Uso |
 |---|---|---|---|
-| tinta / papel | 14.45:1 | 4.5:1 | texto principal |
-| niebla / papel | 5.41:1 | 4.5:1 | texto secundario |
-| cianotipo / papel | 7.60:1 | 4.5:1 | enlaces y foco |
-| tinta / superficie | 13.17:1 | 4.5:1 | texto en bloques |
-| niebla / superficie | 4.93:1 | 4.5:1 | secundario en bloques |
-| luz / noche | 13.78:1 | 4.5:1 | texto principal |
-| bruma / noche | 7.98:1 | 4.5:1 | texto secundario |
-| azul claro / noche | 8.90:1 | 4.5:1 | enlaces y foco |
-| luz / capa | 11.99:1 | 4.5:1 | texto en bloques |
-| bruma / capa | 6.94:1 | 4.5:1 | secundario en bloques |
+| tinta / noche | 12.17:1 | 4.5:1 | texto principal en oscuro |
+| pizarra / noche | 5.69:1 | 4.5:1 | secundario en oscuro |
+| teal / noche | 14.13:1 | 4.5:1 | enlaces y foco en oscuro |
+| tinta / capa oscura | 10.94:1 | 4.5:1 | texto en tarjetas |
+| pizarra / capa oscura | 5.11:1 | 4.5:1 | secundario en tarjetas |
+| teal / capa oscura | 12.71:1 | 4.5:1 | enlaces en tarjetas |
+| tinta / papel | 16.79:1 | 4.5:1 | texto principal en claro |
+| pizarra / papel | 7.23:1 | 4.5:1 | secundario en claro |
+| teal oscuro / papel | 5.56:1 | 4.5:1 | enlaces y foco en claro |
+| tinta / capa clara | 15.08:1 | 4.5:1 | texto en tarjetas |
+| pizarra / capa clara | 6.49:1 | 4.5:1 | secundario en tarjetas |
+| teal oscuro / capa clara | 5.00:1 | 4.5:1 | enlaces en tarjetas |
+| blanco / teal oscuro | 5.83:1 | 4.5:1 | texto sobre botón claro |
+| noche / teal | 14.13:1 | 4.5:1 | texto sobre botón oscuro |
 
-Un solo acento en cada tema. Sin lima ni colores secundarios.
+Un solo acento en cada tema. Sin colores secundarios ni degradados de marca.
 
 ## 5. Tipografía
 
-Dos familias, claramente distintas:
+Dos familias:
 
-- **Display: Bricolage Grotesque.** Nombre, títulos y cifras. Peso 600 a 700.
-- **Texto: Literata.** Serif de lectura para el cuerpo. Interlineado 1.6 por ser serif.
+- **Texto e interfaz: Inter.** Cuerpo, títulos y navegación. Pesos 400, 500, 600 y 700.
+- **Etiquetas y datos: JetBrains Mono.** Números de sección, fechas, tecnologías y botones. Pesos 400 y 500.
 
-Ninguna otra familia. Sin monoespaciada. Ambas se autohospedan en `assets/fonts/` en WOFF2 con `font-display: swap`.
+Ambas se autohospedan en `assets/fonts/` en WOFF2 variable, con `font-display: swap` y `unicode-range` latin.
 
 Licencias verificadas el 2026-11-10:
-- Bricolage Grotesque: OFL-1.1 (`github.com/ateliertriay/bricolage`).
-- Literata: OFL-1.1 (`github.com/googlefonts/literata`).
 
-Escala (escritorio): 14, 16, 18, 22, 28, 40 y 64 px. En móvil, el display baja con `clamp()`. Medida de línea máxima: 68 caracteres.
+- Inter: OFL-1.1 (`github.com/rsms/inter`).
+- JetBrains Mono: OFL-1.1 (`github.com/JetBrains/JetBrainsMono`).
+
+Escala:
+
+| Token | Tamaño | Uso |
+|---|---|---|
+| `--text-xs` | 12 px | etiquetas mono y numeración |
+| `--text-sm` | 14 px | metadatos, fechas y notas |
+| `--text-base` | 16 px | cuerpo |
+| `--text-lg` | 18 px | entradilla |
+| `--text-xl` | 20 px | títulos de tarjeta |
+| `--text-2xl` | 24 px | subtítulos |
+| `--text-3xl` | 32 px | títulos de sección |
+| `--text-4xl` | 40-64 px | nombre en el hero, con `clamp()` |
+
+Interlineado 1.6 en cuerpo y 1.1 en títulos. Medida máxima de línea: 68 caracteres.
 
 ## 6. Layout
 
-Alineación a la izquierda en todo el sitio, incluido el hero. Sin texto centrado.
-
-**Escritorio (desde 900 px):** rail izquierdo fijo con identidad y contacto, y columna principal con el contenido.
+**Escritorio (desde 1024 px):** rail izquierdo fijo de 40 % y columna de contenido de 60 %, con scroll en la columna derecha. El rail se centra verticalmente.
 
 ```
-+-------------------------------------------------------------+
-| RAIL                  | Jesús David                         |
-| Cargo                 | Velásquez Mercado        [retrato]  |
-| Contacto              | Propuesta de valor                  |
-| Anclas                |                                     |
-| Tema / imprimir       | Experiencia                         |
-|                       | 2026-01  Mentor estudiantil         |
-|                       |          Universidad ...            |
-|                       | Proyecto                            |
-|                       | Educación                           |
-|                       | Certificaciones                     |
-|                       | Habilidades y contacto              |
-+-------------------------------------------------------------+
++---------------------------------------------------------------+
+| Jesús David              |  01. Sobre mí                      |
+| Velásquez Mercado        |  ...                               |
+| Desarrollador Full Stack |                                    |
+|                          |  02. Experiencia                   |
+| [01] Sobre mí            |  2026-01  Mentor estudiantil       |
+| [02] Experiencia         |           Universidad ...          |
+| [03] Proyectos           |                                    |
+| [04] Educación           |  03. Proyectos                     |
+| [05] Habilidades         |  SIPIIT                            |
+| [06] Contacto            |                                    |
+|                          |  04. Educación y certificaciones   |
+| GitHub · LinkedIn · Mail |  05. Habilidades                   |
+| Tema      Imprimir       |  06. Contacto                      |
++---------------------------------------------------------------+
 ```
 
-**Móvil (menos de 640 px):** una columna. El rail pasa a cabecera compacta, sin fijación. Retrato de 96 px.
+**Tablet (640-1023 px):** una columna. Cabecera con nombre, cargo y navegación en una fila; contenido debajo.
+
+**Móvil (menos de 640 px):** una columna. Cabecera compacta sin fijación, navegación en dos filas, retrato de 96 px y botones a ancho completo.
 
 ## 7. Elemento memorable
 
-Un solo elemento: el retrato en **duotono cianotipo** (tinta y papel del proyecto), de unos 480 px en escritorio. Es la única pieza con color intenso. Todo lo demás se mantiene sobrio.
+Dos piezas, en este orden:
+
+1. El **retrato** en el hero, con marco teal desplazado y tratamiento duotono en navy y teal.
+2. La **portada real de SIPIIT** en la tarjeta del proyecto, sin marco ni sombra.
+
+Todo lo demás se mantiene sobrio. El spotlight es un detalle ambiental, no el elemento principal.
 
 ## 8. Movimiento
 
-- Una sola secuencia al cargar: el retrato se revela en unos 600 ms.
-- Sin animación por sección ni hover en tarjetas.
-- Hover solo en enlaces (subrayado).
-- Con `prefers-reduced-motion`, no hay animación.
+- Entrada inicial: nombre, cargo y retrato aparecen con un desplazamiento de 12 px y opacidad, en 500 ms, con 80 ms de separación.
+- Spotlight: radial de 600 px que sigue al puntero en el hero, con opacidad máxima de 0.08. Solo en puntero fino.
+- Hover: subrayado teal en enlaces y borde teal en botones, 150 ms.
+- Sin animación por sección, sin parallax y sin carruseles.
+- Con `prefers-reduced-motion: reduce`, no hay entrada, spotlight ni transiciones.
 
 ## 9. Componentes
 
-- **Rail:** nombre, cargo, contacto, anclas con estado activo (subrayado, sin fondo de color), tema y botón de imprimir.
-- **Hero:** nombre, cargo, propuesta de valor, dos acciones (correo y LinkedIn) y retrato.
-- **Experiencia:** cronología con fecha en `<time>` a la izquierda; puesto, empresa y tres logros. Sin numeración.
-- **Proyecto SIPIIT:** título, fechas en línea propia, descripción, tecnologías como texto y enlace "Repositorio en GitHub".
-- **Educación:** título, institución, fechas y actividades.
-- **Certificaciones:** imágenes en dos columnas en escritorio y una en móvil. El emisor y la fecha van en línea propia.
-- **Habilidades:** grupos como lista de texto, sin etiquetas tipo chip.
-- **Contacto:** correo, LinkedIn y GitHub.
+- **Rail:** nombre, cargo, navegación numerada con estado activo, enlaces sociales, botón de tema y botón de imprimir. En móvil pasa a cabecera.
+- **Etiqueta de sección:** número mono en teal, título en Inter 32 px y línea horizontal de 1 px que ocupa el resto.
+- **Hero:** nombre, cargo, propuesta de valor de dos líneas, dos acciones (correo y LinkedIn) y retrato.
+- **Botón:** contorno teal de 1 px, radio 4 px, texto mono de 14 px, relleno teal al 10 % en hover.
+- **Enlace:** teal con subrayado de 1 px y `text-underline-offset: 4px`.
+- **Etiqueta de tecnología:** píldora de 999 px, fondo `--color-capa`, texto mono de 12 px.
+- **Experiencia:** lista vertical con fecha en `<time>` a la izquierda; puesto, empresa y tres logros. Sin tabs.
+- **Proyecto SIPIIT:** portada, título, fechas, descripción, tecnologías y enlace al repositorio.
+- **Educación y certificaciones:** lista con institución, fechas y actividades; certificados con enlace al emisor.
+- **Habilidades:** grupos con etiquetas de tecnología.
+- **Contacto:** correo, LinkedIn, GitHub y ubicación.
+- **Foco:** contorno de 2 px en `--color-acento` con `offset` de 2 px; nunca se elimina.
 
 ## 10. Texto de la interfaz
 
 - Verbos simples y frases cortas. Sin "proactivo" ni adjetivos sin prueba.
 - Botones con la acción real: "Escribir por correo", "Ver repositorio en GitHub", "Imprimir o guardar PDF".
-- Sin flechas ni puntos medios.
+- Las etiquetas de sección usan sustantivos: "Sobre mí", "Experiencia", "Proyectos", "Educación", "Habilidades", "Contacto".
+- Sin signos de admiración ni emojis.
 
 ## 11. Verificación de la dirección
 
-- [ ] Dos familias, una de ellas de lectura.
+- [ ] Dos familias: Inter e JetBrains Mono, ambas autohospedadas.
 - [ ] Un solo acento por tema.
 - [ ] Contraste AA en claro y oscuro (sección 4).
-- [ ] Un solo elemento memorable (retrato).
-- [ ] Ningún rasgo de la sección 3.
-- [ ] Alineación a la izquierda en todo el sitio.
+- [ ] Rail fijo en escritorio y cabecera en móvil.
+- [ ] Etiquetas de sección numeradas y en mono.
+- [ ] Un solo elemento memorable principal (retrato) y la portada de SIPIIT.
+- [ ] Sin copy de la referencia.
+- [ ] Tema claro y oscuro con el mismo contenido.
+- [ ] Impresión A4 legible sin rail ni botones.
 
-## 12. Referencias (candidatas; verificar enlace y licencia antes de usar)
+## 12. Referencias
 
 Verificadas el 2026-11-10:
 
-- `bchiang7/v4` (Brittany Chiang): licencia MIT. Referencia de estructura de rail fijo y biografía. No se copian paleta ni código; si se toma algo, se da crédito.
+- `bchiang7/v4` (Brittany Chiang): licencia MIT. Referencia de estructura, paleta oscura y lenguaje visual. Se da crédito en el README del proyecto y en el pie del sitio si se publica.
 - `every-layout.dev` (Heydon Pickering y Andy Bell): fundamentos de layout en CSS gratuitos; el libro y los componentes son de pago. Solo referencia; no se copian ejemplos.
 - `utopia.fyi` (James Gilyead y Trys Mudford): escalas fluidas de tipo y espacio. Solo referencia de método.
-- Bricolage Grotesque y Literata: OFL-1.1 (sección 5).
+- Inter: OFL-1.1 (`github.com/rsms/inter`).
+- JetBrains Mono: OFL-1.1 (`github.com/JetBrains/JetBrainsMono`).
 - `anthropics/skills`, skill `frontend-design`: Apache 2.0. Copiada en `.claude/skills/frontend-design/` con su `LICENSE.txt`.
+- `nextlevelbuilder/ui-ux-pro-max-skill`, skill `ui-ux-pro-max`: MIT. Copiada en `.claude/skills/ui-ux-pro-max/` con su `LICENSE.txt`.
 
 ## 13. Alternativas descartadas
 
-- **Signal dossier** (propuesta anterior): fondo casi negro con lima y etiquetas en monoespaciada. Rasgos 2 y 5 de la skill. Además, el lima como texto sobre papel claro daba **1.13:1**.
-- **Editorial cobalto**: papel crema con serif. Rasgo 1 de la skill.
+- **Cianotipo** (implementada en `bfff558` y revertida en `2847675`): papel azul, serif Literata y Bricolage Grotesque. Rechazada por el dueño por fría y técnica. No se recupera.
+- **Signal dossier**: fondo casi negro con lima y etiquetas mono. Rasgos genéricos de la skill y contraste insuficiente del lima sobre papel.
+- **Editorial cobalto**: papel crema con serif. Rasgo genérico de la skill.
+- **shadcn/ui clean**: sistema neutral y corporativo; el dueño prefirió un portfolio con identidad propia.
+- **al-folio académico**: sesgo académico que no refleja el perfil de desarrollo.
+- **Carbon / Primer / USWDS**: sistemas enterprise, correctos pero impersonales para un CV.
 
 ## 14. Pendientes
 
-- Captura o mockup de SIPIIT para D6. Sin esto, D6 usa un mockup CSS marcado como `PENDIENTE`.
+- Crédito visible a `bchiang7/v4` en el README y en el pie del sitio.
+- D6: usar `assets/proyectos/sipiit-portada.webp` (imagen real provista por el dueño).
+- D8: revalidar Lighthouse y axe con el diseño nuevo.

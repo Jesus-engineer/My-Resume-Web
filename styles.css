@@ -379,8 +379,7 @@ main {
   text-underline-offset: 3px;
 }
 
-a:focus-visible,
-button:focus-visible {
+:focus-visible {
   outline: 2px solid var(--color-acento);
   outline-offset: 2px;
 }

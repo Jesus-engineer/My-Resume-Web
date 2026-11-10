@@ -1,12 +1,12 @@
 # Brief de diseño: Portfolio nocturno con ondas de luz
 
 Estado: **aprobado por el dueño el 2026-11-10** (issues D1 #42 y D3 #44).
-Producto final definido por las **cuatro imágenes de referencia del dueño**, guardadas en la raíz del proyecto (archivos locales, no se publican):
+Producto final definido por las **cuatro imágenes de referencia del dueño**, organizadas en `docs/referencias/` como documentación visual del proyecto:
 
-1. `Portafolio profesional con ondas de luz.png` — hero con ondas de luz.
-2. `Ideas que llevo al código-1.png` — sección 01 / Proyectos.
-3. `Linux, código y curiosidad por aprender-2.png` — sección 02 / Sobre mí.
-4. `Certificaciones y contacto en degradados.png` — secciones 03 y 04 + footer.
+1. `docs/referencias/01-hero-ondas.png` — hero con ondas de luz.
+2. `docs/referencias/02-proyectos.png` — sección 01 / Proyectos.
+3. `docs/referencias/03-sobre-mi.png` — sección 02 / Sobre mí.
+4. `docs/referencias/04-certificaciones-contacto.png` — secciones 03 y 04 + footer.
 
 El contenido de este brief se extrajo de esas imágenes con el modelo de visión
 `opencode-go/gemini-4-argon` (ruta 4) el 2026-11-10, porque el modelo de
@@ -176,6 +176,9 @@ sans geométrica; Inter ya cubre ese registro.
 
 ## 6. Componentes
 
+- **Layout full-bleed:** sin `max-width` de 75 rem. Todas las secciones usan `padding-inline: clamp(1rem, 4.5vw, 4.5rem)`. A 1440 px el contenido ocupa 1295 px (90.9 % del ancho visible); a 1920 px ronda el 91 %.
+- **Hero:** dos columnas por encima de 1023 px (texto flexible + tarjeta de perfil de 384 px); una columna desde 1023 px, con la tarjeta centrada y un máximo de 22 rem.
+- **Grillas:** proyectos 3 columnas en escritorio, 2 en tablet y 1 en móvil; certificaciones 3/2/1; entornos 3/2/1. Los párrafos conservan su ancho de lectura.
 - **Botón primario:** relleno azul sólido, radio ~10 px, texto blanco, flecha `↗`.
 - **Botón secundario:** contorno fino claro, fondo translúcido, texto blanco.
 - **Chip:** píldora `9999px`, fondo oscuro, borde fino, icono + etiqueta mono.
@@ -188,9 +191,14 @@ sans geométrica; Inter ya cubre ese registro.
 
 ## 7. Movimiento
 
-- Sin animaciones de entrada por sección ni parallax: la referencia es estática.
+- Sin parallax ni scroll-jacking. El scroll sigue siendo vertical y predecible.
+- Entrada del hero con desplazamiento corto y opacidad, escalonada por bloques (máximo 0.7 s).
+- Ondas de luz con deriva lenta y continua (`translate` + `scale`, 18-24 s, alterna).
+- Punto de disponibilidad con pulso suave y flecha de "Desliza para explorar" con rebote corto.
+- Tarjetas y botones con elevación de 2-4 px y borde iluminado al pasar el puntero.
+- Los revelados por scroll se documentan como pendiente D11; no se inventan aquí.
 - Hover y foco con transiciones de 150 ms.
-- `prefers-reduced-motion`: sin transiciones.
+- `prefers-reduced-motion`: sin animaciones, transiciones ni scroll suave.
 - El scroll es suave con `scroll-behavior: smooth` y `scroll-padding-top` para la barra fija.
 
 ## 8. Decisiones de integridad
@@ -217,7 +225,7 @@ sans geométrica; Inter ya cubre ese registro.
 
 ## 10. Referencias
 
-- Cuatro imágenes del dueño (2026-11-10): producto final. Locales, no se publican.
+- Cuatro imágenes del dueño (2026-11-10): producto final, versionadas en `docs/referencias/` con nombres ASCII.
 - `bchiang7/v4` (MIT): superada por estas imágenes; su crédito se retira del pie y queda en el historial del repositorio.
 - Inter: OFL-1.1 (`github.com/rsms/inter`).
 - JetBrains Mono: OFL-1.1 (`github.com/JetBrains/JetBrainsMono`).
@@ -234,4 +242,5 @@ sans geométrica; Inter ya cubre ese registro.
 - Aprobación visual del dueño sobre la implementación.
 - Regenerar OG y favicon en la nueva paleta (hecho en esta iteración; ver sección 13).
 - D8: revalidar Lighthouse, axe y navegadores con el diseño nuevo.
-- Las cuatro imágenes de referencia siguen en la raíz del proyecto, sin commitear.
+- D11: paridad visual fina y revelados por scroll; ver issue correspondiente.
+- Las cuatro imágenes de referencia viven en `docs/referencias/` y se versionan con el proyecto.

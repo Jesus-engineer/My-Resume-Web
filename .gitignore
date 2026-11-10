@@ -20,3 +20,7 @@ Profile*.pdf
 
 # Foto original sin optimizar: solo local (se publica assets/foto.webp)
 foto_950kb.jpg
+
+# Referencias visuales del dueno: solo locales, nunca se publican
+docs/referencias/*
+!docs/referencias/README.md

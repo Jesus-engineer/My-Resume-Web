@@ -1,7 +1,7 @@
 # Brief de diseño: Portfolio nocturno con ondas de luz
 
 Estado: **aprobado por el dueño el 2026-11-10** (issues D1 #42 y D3 #44).
-Producto final definido por las **cuatro imágenes de referencia del dueño**, organizadas en `docs/referencias/` como documentación visual del proyecto:
+Producto final definido por las **cuatro imágenes de referencia del dueño**, guardadas en `docs/referencias/` como referencia local (ignoradas por Git, no se publican):
 
 1. `docs/referencias/01-hero-ondas.png` — hero con ondas de luz.
 2. `docs/referencias/02-proyectos.png` — sección 01 / Proyectos.
@@ -225,7 +225,7 @@ sans geométrica; Inter ya cubre ese registro.
 
 ## 10. Referencias
 
-- Cuatro imágenes del dueño (2026-11-10): producto final, versionadas en `docs/referencias/` con nombres ASCII.
+- Cuatro imágenes del dueño (2026-11-10): producto final; solo locales en `docs/referencias/`, ignoradas por Git y no publicadas.
 - `bchiang7/v4` (MIT): superada por estas imágenes; su crédito se retira del pie y queda en el historial del repositorio.
 - Inter: OFL-1.1 (`github.com/rsms/inter`).
 - JetBrains Mono: OFL-1.1 (`github.com/JetBrains/JetBrainsMono`).
@@ -243,4 +243,4 @@ sans geométrica; Inter ya cubre ese registro.
 - Regenerar OG y favicon en la nueva paleta (hecho en esta iteración; ver sección 13).
 - D8: revalidar Lighthouse, axe y navegadores con el diseño nuevo.
 - D11: paridad visual fina y revelados por scroll; ver issue correspondiente.
-- Las cuatro imágenes de referencia viven en `docs/referencias/` y se versionan con el proyecto.
+- Las cuatro imágenes de referencia viven en `docs/referencias/`, están ignoradas por Git y no se publican.

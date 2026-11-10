@@ -306,6 +306,11 @@ a:hover {
 }
 
 .cabecera__marca {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   font-family: var(--fuente-mono);
   font-size: var(--text-lg);
   font-weight: 700;

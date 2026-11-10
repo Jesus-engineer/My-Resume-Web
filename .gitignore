@@ -5,6 +5,10 @@ dist/
 .env
 .DS_Store
 
+# Python del skill ui-ux-pro-max
+__pycache__/
+*.pyc
+
 # Reglas locales del agente: nunca se versionan
 AGENTS.md
 

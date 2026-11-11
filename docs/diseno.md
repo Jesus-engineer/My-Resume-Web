@@ -1,18 +1,23 @@
 # Brief de diseño: Portfolio nocturno con ondas de luz
 
 Estado: **aprobado por el dueño el 2026-11-10** (issues D1 #42 y D3 #44).
-Producto final definido por las **cuatro imágenes de referencia del dueño**, guardadas en `docs/referencias/` como referencia local (ignoradas por Git, no se publican):
+Actualizado el 2026-11-11 para alinear el documento con las cinco imágenes de
+referencia y con la implementación de D11.
 
-1. `docs/referencias/01-hero-ondas.png` — hero con ondas de luz.
-2. `docs/referencias/02-proyectos.png` — sección 01 / Proyectos.
-3. `docs/referencias/03-sobre-mi.png` — sección 02 / Sobre mí.
-4. `docs/referencias/04-certificaciones-contacto.png` — secciones 03 y 04 + footer.
+Producto final: las **cinco imágenes de referencia del dueño**, guardadas en
+`docs/referencias/` como material local (ignoradas por Git, no se publican):
 
-El contenido de este brief se extrajo de esas imágenes con el modelo de visión
-`opencode-go/gemini-4-argon` (ruta 4) el 2026-11-10, porque el modelo de
-implementación no procesa imágenes. Los textos literales provienen de esa
-extracción y de `content.md`. Nada se inventa: lo que no tiene respaldo real
-queda marcado.
+1. `01-hero-ondas.png` — hero con nombre, ondas de luz y tarjeta de perfil.
+2. `02-proyectos.png` — sección 01 / Proyectos.
+3. `03-sobre-mi.png` — sección 02 / Sobre mí, con pingüino Ubuntu.
+4. `04-certificaciones-contacto.png` — sección 03 / Formación y avance de contacto.
+5. `05-ultimapagina.png` — sección 04 / Contacto en dos columnas y pie.
+
+Las imágenes mandan sobre este documento en lo visual y estructural. `content.md`
+manda en los datos reales, enlaces y privacidad. El código de `docs/codigoshtml/`
+es una ayuda local de implementación (SVG, medidas, composiciones e iconos); no
+es el producto, no se publica y no se copia literalmente porque usa otra
+tipografía, cinco páginas separadas y algunos textos que no existen en el CV.
 
 ## 1. Sujeto y trabajo del sitio
 
@@ -27,9 +32,9 @@ Una frase: *un portfolio nocturno atravesado por ondas de luz: azul para actuar,
 
 Tres adjetivos: nocturno, luminoso, directo.
 
-El fondo es casi negro azulado y cada sección se distingue por una onda de luz de
-color propio. La página se lee de arriba abajo como una sola historia: quién soy,
-qué construyo, qué me respalda y cómo hablar conmigo.
+El fondo es casi negro azulado y cada sección se distingue por una onda o un
+wallpaper de luz con color propio. La página se lee de arriba abajo como una sola
+historia: quién soy, qué construyo, qué me respalda y cómo hablar conmigo.
 
 ## 3. Estructura y textos literales
 
@@ -38,102 +43,121 @@ qué construyo, qué me respalda y cómo hablar conmigo.
 - Marca: `JV` a la izquierda, en blanco.
 - Enlaces a la derecha: `Inicio`, `Proyectos`, `Sobre mí`, `Certificaciones`, `Contacto`.
 - Estado activo: texto blanco en negrita y subrayado corto en el color de acento de la sección visible.
-- Barra fija con fondo oscuro translúcido y línea divisoria inferior tenue.
+- Barra fija con fondo oscuro translúcido al hacer scroll y línea divisoria inferior tenue.
+- Control de tema claro/oscuro como mejora de accesibilidad (no aparece en las referencias).
 
 ### Hero (`#inicio`) — acento azul
 
-- Antetítulo: `JESÚS DAVID VELÁSQUEZ MERCADO`.
-- Titular: `Desarrollo software.` y `Sigo explorando.` (segunda línea con leve tinte celeste).
-- Subtítulo: `Backend con Python, SQL y APIs. Interfaces con React.`
+- Antetítulo: `ESTUDIANTE DE INGENIERÍA DE SISTEMAS`.
+- Titular: `Jesús David` y `Velásquez Mercado`, en dos líneas. Es el único `h1`.
+- Subtítulo: `Me enfoco en desarrollo backend con Python, SQL y APIs. También construyo interfaces con React y sigo aprendiendo con cada proyecto.`
 - Badge de disponibilidad: punto verde + `Disponible para prácticas`.
 - Botones: `Ver proyectos ↗` (azul sólido, ancla a #proyectos) y `Descargar CV` (contorno, abre el diálogo de impresión para guardar PDF; no existe un PDF público, no se inventa archivo).
-- Bloque `Mis entornos de aprendizaje` con chips: `Linux`, `macOS`, `Windows`.
-- Tarjeta de perfil a la derecha: foto original sin filtros (~70 % de la altura), pie con `Jesús David` y `Estudiante de Ingeniería de Sistemas`; debajo y fuera de la tarjeta: `GitHub` y `LinkedIn` separados por línea vertical.
-- Indicador centrado al pie del hero: `Desliza para explorar ↓`.
-- Ondas: cian/azul descendente desde el borde superior derecho, ámbar desde la izquierda inferior, magenta/violeta desde la derecha inferior.
+- Tarjeta de perfil a la derecha: foto real `assets/foto.webp` en formato 4:5, sin filtros, con pie `Jesús David` y `Estudiante de Ingeniería de Sistemas`.
+- Bloque inferior `Herramientas y entornos`:
+  - Tecnologías: `Python`, `SQL`, `React`.
+  - Sistemas operativos: `Linux`, `Windows`, `macOS`.
+- Pie del hero: `GitHub` y `LinkedIn` a la izquierda; `Continúa hacia mis proyectos ↓` a la derecha.
+- Ondas: wallpaper vectorial con cintas azules (Windows), órbitas naranjas y ladera violeta (Ubuntu), y ondas coral (macOS). El texto vive sobre un velo oscuro para conservar contraste.
 
 ### 01 / Proyectos (`#proyectos`) — acento azul
 
-- Etiqueta: `01 / PROYECTOS` con línea corta azul.
-- Titular: `Ideas que llevo al código.`
-- Subtítulo: `Proyectos académicos y personales en desarrollo de software e inteligencia artificial.`
+- Etiqueta: `01 / PROYECTOS` con icono de cuadrícula.
+- Titular: `Proyectos seleccionados`.
+- Subtítulo: `Una selección de lo que estoy construyendo y aprendiendo.`
+- Fondo: cintas azules 3D en la esquina superior derecha.
 
-Tarjeta destacada (ancho completo, texto izquierda ~40 %, maqueta derecha ~60 %):
+Tarjeta destacada (ancho completo, texto izquierda ~45 %, maqueta derecha ~55 %):
 
-- Badge sólido azul: `PROYECTO DESTACADO`.
-- Título: `Savio AI` con badge de estado `Investigación en curso` (borde azul, icono de destello).
+- Título: `Savio AI` con badge de estado `Investigación en curso` (borde azul, icono de matraz).
 - Descripción: `Exploro cómo personalizar contenido académico con inteligencia artificial para el LMS de mi universidad.`
 - Chips: `IA`, `Moodle`, `Investigación`.
 - Sin botón: la investigación no tiene repositorio ni demo públicos. No se inventa el enlace.
-- Maqueta decorativa en CSS (no captura real): ventana con puntos macOS, menú lateral (`Savio AI`, `Inicio`, `Recomendaciones`, `Recursos`, `Mi curso`) y panel con banner `Hola, estudiante`, tres tarjetas de acción (`Revisar tema`, `Ver recurso`, `Practicar`) y chips de `Tipos de recursos` (`Lecturas`, `Videos`, `</> Ejercicios`, `Material adicional`).
+- Maqueta decorativa en CSS (no captura real): ventana con puntos macOS, menú lateral (`Savio AI`, `Inicio`, `Recomendaciones`, `Recursos`, `Mi curso`) y panel con `Hola, estudiante`, `Sugerencias de recursos para tu aprendizaje`, `Recursos recomendados` y tres filas (`Resumen: Redes de computadoras`, `Video: Introducción a la IA`, `Ejercicios de práctica`).
 
-Fila de tres tarjetas secundarias:
+Fila de tres tarjetas secundarias, separadas por líneas verticales como en la referencia:
 
-1. **SIPIIT** (real, `Terminado`): título completo `Intelligent IT Incident Prioritization System (SIPIIT)`, fechas reales febrero-mayo de 2026, descripción real de `content.md`, chips `Flutter`, `Dart`, `Git`, portada real `assets/proyectos/sipiit-portada.webp` y botón `Ver repositorio ↗` con URL real de GitHub.
+1. **SIPIIT** (real, `Terminado`): título completo `Intelligent IT Incident Prioritization System (SIPIIT)`, fechas reales febrero-mayo de 2026, descripción real de `content.md`, chips `Flutter`, `Dart`, `Git`, portada real `assets/proyectos/sipiit-portada.webp` y enlace `Ver repositorio ↗` con URL real de GitHub.
 2. **Finanzas personales** (`En progreso`): `Registro de ingresos y gastos.`, chips `Flutter`, `Dart`. Sin botón: no hay repositorio. Maqueta decorativa con panel `Mis finanzas`, tarjetas `Ingresos` (verde) y `Gastos` (rojo) y gráfico de barras.
 3. **StudyPlanner** (`En progreso`): `Organización de tareas y seguimiento de estudio.`, chip `Java`. Sin botón: no hay repositorio. Maqueta decorativa con panel `Mis tareas` y tres tareas con píldoras de color.
 
-Los badges `En progreso` aplican por pedido del dueño a los proyectos que solo
-existen en sus imágenes de referencia. Las maquetas son ilustraciones decorativas
-(`aria-hidden`), nunca capturas presentadas como reales.
+La referencia 02 muestra tres proyectos y no incluye SIPIIT; se conserva SIPIIT
+porque es el único proyecto con repositorio real. Las maquetas son ilustraciones
+decorativas (`aria-hidden`), nunca capturas presentadas como reales.
 
 ### 02 / Sobre mí (`#sobre-mi`) — acento dorado
 
-- Etiqueta: `02 / SOBRE MÍ`.
-- Titular: `Curiosidad para aprender.` (blanco) y `Iniciativa para construir.` (dorado).
-- Subtítulo: `Jesús David Velásquez Mercado · Estudiante de Ingeniería de Sistemas`.
-- Columna izquierda: dos párrafos reales (universidad, backend, investigación Savio, mentoría TEPAYA) y chips grandes: `Python`, `SQL`, `</> APIs`, `React`.
-- Columna derecha: tarjeta `Mi camino`, línea vertical con tres nodos dorados e iconos (birrete, matraz, personas):
-  1. `Formación` — `Ingeniería de Sistemas · UTB`.
-  2. `Investigación` — `Personalización de contenido para Savio`.
-  3. `Comunidad` — `Mentor estudiantil · TEPAYA`.
-- Subsección inferior: titular `Aprender también es explorar nuevos entornos.` con badge `En aprendizaje`, subtítulo `Actualmente profundizo en mis herramientas de desarrollo.` y tres tarjetas: `Linux — Terminal y herramientas`, `Windows — Entorno de trabajo`, `macOS — Exploración del ecosistema`.
+- Etiqueta: `02 / SOBRE MÍ` con icono de personas.
+- Titular: `Un poco sobre mí`.
+- Columna izquierda:
+  - Párrafo 1: `Estudio Ingeniería de Sistemas en la Universidad Tecnológica de Bolívar. Me interesa entender cómo funcionan las aplicaciones y construir soluciones útiles.`
+  - Párrafo 2: `Actualmente participo en una investigación sobre recomendaciones académicas con IA para Savio. También soy mentor TEPAYA y acompaño a estudiantes de primer año.`
+  - Chips: `Python`, `SQL`, `</> APIs`, `React`.
+  - Filas de `Mi camino`, con icono, etiqueta y valor:
+    1. `Formación` — `Ingeniería de Sistemas · UTB`.
+    2. `Investigación` — `Personalización de contenido en Savio`.
+    3. `Comunidad` — `Mentor TEPAYA`.
+- Columna derecha: pingüino Ubuntu vectorial, decorativo (`aria-hidden`), con líneas doradas.
+- Subsección inferior: titular `Entornos que estoy explorando` y tres tarjetas: `Linux — Terminal y herramientas`, `Windows — Entorno de trabajo`, `macOS — Exploración del ecosistema`.
+- Fondo: facetas vino, coral y violeta inspiradas en el wallpaper de Ubuntu.
 
-TEPYA y la educación se integran aquí como hitos del camino; ya no existe una
-sección de Experiencia aparte. Los entornos se presentan como aprendizaje, no
-como experiencia verificada: así los diseñó el dueño.
+Los entornos se presentan como aprendizaje, no como experiencia verificada: así
+los diseñó el dueño.
 
-### 03 / Certificaciones (`#certificaciones`) — acento coral
+### 03 / Formación (`#certificaciones`) — acento coral
 
-- Etiqueta: `03 / CERTIFICACIONES` con línea corta coral.
-- Titular: `Formación que impulsa mi camino.`
-- Subtítulo: `Aprendizajes en programación, datos e inteligencia artificial.`
-- Seis tarjetas reales (la referencia muestra tres; se muestran las seis de `content.md` en grilla de tres columnas): título real completo, emisor real y enlace `Ver certificado ↗` que abre el visor accesible existente.
-- Ilustración de documento en CSS con barra y sello que rotan en azul, verde y violeta (no sustituye la imagen real: el visor muestra el certificado verdadero).
+- Etiqueta: `03 / FORMACIÓN` con icono de premio.
+- Titular: `Certificaciones`.
+- Subtítulo: `Cursos y programas que complementan mi formación.`
+- Ventana tipo Finder con barra de tres puntos, título `Mi formación` y filtros `Todos`, `Programación`, `Datos e IA`.
+- Seis certificaciones reales en grilla de tres columnas (dos filas), con icono de documento, título completo, emisor y enlace `Ver certificado ↗` que abre el visor accesible existente.
+- Los filtros son una mejora progresiva: sin JavaScript se muestran las seis.
+- Fondo: montañas y resplandor coral inspirados en la referencia 04.
 
-### 04 / Contacto (`#contacto`) — acento azul, centrado
+La referencia 04 usa la marca de Apple y un certificado de "Habilidades de
+Investigación" que no existe en `content.md`. No se copia la marca ni se inventa
+el certificado: se mantienen los seis documentos reales.
 
-- Etiqueta: `04 / CONTACTO` con línea corta azul.
-- Titular: `La próxima idea empieza con una conversación.`
-- Subtítulo: `Estoy abierto a prácticas y oportunidades para seguir aprendiendo y aportar.`
-- Botones: `Escríbeme` (azul sólido, `mailto:` real), `LinkedIn ↗` y `GitHub ↗` (contorno, URLs reales).
+### 04 / Contacto (`#contacto`) — acento azul, dos columnas
+
+- Etiqueta: `04 / CONTACTO`.
+- Titular: `¿Hablamos?`.
+- Subtítulo: `Busco prácticas y oportunidades para aportar, aprender y seguir desarrollando software.`
+- Badge de disponibilidad: `Disponible para prácticas`.
+- Cierre: `Gracias por conocer mi trabajo.`
+- Columna derecha, tres filas con icono y flecha:
+  1. `Correo` — `Escríbeme directamente` — `mailto:` real.
+  2. `LinkedIn` — `Conoce mi perfil profesional` — URL real.
+  3. `GitHub` — `Explora mis repositorios` — URL real.
+- Fondo: ondas azul, violeta y coral con órbitas naranjas en la parte inferior.
 
 ### Pie de página
 
 - Línea divisoria superior.
-- `Jesús David Velásquez Mercado` a la izquierda.
-- `Volver arriba ↑` a la derecha (ancla a `#inicio`).
+- `JV` a la izquierda.
+- `Jesús David Velásquez Mercado` y `Desarrollo de software` separados por líneas verticales.
+- `Volver al inicio ↑` a la derecha (ancla a `#inicio`).
 
 ## 4. Paleta
 
-### Oscuro (tema canónico)
+### Oscuro (tema canónico y por defecto)
 
 | Token | Valor | Uso |
 |---|---|---|
 | noche | `#070b14` | fondo |
-| superficie | `#111a2e` | tarjetas, chips y paneles |
-| superficie-2 | `#0e1729` | tarjetas de proyecto |
+| superficie | `rgb(17 26 46 / 78%)` | tarjetas, chips y paneles |
+| superficie-2 | `rgb(14 23 41 / 90%)` | cabecera compacta y tarjetas de proyecto |
 | blanco | `#f5f6f8` | texto principal |
 | plata | `#c8ccd4` | párrafos |
 | gris | `#94a3b8` | subtítulos y metadatos |
 | azul | `#2b72fb` | acción principal: botones, enlaces, subrayados |
-| azul-claro | `#3b82f6` | etiquetas de sección azules |
+| azul-claro | `#60a5fa` | etiquetas de sección azules |
 | oro | `#f2c94c` | acento de Sobre mí |
-| coral | `#f06464` | acento de Certificaciones |
+| coral | `#f06464` | acento de Certificaciones y resplandores |
 | verde | `#22c55e` | punto de disponibilidad |
 | borde | `#26314a` | bordes de tarjetas y chips |
 
-### Claro (alternativa accesible)
+### Claro (alternativa accesible, solo con el control de tema)
 
 | Token | Valor | Uso |
 |---|---|---|
@@ -151,17 +175,17 @@ como experiencia verificada: así los diseñó el dueño.
 
 Se verifica en la implementación con script sobre los pares texto/fondo y
 texto/superficie de ambos temas, incluido el texto que cruza las ondas. La regla:
-ningún par por debajo de 4.5:1. Las ondas se mantienen detrás del texto con baja
-opacidad y los resplandores evitan las crestas más luminosas, como en la referencia.
+ningún par por debajo de 4.5:1. Las ondas se mantienen detrás del texto con un
+velo de contraste y los resplandores evitan las crestas más luminosas.
 
-### Ondas de luz
+### Ondas y wallpapers
 
-- Hero: onda cian/azul (`#1d4ed8` → `#38bdf8`) desde arriba a la derecha; ámbar (`#f59e0b`) abajo a la izquierda; magenta/violeta (`#ec4899` → `#6d28d9`) abajo a la derecha.
-- Proyectos: listones azules 3D en la esquina superior derecha.
-- Sobre mí: onda dorada que nace arriba a la izquierda y cresta arriba a la derecha.
-- Certificaciones: cinta multicolor azul → violeta → coral de izquierda a derecha.
-- Contacto: resplandores ámbar, zafiro y púrpura.
-- Implementación: SVG con degradados y desenfoque, `aria-hidden`, `pointer-events: none`, estático (sin animación) y con opacidad reducida en tema claro.
+- Hero: SVG de 1536 × 1024 con cintas azules, órbitas naranjas, ladera violeta y ondas coral; velo oscuro de izquierda a derecha.
+- Proyectos: cintas azules 3D en la esquina superior derecha.
+- Sobre mí: facetas vino/coral/violeta y pingüino Ubuntu.
+- Formación: montañas azuladas con cresta coral.
+- Contacto: ondas azul, violeta y coral con órbitas naranjas.
+- Implementación: SVG inline con degradados, `aria-hidden`, `pointer-events: none`, animación lenta de deriva y opacidad reducida en tema claro.
 
 ## 5. Tipografía
 
@@ -171,33 +195,32 @@ Dos familias, sin cambios:
 - **JetBrains Mono:** etiquetas de sección, chips, botones y datos.
 
 Ambas autohospedadas en WOFF2 con `font-display: swap`, `unicode-range` latin y
-licencias OFL-1.1 verificadas. La referencia tipográfica de las imágenes es una
-sans geométrica; Inter ya cubre ese registro.
+licencias OFL-1.1 verificadas. Las referencias usan una sans geométrica; Inter
+cubre ese registro sin añadir una tercera familia ni fuentes base64.
 
 ## 6. Componentes
 
-- **Layout full-bleed:** sin `max-width` de 75 rem. Todas las secciones usan `padding-inline: clamp(1rem, 4.5vw, 4.5rem)`. A 1440 px el contenido ocupa 1295 px (90.9 % del ancho visible); a 1920 px ronda el 91 %.
-- **Hero:** dos columnas por encima de 1023 px (texto flexible + tarjeta de perfil de 384 px); una columna desde 1023 px, con la tarjeta centrada y un máximo de 22 rem.
+- **Layout full-bleed:** sin `max-width` de 75 rem. Todas las secciones usan `padding-inline: clamp(1.25rem, 4.5vw, 4.5rem)`. Se conserva la corrección de ancho pedida por el dueño.
+- **Hero:** dos columnas por encima de 1023 px (texto flexible + tarjeta de perfil de 20.5 rem); una columna desde 1023 px, con la tarjeta alineada a la izquierda y un máximo de 18 rem.
 - **Grillas:** proyectos 3 columnas en escritorio, 2 en tablet y 1 en móvil; certificaciones 3/2/1; entornos 3/2/1. Los párrafos conservan su ancho de lectura.
-- **Botón primario:** relleno azul sólido, radio ~10 px, texto blanco, flecha `↗`.
+- **Botón primario:** relleno azul con degradado, radio ~10 px, texto blanco, flecha `↗`.
 - **Botón secundario:** contorno fino claro, fondo translúcido, texto blanco.
 - **Chip:** píldora `9999px`, fondo oscuro, borde fino, icono + etiqueta mono.
-- **Tarjeta:** radio ~16 px, fondo translúcido, borde fino, sin sombras pesadas.
-- **Badge de estado:** píldora con icono; `Investigación en curso` (borde azul), `En progreso`, `Terminado`, `En aprendizaje` (dorados).
-- **Badge destacado:** píldora azul sólida en mayúsculas.
-- **Etiqueta de sección:** mono en mayúsculas con número `01 /`, línea corta del acento, titular grande y subtítulo.
-- **Foco:** contorno de 2 px, nunca se elimina.
+- **Tarjeta:** radio ~14-18 px, fondo translúcido, borde fino, sin sombras pesadas.
+- **Badge de estado:** píldora con icono; `Investigación en curso` (azul), `En progreso` (dorado), `Terminado` (verde).
+- **Ventana de formación:** contenedor tipo Finder con barra de puntos, título, filtros y grilla de certificados.
 - **Maquetas:** ventanas con puntos macOS, menú lateral y panel; decorativas, `aria-hidden`, ocultas en impresión.
+- **Foco:** contorno de 2 px, nunca se elimina.
 
 ## 7. Movimiento
 
 - Sin parallax ni scroll-jacking. El scroll sigue siendo vertical y predecible.
 - Entrada del hero con desplazamiento corto y opacidad, escalonada por bloques (máximo 0.7 s).
-- Ondas de luz con deriva lenta y continua (`translate` + `scale`, 18-24 s, alterna).
-- Punto de disponibilidad con pulso suave y flecha de "Desliza para explorar" con rebote corto.
+- Ondas de luz con deriva lenta y continua (`translate` + `scale`, 24-28 s, alterna).
+- Punto de disponibilidad con pulso suave y flecha de continuar con rebote corto.
 - Tarjetas y botones con elevación de 2-4 px y borde iluminado al pasar el puntero.
-- Los revelados por scroll se documentan como pendiente D11; no se inventan aquí.
-- Hover y foco con transiciones de 150 ms.
+- Revelado por scroll con `IntersectionObserver`, una sola vez, solo en cabeceras, tarjetas y bloques; sin parallax y sin cambiar dimensiones.
+- Fallback sin JavaScript: todo visible.
 - `prefers-reduced-motion`: sin animaciones, transiciones ni scroll suave.
 - El scroll es suave con `scroll-behavior: smooth` y `scroll-padding-top` para la barra fija.
 
@@ -209,23 +232,28 @@ sans geométrica; Inter ya cubre ese registro.
 - **`Descargar CV` abre el diálogo de impresión:** no existe PDF público que descargar.
 - **Entornos como aprendizaje:** Linux, macOS y Windows se presentan como exploración, no como experiencia verificada.
 - **Certificaciones con nombres completos reales** de `content.md`, no los abreviados de la referencia.
-- **h1 = titular del hero** (`Desarrollo software. Sigo explorando.`), como en la referencia; el nombre completo vive en el antetítulo, la tarjeta de perfil, el `title`, el pie y el JSON-LD.
+- **h1 = nombre completo en el hero**, como en la referencia 01; el `title`, el JSON-LD, la tarjeta de perfil y el pie conservan el nombre.
+- **Foto real:** la referencia 01 muestra un marco vacío; el sitio usa `assets/foto.webp`, que es la foto aprobada en `content.md`.
+- **Sin marca de Apple:** la referencia 04 usa el logo de Apple; el sitio usa un icono genérico de premio.
+- **Sin enlaces inventados:** los botones y filas de contacto usan las URLs reales de `content.md`.
 
 ## 9. Verificación de la dirección
 
-- [ ] Scroll vertical único con navegación superior fija.
-- [ ] Cinco anclas: inicio, proyectos, sobre-mi, certificaciones, contacto.
-- [ ] Ondas de luz por sección, detrás del texto.
-- [ ] Un solo `h1`; jerarquía h2/h3 correcta.
-- [ ] Contraste AA en claro y oscuro, incluido el texto sobre ondas.
-- [ ] Teclado completo: menú móvil, visor de certificados, volver arriba.
-- [ ] Impresión A4 sin ondas, navegación, maquetas ni botones.
-- [ ] Sin contenido inventado: todo texto sale de `content.md` o de las imágenes del dueño.
-- [ ] Tema claro alternativo funcional.
+- [x] Scroll vertical único con navegación superior fija.
+- [x] Cinco anclas: inicio, proyectos, sobre-mi, certificaciones, contacto.
+- [x] Ondas de luz por sección, detrás del texto.
+- [x] Un solo `h1`; jerarquía h2/h3 correcta.
+- [x] Contraste AA en claro y oscuro, incluido el texto sobre ondas.
+- [x] Teclado completo: menú móvil, filtros, visor de certificados, volver arriba.
+- [x] Impresión A4 sin ondas, navegación, maquetas ni botones.
+- [x] Sin contenido inventado: todo texto sale de `content.md` o de las imágenes del dueño.
+- [x] Tema claro alternativo funcional.
+- [ ] Aprobación visual del dueño contra las cinco referencias.
 
 ## 10. Referencias
 
-- Cuatro imágenes del dueño (2026-11-10): producto final; solo locales en `docs/referencias/`, ignoradas por Git y no publicadas.
+- Cinco imágenes del dueño (2026-11-10): producto final; solo locales en `docs/referencias/`, ignoradas por Git y no publicadas.
+- `docs/codigoshtml/` (2026-11-11): ayuda local de implementación; no se publica, no se commitea y no sustituye las referencias.
 - `bchiang7/v4` (MIT): superada por estas imágenes; su crédito se retira del pie y queda en el historial del repositorio.
 - Inter: OFL-1.1 (`github.com/rsms/inter`).
 - JetBrains Mono: OFL-1.1 (`github.com/JetBrains/JetBrainsMono`).
@@ -236,11 +264,23 @@ sans geométrica; Inter ya cubre ese registro.
 - **Portfolio técnico nocturno (Brittany Chiang)**: implementada en `bcc373a`; el dueño definió un nuevo producto final con sus propias imágenes. El crédito visible se retira.
 - **Cianotipo**: revertida en `2847675`.
 - **Signal dossier** y **Editorial cobalto**: descartadas antes de implementarse.
+- **Copiar literalmente `docs/codigoshtml/`:** descartado por usar Lato, cinco páginas, fuentes base64 y textos que no existen en el CV.
 
-## 12. Pendientes
+## 12. Estado de las tareas
+
+- D1 #42: cerrado.
+- D2 #43 a D7 #48: implementados en el sitio; se cierran con evidencia.
+- D8 #49: QA técnica completa; la comparación visual se absorbe en D11.
+- D11 #53: paridad estructural con las cinco referencias y capa de animaciones; es la tarea de cierre.
+- D9 #50: aprobación y handoff, después de D11.
+- D10 #52: deck con Reveal.js, independiente del sitio.
+- D0 #41: bandeja de ideas, abierta.
+
+## 13. Pendientes
 
 - Aprobación visual del dueño sobre la implementación.
-- Regenerar OG y favicon en la nueva paleta (hecho en esta iteración; ver sección 13).
-- D8: revalidar Lighthouse, axe y navegadores con el diseño nuevo.
-- D11: paridad visual fina y revelados por scroll; ver issue correspondiente.
-- Las cuatro imágenes de referencia viven en `docs/referencias/`, están ignoradas por Git y no se publican.
+- Capturas 360/390/768/1023/1024/1440/1920 en claro y oscuro, comparadas con las cinco referencias.
+- Evidencia técnica: axe 0 en oscuro 1440/390 y claro 1440; sin desborde 360-1920; impresión A4 en 3 páginas; Lighthouse 98/100/100/100.
+- Regenerar OG y favicon si la paleta final cambia.
+- Las cinco imágenes de referencia viven en `docs/referencias/`, están ignoradas por Git y no se publican.
+- `docs/codigoshtml/` está ignorado por Git y no se publica.

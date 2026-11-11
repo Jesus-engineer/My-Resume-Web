@@ -1,5 +1,6 @@
 // Interacciones del sitio: tema, cabecera, menu movil, navegacion activa,
-// impresion del CV y visor accesible de certificados. Sin dependencias.
+// impresion del CV, filtros de certificaciones, revelado por scroll y visor
+// accesible de certificados. Sin dependencias.
 
 const raiz = document.documentElement;
 const cabecera = document.querySelector('#cabecera');
@@ -7,22 +8,18 @@ const botonMenu = document.querySelector('.cabecera__menu');
 const navegacion = document.querySelector('#navegacion');
 const enlacesNav = [...document.querySelectorAll('.cabecera__enlace')];
 
-/* ---------- Tema claro / oscuro ---------- */
+/* ---------- Tema oscuro canonico / claro alternativo ---------- */
 
 const botonTema = document.querySelector('.tema-toggle');
-const mediaOscuro = window.matchMedia('(prefers-color-scheme: dark)');
 
 function temaEfectivo() {
-  const guardado = raiz.dataset.theme;
-  if (guardado === 'dark' || guardado === 'light') return guardado;
-  return mediaOscuro.matches ? 'dark' : 'light';
+  return raiz.dataset.theme === 'light' ? 'light' : 'dark';
 }
 
 function actualizarBotonTema() {
   if (!botonTema) return;
   const oscuro = temaEfectivo() === 'dark';
-  botonTema.setAttribute('aria-pressed', String(oscuro));
-  botonTema.setAttribute('aria-label', oscuro ? 'Activar tema claro' : 'Activar tema oscuro');
+  botonTema.setAttribute('aria-label', oscuro ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
   botonTema.textContent = oscuro ? 'Tema claro' : 'Tema oscuro';
 }
 
@@ -36,10 +33,6 @@ if (botonTema) {
     actualizarBotonTema();
   });
 }
-
-mediaOscuro.addEventListener('change', () => {
-  if (!raiz.dataset.theme) actualizarBotonTema();
-});
 
 actualizarBotonTema();
 
@@ -116,7 +109,7 @@ if (botonMenu) {
     });
   }
 
-  const mediaEscritorio = window.matchMedia('(min-width: 768px)');
+  const mediaEscritorio = window.matchMedia('(min-width: 1024px)');
   const alCambiarAncho = evento => {
     if (evento.matches && menuAbierto) cerrarMenu();
   };
@@ -175,6 +168,67 @@ if (seccionesNavegables.length) {
   window.addEventListener('load', programarSeccionActual);
   if (document.fonts) document.fonts.ready.then(programarSeccionActual);
   actualizarSeccionActual();
+}
+
+/* ---------- Filtros de certificaciones ---------- */
+
+const filtros = [...document.querySelectorAll('[data-filtro]')];
+const certificaciones = [...document.querySelectorAll('.certificacion')];
+const estadoFiltro = document.querySelector('#filtro-estado');
+
+function aplicarFiltro(categoria) {
+  for (const boton of filtros) {
+    boton.setAttribute('aria-pressed', String(boton.dataset.filtro === categoria));
+  }
+
+  let visibles = 0;
+  for (const certificacion of certificaciones) {
+    const coincide = categoria === 'todos' || certificacion.dataset.categoria === categoria;
+    certificacion.hidden = !coincide;
+    if (coincide) visibles += 1;
+  }
+
+  if (estadoFiltro) {
+    estadoFiltro.textContent = visibles === 1 ? '1 certificación' : `${visibles} certificaciones`;
+  }
+}
+
+for (const boton of filtros) {
+  boton.addEventListener('click', () => aplicarFiltro(boton.dataset.filtro));
+}
+
+/* ---------- Revelado por scroll ---------- */
+
+const elementosRevelar = [...document.querySelectorAll('.revelar')];
+const movimientoReducido = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (elementosRevelar.length) {
+  if (movimientoReducido.matches || !('IntersectionObserver' in window)) {
+    for (const elemento of elementosRevelar) elemento.classList.add('visible');
+  } else {
+    for (const elemento of elementosRevelar) elemento.classList.add('revelar--oculto');
+
+    const observador = new IntersectionObserver(
+      entradas => {
+        for (const entrada of entradas) {
+          if (!entrada.isIntersecting) continue;
+          entrada.target.classList.add('visible');
+          observador.unobserve(entrada.target);
+        }
+      },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0.12 }
+    );
+
+    for (const elemento of elementosRevelar) observador.observe(elemento);
+  }
+
+  movimientoReducido.addEventListener('change', evento => {
+    if (!evento.matches) return;
+    for (const elemento of elementosRevelar) {
+      elemento.classList.add('visible');
+      elemento.classList.remove('revelar--oculto');
+    }
+  });
 }
 
 /* ---------- Visor accesible de certificados ---------- */

@@ -24,3 +24,6 @@ foto_950kb.jpg
 # Referencias visuales del dueno: solo locales, nunca se publican
 docs/referencias/*
 !docs/referencias/README.md
+
+# Codigo HTML de apoyo del dueno: solo local, no es parte del sitio
+docs/codigoshtml/

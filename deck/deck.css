@@ -1,0 +1,703 @@
+/* Tema "Portfolio nocturno con ondas de luz" para Reveal.js.
+   Reutiliza las fuentes locales Inter y JetBrains Mono y los tokens oscuros canónicos. */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("../assets/fonts/jetbrains-mono-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  color-scheme: dark;
+  --fondo: #070b14;
+  --superficie: rgb(17 26 46 / 82%);
+  --superficie-2: rgb(14 23 41 / 92%);
+  --texto: #f5f6f8;
+  --plata: #c8ccd4;
+  --suave: #94a3b8;
+  --azul: #2b72fb;
+  --azul-claro: #60a5fa;
+  --oro: #f2c94c;
+  --coral: #f06464;
+  --verde: #22c55e;
+  --borde: #26314a;
+  --fuente-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fuente-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+html,
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-sans);
+}
+
+.deck-symbols {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* ---------- Sobrescrituras Reveal.js ---------- */
+
+.reveal-viewport {
+  background: var(--fondo);
+}
+
+.reveal {
+  font-family: var(--fuente-sans);
+  font-size: 22px;
+  color: var(--texto);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.reveal .controls {
+  color: var(--azul-claro);
+}
+
+.reveal .progress {
+  height: 3px;
+  background: rgb(255 255 255 / 10%);
+  color: var(--azul);
+}
+
+.reveal .slide-number {
+  font-family: var(--fuente-mono);
+  font-size: 13px;
+  color: var(--plata);
+  background: rgb(7 11 20 / 72%);
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.reveal a {
+  color: var(--azul-claro);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.reveal a:hover {
+  color: var(--texto);
+}
+
+.reveal :focus-visible {
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 3px;
+}
+
+/* ---------- Fondos por diapositiva ---------- */
+
+.slide {
+  position: relative;
+  background: var(--fondo);
+}
+
+.slide__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.slide__bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.slide__bg--cert {
+  background: #131c30 url("../assets/fondos/certificaciones.webp") center top / cover no-repeat;
+}
+
+.slide__bg--cert::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(8 15 30 / 82%), rgb(8 15 30 / 48%) 70%),
+    linear-gradient(180deg, rgb(8 15 30 / 28%), rgb(8 15 30 / 82%));
+}
+
+.slide__bg--contacto {
+  background: #0b1525 url("../assets/fondos/contacto.webp") center bottom / cover no-repeat;
+}
+
+.slide__bg--contacto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(7 11 20 / 86%) 0%, rgb(7 11 20 / 54%) 62%, rgb(7 11 20 / 28%) 100%),
+    linear-gradient(180deg, rgb(7 11 20 / 25%) 0%, rgb(7 11 20 / 82%) 100%);
+}
+
+.olas-deck {
+  position: absolute;
+  inset: auto 0 0 0;
+  width: 100%;
+  height: 220px;
+  z-index: 1;
+}
+
+/* ---------- Estructura común de diapositiva ---------- */
+
+.slide__frame {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 40px 56px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.slide__top,
+.hero-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.marca {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -0.04em;
+  color: var(--texto);
+}
+
+.slide__tag,
+.ubicacion {
+  font-family: var(--fuente-mono);
+  font-size: 13px;
+  color: var(--suave);
+}
+
+.slide__head h2 {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--texto);
+  margin: 8px 0 6px;
+}
+
+.subhead {
+  font-size: 18px;
+  color: var(--plata);
+  max-width: 68ch;
+  line-height: 1.45;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--fuente-mono);
+  font-size: 13px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--azul-claro);
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--azul);
+}
+
+.eyebrow--oro {
+  color: var(--oro);
+  border-bottom-color: var(--oro);
+}
+
+.eyebrow--coral {
+  color: var(--coral);
+  border-bottom-color: var(--coral);
+}
+
+.ico {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+/* ---------- Slide 1: Portada ---------- */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto;
+  gap: 44px;
+  align-items: center;
+}
+
+.kicker {
+  font-family: var(--fuente-mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--azul-claro);
+  margin-bottom: 10px;
+}
+
+.hero-copy h1 {
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--texto);
+  margin-bottom: 16px;
+}
+
+.hero-copy h1 span {
+  display: block;
+}
+
+.lead {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--plata);
+  max-width: 54ch;
+  margin-bottom: 16px;
+}
+
+.disponibilidad {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: var(--texto);
+}
+
+.punto-verde {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--verde);
+  box-shadow: 0 0 10px var(--verde);
+}
+
+.hero-foto {
+  width: 248px;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 22%);
+  background: #10182b;
+  box-shadow: 0 24px 60px -24px rgb(0 0 0 / 85%);
+}
+
+.hero-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.hero-foot {
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  padding-top: 14px;
+  padding-right: 112px;
+}
+
+.herramientas {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--texto);
+}
+
+.herramientas li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.herramientas .sep {
+  color: var(--suave);
+}
+
+.herramientas .bar {
+  width: 1px;
+  height: 16px;
+  background: rgb(255 255 255 / 22%);
+  margin: 0 4px;
+}
+
+/* ---------- Slide 2: Sobre mí ---------- */
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.75fr);
+  gap: 36px;
+  align-items: center;
+  flex: 1;
+}
+
+.sobre-p {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--plata);
+  margin-bottom: 14px;
+}
+
+.camino-lista {
+  margin-top: 16px;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+}
+
+.camino-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  font-size: 16px;
+}
+
+.camino-row dt {
+  font-family: var(--fuente-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--oro);
+}
+
+.camino-row dd {
+  color: var(--texto);
+}
+
+.sobre-arte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.tux-oro {
+  width: 220px;
+  height: auto;
+}
+
+.entornos-mini {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  font-size: 14px;
+  color: var(--plata);
+}
+
+.entornos-mini strong {
+  color: var(--texto);
+}
+
+/* ---------- Slide 3: Stack ---------- */
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  flex: 1;
+  align-content: center;
+}
+
+.card {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card--wide {
+  grid-column: 1 / -1;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font-family: var(--fuente-mono);
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgb(19 31 54 / 88%);
+  border: 1px solid var(--borde);
+  color: var(--texto);
+}
+
+/* ---------- Slides 4 y 5: Proyectos ---------- */
+
+.proy-dos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  flex: 1;
+  align-items: stretch;
+}
+
+.card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card__desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--plata);
+}
+
+.card__nota {
+  margin-top: auto;
+  font-family: var(--fuente-mono);
+  font-size: 13px;
+  color: var(--suave);
+}
+
+.card__foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.badge--curso {
+  background: rgb(16 35 71 / 75%);
+  border-color: #3b82f6;
+  color: var(--texto);
+}
+
+.badge--terminado {
+  background: rgb(20 61 42 / 55%);
+  border-color: rgb(74 222 128 / 55%);
+  color: #4ade80;
+}
+
+.badge--progreso {
+  background: rgb(38 33 21 / 70%);
+  border-color: rgb(217 186 90 / 50%);
+  color: #d9ba5a;
+}
+
+.sipiit-media {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  background: #0a1020;
+}
+
+.sipiit-media img {
+  width: 100%;
+  height: 165px;
+  object-fit: contain;
+  display: block;
+}
+
+.link-ext {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fuente-mono);
+  font-size: 14px;
+}
+
+.mini-panel {
+  margin-top: auto;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--superficie-2);
+  border: 1px solid var(--borde);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mini-panel__title {
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--azul-claro);
+}
+
+.mini-panel__row {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--plata);
+}
+
+.mini-panel__row span {
+  font-family: var(--fuente-mono);
+  color: var(--suave);
+}
+
+/* ---------- Slide 6: Certificaciones ---------- */
+
+.certs-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  flex: 1;
+  align-content: center;
+}
+
+.cert-item h3 {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.cert-item p {
+  font-size: 14px;
+  color: var(--plata);
+  line-height: 1.4;
+}
+
+/* ---------- Slide 7: Contacto ---------- */
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 44px;
+  align-items: center;
+  flex: 1;
+}
+
+.contacto-copy h2 {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 12px 0 14px;
+}
+
+.gracias {
+  margin-top: 22px;
+  font-size: 18px;
+  color: var(--plata);
+}
+
+.contacto-canales {
+  display: flex;
+  flex-direction: column;
+}
+
+.canal {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 20px;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 8px;
+  border-bottom: 1px solid rgb(255 255 255 / 16%);
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.canal:last-child {
+  border-bottom: 0;
+}
+
+.canal__ico {
+  width: 32px;
+  height: 32px;
+  color: var(--texto);
+}
+
+.canal__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.canal__txt strong {
+  font-size: 20px;
+  color: var(--texto);
+}
+
+.canal__txt span {
+  font-size: 14px;
+  color: var(--plata);
+  word-break: break-word;
+}
+
+/* ---------- Movimiento reducido e impresión ?print-pdf ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .reveal .controls,
+  .reveal .progress,
+  .reveal .slide-number {
+    display: none !important;
+  }
+}
+
+html.print-pdf * {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}

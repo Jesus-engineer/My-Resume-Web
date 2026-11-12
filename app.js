@@ -174,7 +174,24 @@ if (seccionesNavegables.length) {
 
 const filtros = [...document.querySelectorAll('[data-filtro]')];
 const certificaciones = [...document.querySelectorAll('.certificacion')];
+const grillaCertificaciones = document.querySelector('.certificaciones');
 const estadoFiltro = document.querySelector('#filtro-estado');
+
+function actualizarFilasCertificaciones() {
+  if (!grillaCertificaciones) return;
+  const visibles = certificaciones.filter(certificacion => !certificacion.hidden);
+  const columnas = window.matchMedia('(max-width: 767px)').matches
+    ? 1
+    : window.matchMedia('(max-width: 1100px)').matches ? 2 : 3;
+
+  for (const certificacion of certificaciones) {
+    certificacion.classList.remove('certificacion--inicio-fila', 'certificacion--fila-siguiente');
+  }
+  for (const [indice, certificacion] of visibles.entries()) {
+    if (indice % columnas === 0) certificacion.classList.add('certificacion--inicio-fila');
+    if (indice >= columnas) certificacion.classList.add('certificacion--fila-siguiente');
+  }
+}
 
 function aplicarFiltro(categoria) {
   for (const boton of filtros) {
@@ -188,6 +205,11 @@ function aplicarFiltro(categoria) {
     if (coincide) visibles += 1;
   }
 
+  if (grillaCertificaciones) {
+    grillaCertificaciones.classList.toggle('certificaciones--filtradas', categoria !== 'todos');
+    actualizarFilasCertificaciones();
+  }
+
   if (estadoFiltro) {
     estadoFiltro.textContent = visibles === 1 ? '1 certificación' : `${visibles} certificaciones`;
   }
@@ -196,6 +218,8 @@ function aplicarFiltro(categoria) {
 for (const boton of filtros) {
   boton.addEventListener('click', () => aplicarFiltro(boton.dataset.filtro));
 }
+
+if (grillaCertificaciones) window.addEventListener('resize', actualizarFilasCertificaciones);
 
 /* ---------- Revelado por scroll ---------- */
 

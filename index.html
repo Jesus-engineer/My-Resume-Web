@@ -157,6 +157,16 @@
           <path d="M22 43h39M22 59h39M22 75h22"/>
         </g>
       </symbol>
+      <symbol id="icono-linkedin-trazo" viewBox="0 0 48 48">
+        <rect x="4" y="4" width="39" height="39" rx="7" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path fill="currentColor" d="M12 19h5v16h-5zm2.5-8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6M21 19h4.8v2.2c1-1.6 2.6-2.6 4.7-2.6 5 0 6 3.1 6 7.3V35h-5v-8.1c0-2 0-4.4-2.8-4.4s-3.2 2.1-3.2 4.2V35H21z"/>
+      </symbol>
+      <symbol id="icono-documento-finder" viewBox="0 0 84 112">
+        <path d="M12 1h41l30 29v70q0 11-11 11H12q-11 0-11-11V13Q1 1 12 1Z" fill="#e6e7e9"/>
+        <path d="M53 1v20q0 9 9 9h21Z" fill="#b9bdc5"/>
+        <path d="M53 1 83 30H62q-9 0-9-9Z" fill="#f7f7f8" opacity=".75"/>
+        <g stroke="#a3a8b1" stroke-width="5.8" stroke-linecap="round"><path d="M22 43h39M22 59h39M22 75h22"/></g>
+      </symbol>
       <symbol id="icono-premio" viewBox="0 0 24 24">
         <circle cx="12" cy="9" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
         <path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -194,6 +204,14 @@
       </symbol>
       <symbol id="icono-ajustes" viewBox="0 0 24 24">
         <path d="M3 5h18M3 12h18M3 19h18M8 2v6m8 1v6M9 16v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="icono-tijeras" viewBox="0 0 24 24">
+        <circle cx="6" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icono-codigo" viewBox="0 0 24 24">
+        <path d="m8 6-6 6 6 6m8-12 6 6-6 6m-2-14-4 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
       </symbol>
     </defs>
   </svg>
@@ -257,8 +275,8 @@
             <path d="M842 696c48-122 97-159 153-181 39-55 85-67 132-62 96 10 167 106 139 166-40 83-186 59-229-7-26-39-38-72-28-91"/>
             <path d="M1335 493c22-71 72-114 147-138 20 46 43 101 25 173m-79-228c25 18 38 34 47 47m33 8c10-1 18-1 28 1"/>
           </g>
-          <circle cx="997" cy="515" r="25" fill="#3d2140" stroke="#e9672c" stroke-width="3"/>
-          <circle cx="1483" cy="354" r="25" fill="#52223e" stroke="#f36b2b" stroke-width="3"/>
+          <circle class="onda-nodo onda-nodo--1" cx="997" cy="515" r="25" fill="#3d2140" stroke="#e9672c" stroke-width="3"/>
+          <circle class="onda-nodo onda-nodo--2" cx="1483" cy="354" r="25" fill="#52223e" stroke="#f36b2b" stroke-width="3"/>
           <path d="M580 1024c42-69 108-133 160-174 102-91 210-144 311-160 100-15 157-7 236-51 88-49 151-103 249-116v501Z" fill="url(#hero-coral)"/>
           <path d="M580 1024c42-69 108-133 160-174 102-91 210-144 311-160 100-15 157-7 236-51 88-49 151-103 249-116" fill="none" stroke="#ffc1ae" stroke-width="1.2" opacity=".8"/>
           <path d="M617 1000c139-127 269-151 404-194 107-34 166-77 252-126 75-43 135-54 214-22l49 19v347H617Z" fill="url(#hero-montana)"/>
@@ -289,10 +307,6 @@
           <div class="hero__perfil-tarjeta">
             <img class="hero__foto" src="assets/foto.webp" alt="Jesús David Velásquez Mercado" width="480" height="480" decoding="async">
           </div>
-          <figcaption class="hero__perfil-datos">
-            <strong>Jesús David</strong>
-            <span>Estudiante de Ingeniería de Sistemas</span>
-          </figcaption>
         </figure>
       </div>
 
@@ -434,17 +448,20 @@
           <a class="proyecto__enlace" href="https://github.com/Oyhs-co/Intelligent-IT-incident-prioritization-system" target="_blank" rel="noopener noreferrer">Ver repositorio <svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg><span class="sr-only"> en GitHub (abre en una pestaña nueva)</span></a>
         </article>
 
-        <article class="proyecto revelar" aria-labelledby="proyecto-finanzas-titulo">
+        <article class="proyecto revelar" aria-labelledby="proyecto-gyr-titulo">
           <div class="proyecto__cabecera">
-            <h3 id="proyecto-finanzas-titulo">Finanzas personales</h3>
+            <h3 id="proyecto-gyr-titulo">GyR Barber</h3>
             <span class="badge badge--progreso">
               <svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>En progreso
             </span>
           </div>
-          <p class="proyecto__descripcion">Registro de ingresos y gastos.</p>
+          <p class="proyecto__descripcion">Gestión de reservas, citas y servicios para barbería.</p>
           <ul class="chips" aria-label="Tecnologías del proyecto">
-            <li class="chip">Flutter</li>
-            <li class="chip">Dart</li>
+            <li class="chip">React</li>
+            <li class="chip">Python</li>
+            <li class="chip">Supabase</li>
+            <li class="chip">PostgreSQL</li>
+            <li class="chip">Tailwind CSS</li>
           </ul>
           <div class="proyecto__mockup" aria-hidden="true">
             <div class="mockup mockup--compacto">
@@ -455,41 +472,36 @@
               </div>
               <div class="mockup__cuerpo">
                 <div class="mockup__menu">
-                  <p class="mockup__marca"><svg class="icono" aria-hidden="true"><use href="#icono-cartera"/></svg>Finanzas</p>
-                  <p class="mockup__item mockup__item--activo"><svg class="icono" aria-hidden="true"><use href="#icono-inicio"/></svg>Inicio</p>
-                  <p class="mockup__item"><svg class="icono" aria-hidden="true"><use href="#icono-ajustes"/></svg>Movimientos</p>
-                  <p class="mockup__item"><svg class="icono" aria-hidden="true"><use href="#icono-grafico"/></svg>Presupuesto</p>
+                  <p class="mockup__marca"><svg class="icono" aria-hidden="true"><use href="#icono-tijeras"/></svg>GyR Barber</p>
+                  <p class="mockup__item mockup__item--activo"><svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>Agenda</p>
+                  <p class="mockup__item"><svg class="icono" aria-hidden="true"><use href="#icono-tijeras"/></svg>Servicios</p>
+                  <p class="mockup__item"><svg class="icono" aria-hidden="true"><use href="#icono-personas"/></svg>Barberos</p>
                 </div>
                 <div class="mockup__panel">
-                  <p class="mockup__panel-titulo">Mis finanzas</p>
-                  <div class="mockup__estadisticas">
-                    <p class="mockup__estadistica mockup__estadistica--ingreso"><span aria-hidden="true">↗</span>Ingresos</p>
-                    <p class="mockup__estadistica mockup__estadistica--gasto"><span aria-hidden="true">↘</span>Gastos</p>
-                  </div>
-                  <div class="mockup__barras" aria-hidden="true">
-                    <span class="mockup__barra--40"></span>
-                    <span class="mockup__barra--65"></span>
-                    <span class="mockup__barra--30"></span>
-                    <span class="mockup__barra--80"></span>
-                    <span class="mockup__barra--55"></span>
-                    <span class="mockup__barra--70"></span>
-                  </div>
+                  <p class="mockup__panel-titulo">Citas de hoy</p>
+                  <ul class="mockup__tareas">
+                    <li><span class="mockup__hora">10:00</span>Corte y barba<span class="mockup__pildora mockup__pildora--verde"></span></li>
+                    <li><span class="mockup__hora">11:30</span>Corte clásico<span class="mockup__pildora mockup__pildora--azul"></span></li>
+                    <li><span class="mockup__hora">14:00</span>Perfilado<span class="mockup__pildora mockup__pildora--morada"></span></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="proyecto revelar" aria-labelledby="proyecto-studyplanner-titulo">
+        <article class="proyecto revelar" aria-labelledby="proyecto-proximo-titulo">
           <div class="proyecto__cabecera">
-            <h3 id="proyecto-studyplanner-titulo">StudyPlanner</h3>
+            <h3 id="proyecto-proximo-titulo">Próximo proyecto</h3>
             <span class="badge badge--progreso">
               <svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>En progreso
             </span>
           </div>
-          <p class="proyecto__descripcion">Organización de tareas y seguimiento de estudio.</p>
+          <p class="proyecto__descripcion">Desarrollando una nueva aplicación en progreso para seguir practicando arquitectura backend, APIs e interfaces modernas.</p>
           <ul class="chips" aria-label="Tecnologías del proyecto">
-            <li class="chip">Java</li>
+            <li class="chip">Python</li>
+            <li class="chip">SQL</li>
+            <li class="chip">React</li>
           </ul>
           <div class="proyecto__mockup" aria-hidden="true">
             <div class="mockup mockup--compacto">
@@ -500,17 +512,17 @@
               </div>
               <div class="mockup__cuerpo">
                 <div class="mockup__menu">
-                  <p class="mockup__marca"><svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>StudyPlanner</p>
-                  <p class="mockup__item mockup__item--activo"><svg class="icono" aria-hidden="true"><use href="#icono-check"/></svg>Tareas</p>
-                  <p class="mockup__item"><svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>Calendario</p>
-                  <p class="mockup__item"><svg class="icono" aria-hidden="true"><use href="#icono-capas"/></svg>Mis materias</p>
+                  <p class="mockup__marca"><svg class="icono" aria-hidden="true"><use href="#icono-codigo"/></svg>En desarrollo</p>
+                  <p class="mockup__item mockup__item--activo"><svg class="icono" aria-hidden="true"><use href="#icono-capas"/></svg>Avance</p>
+                  <p class="mockup__item"><svg class="icono" aria-hidden="true"><use href="#icono-ajustes"/></svg>Backend</p>
+                  <p class="mockup__item"><svg class="icono" aria-hidden="true"><use href="#icono-cuadricula"/></svg>Interfaz</p>
                 </div>
                 <div class="mockup__panel">
-                  <p class="mockup__panel-titulo">Mis tareas</p>
+                  <p class="mockup__panel-titulo">En construcción</p>
                   <ul class="mockup__tareas">
-                    <li><span class="mockup__casilla"></span>Estudiar estructura de datos<span class="mockup__pildora mockup__pildora--morada"></span></li>
-                    <li><span class="mockup__casilla"></span>Resolver ejercicios<span class="mockup__pildora mockup__pildora--azul"></span></li>
-                    <li><span class="mockup__casilla"></span>Preparar entrega<span class="mockup__pildora mockup__pildora--verde"></span></li>
+                    <li><span class="mockup__casilla"></span>Diseño de base de datos<span class="mockup__pildora mockup__pildora--verde"></span></li>
+                    <li><span class="mockup__casilla"></span>API y lógica en Python<span class="mockup__pildora mockup__pildora--azul"></span></li>
+                    <li><span class="mockup__casilla"></span>Módulos en progreso<span class="mockup__pildora mockup__pildora--morada"></span></li>
                   </ul>
                 </div>
               </div>
@@ -638,20 +650,36 @@
     </section>
 
     <section class="seccion seccion--certificaciones" id="certificaciones" aria-labelledby="certificaciones-titulo">
-      <div class="seccion__fondo ondas" aria-hidden="true">
-        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" focusable="false" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="cert-cielo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b2447"/><stop offset=".55" stop-color="#111a33"/><stop offset="1" stop-color="#0a1020"/></linearGradient>
-            <linearGradient id="cert-montana-1" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#2a3b68"/><stop offset="1" stop-color="#10172b"/></linearGradient>
-            <linearGradient id="cert-montana-2" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#3b4d7a"/><stop offset="1" stop-color="#161f3a"/></linearGradient>
-            <linearGradient id="cert-luz" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f06464" stop-opacity="0"/><stop offset=".55" stop-color="#f06464" stop-opacity=".55"/><stop offset="1" stop-color="#f2c94c" stop-opacity=".25"/></linearGradient>
-          </defs>
-          <rect width="1440" height="900" fill="url(#cert-cielo)"/>
-          <path d="M0 520 280 300 520 500 760 250 1040 490 1240 320 1440 470V900H0Z" fill="url(#cert-montana-1)"/>
-          <path d="M0 620 230 450 430 580 680 390 930 580 1170 430 1440 590V900H0Z" fill="url(#cert-montana-2)"/>
-          <path d="M0 520 280 300 520 500 760 250 1040 490 1240 320 1440 470" fill="none" stroke="url(#cert-luz)" stroke-width="3"/>
-          <path d="M0 620 230 450 430 580 680 390 930 580 1170 430 1440 590" fill="none" stroke="#8fa6d8" stroke-width="1" opacity=".25"/>
-        </svg>
+      <div class="seccion__fondo" aria-hidden="true">
+        <div class="olas-mar">
+          <svg class="ola-mar ola-mar--1" viewBox="0 0 2400 320" preserveAspectRatio="none" focusable="false">
+            <defs>
+              <linearGradient id="mar-onda-1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0e2a4a" stop-opacity=".5"/>
+                <stop offset="100%" stop-color="#081424" stop-opacity=".85"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 130 C300 70 500 200 600 135 C700 70 900 200 1200 130 C1500 70 1700 200 1800 135 C1900 70 2100 200 2400 130 L2400 320 L0 320 Z" fill="url(#mar-onda-1)"/>
+          </svg>
+          <svg class="ola-mar ola-mar--2" viewBox="0 0 2400 320" preserveAspectRatio="none" focusable="false">
+            <defs>
+              <linearGradient id="mar-onda-2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#154170" stop-opacity=".42"/>
+                <stop offset="100%" stop-color="#0b1e38" stop-opacity=".8"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 165 C250 105 420 225 600 165 C780 105 950 225 1200 165 C1450 105 1620 225 1800 165 C1980 105 2150 225 2400 165 L2400 320 L0 320 Z" fill="url(#mar-onda-2)" stroke="#2d7ecc" stroke-width="1.2" stroke-opacity=".5"/>
+          </svg>
+          <svg class="ola-mar ola-mar--3" viewBox="0 0 2400 320" preserveAspectRatio="none" focusable="false">
+            <defs>
+              <linearGradient id="mar-onda-3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#205c9a" stop-opacity=".32"/>
+                <stop offset="100%" stop-color="#0f284a" stop-opacity=".75"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 200 C320 150 480 250 600 200 C720 150 880 250 1200 200 C1520 150 1680 250 1800 200 C1920 150 2080 250 2400 200 L2400 320 L0 320 Z" fill="url(#mar-onda-3)" stroke="#58aee8" stroke-width="1.4" stroke-opacity=".55"/>
+          </svg>
+        </div>
       </div>
 
       <header class="seccion__cabecera revelar">
@@ -659,7 +687,7 @@
           <svg class="icono" aria-hidden="true"><use href="#icono-premio"/></svg>
           03 / Formación
         </p>
-        <h2 class="seccion__titulo" id="certificaciones-titulo">Certificaciones</h2>
+        <h2 class="seccion__titulo" id="certificaciones-titulo"><svg class="certificaciones__emblema" aria-hidden="true"><use href="#icono-apple"/></svg>Certificaciones</h2>
         <p class="seccion__subtitulo">Cursos y programas que complementan mi formación.</p>
       </header>
 
@@ -676,25 +704,7 @@
 
         <ul class="certificaciones">
           <li class="certificacion" data-categoria="datos-ia">
-            <span class="certificacion__doc" aria-hidden="true"><span class="certificacion__sello"></span></span>
-            <div class="certificacion__cuerpo">
-              <h3 class="certificacion__titulo">GCI World April 2026: Fundamental Theories and Implementations of Data Science</h3>
-              <p class="certificacion__emisor">GCI World, Matsuo-Iwasawa Lab, Universidad de Tokio, <time datetime="2026-08">agosto de 2026</time></p>
-              <a class="certificacion__enlace" href="assets/certificados/gci-world-2026.webp" data-certificado aria-labelledby="accion-cert-gci titulo-cert-gci"><span id="accion-cert-gci">Ver certificado</span><svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg></a>
-              <h4 class="sr-only" id="titulo-cert-gci">GCI World April 2026: Fundamental Theories and Implementations of Data Science</h4>
-            </div>
-          </li>
-          <li class="certificacion" data-categoria="programacion">
-            <span class="certificacion__doc" aria-hidden="true"><span class="certificacion__sello"></span></span>
-            <div class="certificacion__cuerpo">
-              <h3 class="certificacion__titulo">Curso de Supabase. Backend as a Service (BaaS) desde cero</h3>
-              <p class="certificacion__emisor">Udemy, <time datetime="2026-06">junio de 2026</time>, 6 horas</p>
-              <a class="certificacion__enlace" href="assets/certificados/supabase-baas.webp" data-certificado aria-labelledby="accion-cert-supabase titulo-cert-supabase"><span id="accion-cert-supabase">Ver certificado</span><svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg></a>
-              <h4 class="sr-only" id="titulo-cert-supabase">Curso de Supabase. Backend as a Service (BaaS) desde cero</h4>
-            </div>
-          </li>
-          <li class="certificacion" data-categoria="datos-ia">
-            <span class="certificacion__doc" aria-hidden="true"><span class="certificacion__sello"></span></span>
+            <svg class="certificacion__doc" aria-hidden="true"><use href="#icono-documento-finder"/></svg>
             <div class="certificacion__cuerpo">
               <h3 class="certificacion__titulo">AI Literacy</h3>
               <p class="certificacion__emisor">IBM SkillsBuild, <time datetime="2026-03">marzo de 2026</time></p>
@@ -702,26 +712,17 @@
               <h4 class="sr-only" id="titulo-cert-ibm">AI Literacy</h4>
             </div>
           </li>
-          <li class="certificacion" data-categoria="datos-ia">
-            <span class="certificacion__doc" aria-hidden="true"><span class="certificacion__sello"></span></span>
+          <li class="certificacion" data-categoria="programacion">
+            <svg class="certificacion__doc" aria-hidden="true"><use href="#icono-documento-finder"/></svg>
             <div class="certificacion__cuerpo">
-              <h3 class="certificacion__titulo">On-Chain Analysis for Beginners</h3>
-              <p class="certificacion__emisor">Binance Academy, <time datetime="2026-03">marzo de 2026</time></p>
-              <a class="certificacion__enlace" href="assets/certificados/binance-on-chain.webp" data-certificado aria-labelledby="accion-cert-binance titulo-cert-binance"><span id="accion-cert-binance">Ver certificado</span><svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg></a>
-              <h4 class="sr-only" id="titulo-cert-binance">On-Chain Analysis for Beginners</h4>
-            </div>
-          </li>
-          <li class="certificacion" data-categoria="datos-ia">
-            <span class="certificacion__doc" aria-hidden="true"><span class="certificacion__sello"></span></span>
-            <div class="certificacion__cuerpo">
-              <h3 class="certificacion__titulo">Análisis de Datos Nivel Intermedio</h3>
-              <p class="certificacion__emisor">Bootcamp, Ministerio TIC y Universidad Tecnológica de Bolívar, <time datetime="2025-12">diciembre de 2025</time>, 159 horas</p>
-              <a class="certificacion__enlace" href="assets/certificados/certificado-analisis-de-datos.webp" data-certificado aria-labelledby="accion-cert-datos titulo-cert-datos"><span id="accion-cert-datos">Ver certificado</span><svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg></a>
-              <h4 class="sr-only" id="titulo-cert-datos">Análisis de Datos Nivel Intermedio</h4>
+              <h3 class="certificacion__titulo">Curso de Supabase. Backend as a Service (BaaS) desde cero</h3>
+              <p class="certificacion__emisor">Udemy, <time datetime="2026-06">junio de 2026</time>, 6 horas</p>
+              <a class="certificacion__enlace" href="assets/certificados/supabase-baas.webp" data-certificado aria-labelledby="accion-cert-supabase titulo-cert-supabase"><span id="accion-cert-supabase">Ver certificado</span><svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg></a>
+              <h4 class="sr-only" id="titulo-cert-supabase">Curso de Supabase. Backend as a Service (BaaS) desde cero</h4>
             </div>
           </li>
           <li class="certificacion" data-categoria="programacion">
-            <span class="certificacion__doc" aria-hidden="true"><span class="certificacion__sello"></span></span>
+            <svg class="certificacion__doc" aria-hidden="true"><use href="#icono-documento-finder"/></svg>
             <div class="certificacion__cuerpo">
               <h3 class="certificacion__titulo">Programación Nivel Intermedio</h3>
               <p class="certificacion__emisor">Bootcamp, Ministerio TIC y Universidad Tecnológica de Bolívar, <time datetime="2025-06">junio de 2025</time>, 159 horas</p>
@@ -729,30 +730,41 @@
               <h4 class="sr-only" id="titulo-cert-programacion">Programación Nivel Intermedio</h4>
             </div>
           </li>
+          <li class="certificacion" data-categoria="datos-ia">
+            <svg class="certificacion__doc" aria-hidden="true"><use href="#icono-documento-finder"/></svg>
+            <div class="certificacion__cuerpo">
+              <h3 class="certificacion__titulo">Análisis de Datos Nivel Intermedio</h3>
+              <p class="certificacion__emisor">Bootcamp, Ministerio TIC y Universidad Tecnológica de Bolívar, <time datetime="2025-12">diciembre de 2025</time>, 159 horas</p>
+              <a class="certificacion__enlace" href="assets/certificados/certificado-analisis-de-datos.webp" data-certificado aria-labelledby="accion-cert-datos titulo-cert-datos"><span id="accion-cert-datos">Ver certificado</span><svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg></a>
+              <h4 class="sr-only" id="titulo-cert-datos">Análisis de Datos Nivel Intermedio</h4>
+            </div>
+          </li>
+          <li class="certificacion" data-categoria="datos-ia">
+            <svg class="certificacion__doc" aria-hidden="true"><use href="#icono-documento-finder"/></svg>
+            <div class="certificacion__cuerpo">
+              <h3 class="certificacion__titulo">GCI World April 2026: Fundamental Theories and Implementations of Data Science</h3>
+              <p class="certificacion__emisor">GCI World, Matsuo-Iwasawa Lab, Universidad de Tokio, <time datetime="2026-08">agosto de 2026</time></p>
+              <a class="certificacion__enlace" href="assets/certificados/gci-world-2026.webp" data-certificado aria-labelledby="accion-cert-gci titulo-cert-gci"><span id="accion-cert-gci">Ver certificado</span><svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg></a>
+              <h4 class="sr-only" id="titulo-cert-gci">GCI World April 2026: Fundamental Theories and Implementations of Data Science</h4>
+            </div>
+          </li>
+          <li class="certificacion" data-categoria="datos-ia">
+            <svg class="certificacion__doc" aria-hidden="true"><use href="#icono-documento-finder"/></svg>
+            <div class="certificacion__cuerpo">
+              <h3 class="certificacion__titulo">On-Chain Analysis for Beginners</h3>
+              <p class="certificacion__emisor">Binance Academy, <time datetime="2026-03">marzo de 2026</time></p>
+              <a class="certificacion__enlace" href="assets/certificados/binance-on-chain.webp" data-certificado aria-labelledby="accion-cert-binance titulo-cert-binance"><span id="accion-cert-binance">Ver certificado</span><svg class="icono" aria-hidden="true"><use href="#icono-externo"/></svg></a>
+              <h4 class="sr-only" id="titulo-cert-binance">On-Chain Analysis for Beginners</h4>
+            </div>
+          </li>
         </ul>
         <p id="filtro-estado" class="sr-only" role="status" aria-live="polite">6 certificaciones</p>
       </div>
+      <a class="certificaciones__continuar" href="#contacto">Seguir a contacto <svg class="icono" aria-hidden="true"><use href="#icono-flecha"/></svg></a>
     </section>
 
     <section class="seccion seccion--contacto" id="contacto" aria-labelledby="contacto-titulo">
-      <div class="seccion__fondo ondas" aria-hidden="true">
-        <svg viewBox="0 0 1440 620" preserveAspectRatio="xMidYMid slice" focusable="false" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="cont-azul" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0b3c8c" stop-opacity=".1"/><stop offset=".45" stop-color="#0d5bd7" stop-opacity=".65"/><stop offset="1" stop-color="#0a2d74" stop-opacity=".1"/></linearGradient>
-            <linearGradient id="cont-violeta" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#3d1650" stop-opacity=".1"/><stop offset=".55" stop-color="#7b2b66" stop-opacity=".6"/><stop offset="1" stop-color="#36123f" stop-opacity=".1"/></linearGradient>
-            <linearGradient id="cont-coral" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5b2038" stop-opacity=".1"/><stop offset=".5" stop-color="#e06a6a" stop-opacity=".65"/><stop offset="1" stop-color="#7d3044" stop-opacity=".1"/></linearGradient>
-          </defs>
-          <path d="M-80 520C180 420 330 560 580 470c250-90 360-30 560-80 150-38 260-120 380-170v480H-80Z" fill="url(#cont-azul)"/>
-          <path d="M-60 600C220 500 420 620 680 520c220-85 330-40 520-95 100-28 200-85 300-125v360H-60Z" fill="url(#cont-violeta)"/>
-          <path d="M-40 650C260 560 470 660 740 560c220-82 330-45 520-100 80-22 160-65 240-100v300H-40Z" fill="url(#cont-coral)"/>
-          <g fill="none" stroke="#f06464" stroke-width="2.2" opacity=".55">
-            <path d="M220 620c80-170 230-250 390-235 160 15 250 120 370 90"/>
-            <path d="M690 560c-40-140 60-260 190-300 120-38 230 8 300 78"/>
-          </g>
-          <circle cx="610" cy="385" r="18" fill="#0b1220" stroke="#f06464" stroke-width="2.5"/>
-          <circle cx="1010" cy="360" r="22" fill="#0b1220" stroke="#f06464" stroke-width="2.5"/>
-        </svg>
-      </div>
+      <div class="seccion__fondo" aria-hidden="true"></div>
 
       <div class="contacto__grid">
         <div class="contacto__texto revelar">
@@ -762,7 +774,7 @@
           </p>
           <h2 class="seccion__titulo" id="contacto-titulo">¿Hablamos?</h2>
           <p class="contacto__intro">Busco prácticas y oportunidades para aportar, aprender y seguir desarrollando software.</p>
-          <p class="hero__disponibilidad"><span class="hero__disponibilidad-punto" aria-hidden="true"></span>Disponible para prácticas</p>
+          <p class="contacto__disponibilidad"><span class="hero__disponibilidad-punto" aria-hidden="true"></span>Disponible para prácticas</p>
           <p class="contacto__gracias">Gracias por conocer mi trabajo.</p>
         </div>
 
@@ -773,7 +785,7 @@
             <svg class="contacto__flecha" aria-hidden="true"><use href="#icono-externo"/></svg>
           </a>
           <a class="contacto__item" href="https://www.linkedin.com/in/jesus-david-velasquez-mercado-dev" target="_blank" rel="noopener noreferrer">
-            <svg class="contacto__icono" aria-hidden="true"><use href="#icono-linkedin"/></svg>
+            <svg class="contacto__icono" aria-hidden="true"><use href="#icono-linkedin-trazo"/></svg>
             <span class="contacto__etiqueta"><strong>LinkedIn</strong><span>Conoce mi perfil profesional</span></span>
             <svg class="contacto__flecha" aria-hidden="true"><use href="#icono-externo"/></svg>
             <span class="sr-only"> (abre en una pestaña nueva)</span>

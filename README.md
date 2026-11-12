@@ -42,6 +42,7 @@ app.js                     Tema, navegación, filtros, revelado y visor de certi
 assets/fonts/              Inter y JetBrains Mono en WOFF2 + licencias OFL
 assets/certificados/       Seis certificados reales en WebP
 assets/proyectos/          Portada real de SIPIIT
+assets/fondos/             Fondos WebP derivados de las guias HTML del dueno
 docs/diseno.md             Brief y decisiones de diseño
 docs/referencias/          Imágenes del dueño (locales, ignoradas por Git)
 docs/codigoshtml/          Código de apoyo del dueño (local, ignorado por Git)

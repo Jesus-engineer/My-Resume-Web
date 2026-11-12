@@ -53,7 +53,7 @@ historia: quién soy, qué construyo, qué me respalda y cómo hablar conmigo.
 - Subtítulo: `Me enfoco en desarrollo backend con Python, SQL y APIs. También construyo interfaces con React y sigo aprendiendo con cada proyecto.`
 - Badge de disponibilidad: punto verde + `Disponible para prácticas`.
 - Botones: `Ver proyectos ↗` (azul sólido, ancla a #proyectos) y `Descargar CV` (contorno, abre el diálogo de impresión para guardar PDF; no existe un PDF público, no se inventa archivo).
-- Tarjeta de perfil a la derecha: foto real `assets/foto.webp` en formato 4:5, sin filtros, con pie `Jesús David` y `Estudiante de Ingeniería de Sistemas`.
+- Tarjeta de perfil a la derecha: foto real `assets/foto.webp` en formato 4:5, sin filtros, con retrato limpio y encuadre compacto (máximo 15.5rem en escritorio, 14rem en tablet y 12rem en móvil) para que no compita con el nombre.
 - Bloque inferior `Herramientas y entornos`:
   - Tecnologías: `Python`, `SQL`, `React`.
   - Sistemas operativos: `Linux`, `Windows`, `macOS`.
@@ -77,9 +77,9 @@ Tarjeta destacada (ancho completo, texto izquierda ~45 %, maqueta derecha ~55 %)
 
 Fila de tres tarjetas secundarias, separadas por líneas verticales como en la referencia:
 
-1. **SIPIIT** (real, `Terminado`): título completo `Intelligent IT Incident Prioritization System (SIPIIT)`, fechas reales febrero-mayo de 2026, descripción real de `content.md`, chips `Flutter`, `Dart`, `Git`, portada real `assets/proyectos/sipiit-portada.webp` y enlace `Ver repositorio ↗` con URL real de GitHub.
-2. **Finanzas personales** (`En progreso`): `Registro de ingresos y gastos.`, chips `Flutter`, `Dart`. Sin botón: no hay repositorio. Maqueta decorativa con panel `Mis finanzas`, tarjetas `Ingresos` (verde) y `Gastos` (rojo) y gráfico de barras.
-3. **StudyPlanner** (`En progreso`): `Organización de tareas y seguimiento de estudio.`, chip `Java`. Sin botón: no hay repositorio. Maqueta decorativa con panel `Mis tareas` y tres tareas con píldoras de color.
+1. **SIPIIT** (real, `Terminado`): título completo `Intelligent IT Incident Prioritization System (SIPIIT)`, fechas reales febrero-mayo de 2026, descripción real de `content.md`, chips `Flutter`, `Dart`, `Git`, portada real `assets/proyectos/sipiit-portada.webp` completa sin recortes y enlace `Ver repositorio ↗` con URL real de GitHub.
+2. **GyR Barber** (`En progreso`): `Gestión de reservas, citas y servicios para barbería.`, chips `React`, `Python`, `Supabase`, `PostgreSQL`, `Tailwind CSS`. Sin botón: proyecto en desarrollo. Maqueta decorativa con panel `Citas de hoy` y horarios de atención.
+3. **Próximo proyecto** (`En progreso`): `Desarrollando una nueva aplicación en progreso para seguir practicando arquitectura backend, APIs e interfaces modernas.`, chips `Python`, `SQL`, `React`. Maqueta decorativa con panel `En construcción` y etapas de avance.
 
 La referencia 02 muestra tres proyectos y no incluye SIPIIT; se conserva SIPIIT
 porque es el único proyecto con repositorio real. Las maquetas son ilustraciones
@@ -106,30 +106,31 @@ los diseñó el dueño.
 
 ### 03 / Formación (`#certificaciones`) — acento coral
 
-- Etiqueta: `03 / FORMACIÓN` con icono de premio.
+- Etiqueta: `03 / FORMACIÓN` con acento coral; emblema plateado decorativo junto al titulo.
 - Titular: `Certificaciones`.
 - Subtítulo: `Cursos y programas que complementan mi formación.`
 - Ventana tipo Finder con barra de tres puntos, título `Mi formación` y filtros `Todos`, `Programación`, `Datos e IA`.
 - Seis certificaciones reales en grilla de tres columnas (dos filas), con icono de documento, título completo, emisor y enlace `Ver certificado ↗` que abre el visor accesible existente.
 - Los filtros son una mejora progresiva: sin JavaScript se muestran las seis.
-- Fondo: montañas y resplandor coral inspirados en la referencia 04.
+- Fondo: paisaje costero de la guia HTML optimizado a WebP, con velo de contraste.
 
 La referencia 04 usa la marca de Apple y un certificado de "Habilidades de
-Investigación" que no existe en `content.md`. No se copia la marca ni se inventa
-el certificado: se mantienen los seis documentos reales.
+Investigación" que no existe en `content.md`. Se toma el emblema decorativo
+de la guia para respetar el diseno, pero no se inventa el certificado: se
+mantienen los seis documentos reales.
 
 ### 04 / Contacto (`#contacto`) — acento azul, dos columnas
 
 - Etiqueta: `04 / CONTACTO`.
 - Titular: `¿Hablamos?`.
 - Subtítulo: `Busco prácticas y oportunidades para aportar, aprender y seguir desarrollando software.`
-- Badge de disponibilidad: `Disponible para prácticas`.
+- Disponibilidad: punto verde y texto plano `Disponible para prácticas`.
 - Cierre: `Gracias por conocer mi trabajo.`
 - Columna derecha, tres filas con icono y flecha:
   1. `Correo` — `Escríbeme directamente` — `mailto:` real.
   2. `LinkedIn` — `Conoce mi perfil profesional` — URL real.
   3. `GitHub` — `Explora mis repositorios` — URL real.
-- Fondo: ondas azul, violeta y coral con órbitas naranjas en la parte inferior.
+- Fondo: ondas azul, violeta y coral con orbitas naranjas, extraidas del HTML de guia y optimizadas a WebP.
 
 ### Pie de página
 
@@ -183,9 +184,9 @@ velo de contraste y los resplandores evitan las crestas más luminosas.
 - Hero: SVG de 1536 × 1024 con cintas azules, órbitas naranjas, ladera violeta y ondas coral; velo oscuro de izquierda a derecha.
 - Proyectos: cintas azules 3D en la esquina superior derecha.
 - Sobre mí: facetas vino/coral/violeta y pingüino Ubuntu.
-- Formación: montañas azuladas con cresta coral.
-- Contacto: ondas azul, violeta y coral con órbitas naranjas.
-- Implementación: SVG inline con degradados, `aria-hidden`, `pointer-events: none`, animación lenta de deriva y opacidad reducida en tema claro.
+- Formación: costa al atardecer en `assets/fondos/certificaciones.webp`.
+- Contacto: ondas azul, violeta y coral en `assets/fondos/contacto.webp`.
+- Implementación: Hero, Proyectos y Sobre mi conservan sus SVG; Formación y Contacto usan los fondos de las guias HTML convertidos a WebP, con velo para proteger la lectura. Ninguna imagen privada de `docs/referencias/` se publica.
 
 ## 5. Tipografía
 
@@ -200,7 +201,7 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 
 ## 6. Componentes
 
-- **Layout full-bleed:** sin `max-width` de 75 rem. Todas las secciones usan `padding-inline: clamp(1.25rem, 4.5vw, 4.5rem)`. Se conserva la corrección de ancho pedida por el dueño.
+- **Layout full-bleed:** sin `max-width` de 75 rem. El padding general es `clamp(1.25rem, 4.5vw, 4.5rem)`; Formación y Contacto usan un margen lateral mayor en escritorio para coincidir con las referencias.
 - **Hero:** dos columnas por encima de 1023 px (texto flexible + tarjeta de perfil de 20.5 rem); una columna desde 1023 px, con la tarjeta alineada a la izquierda y un máximo de 18 rem.
 - **Grillas:** proyectos 3 columnas en escritorio, 2 en tablet y 1 en móvil; certificaciones 3/2/1; entornos 3/2/1. Los párrafos conservan su ancho de lectura.
 - **Botón primario:** relleno azul con degradado, radio ~10 px, texto blanco, flecha `↗`.
@@ -234,7 +235,7 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 - **Certificaciones con nombres completos reales** de `content.md`, no los abreviados de la referencia.
 - **h1 = nombre completo en el hero**, como en la referencia 01; el `title`, el JSON-LD, la tarjeta de perfil y el pie conservan el nombre.
 - **Foto real:** la referencia 01 muestra un marco vacío; el sitio usa `assets/foto.webp`, que es la foto aprobada en `content.md`.
-- **Sin marca de Apple:** la referencia 04 usa el logo de Apple; el sitio usa un icono genérico de premio.
+- **Emblema plateado:** se usa la silueta decorativa junto a Certificaciones para seguir la referencia 04; los certificados y sus enlaces siguen siendo reales.
 - **Sin enlaces inventados:** los botones y filas de contacto usan las URLs reales de `content.md`.
 
 ## 9. Verificación de la dirección

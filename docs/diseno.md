@@ -52,7 +52,7 @@ historia: quién soy, qué construyo, qué me respalda y cómo hablar conmigo.
 - Titular: `Jesús David` y `Velásquez Mercado`, en dos líneas. Es el único `h1`.
 - Subtítulo: `Me enfoco en desarrollo backend con Python, SQL y APIs. También construyo interfaces con React y sigo aprendiendo con cada proyecto.`
 - Badge de disponibilidad: punto verde + `Disponible para prácticas`.
-- Botones: `Ver proyectos ↗` (azul sólido, ancla a #proyectos) y `Descargar CV` (contorno, abre el diálogo de impresión para guardar PDF; no existe un PDF público, no se inventa archivo).
+- Botones: `Ver proyectos ↗` (azul sólido, ancla a #proyectos) y `Descargar CV` (contorno, descarga directa de `assets/cv-jesus-velasquez.pdf` en formato ATS de 1 página).
 - Tarjeta de perfil a la derecha: foto real `assets/foto.webp` en formato 4:5, sin filtros, con retrato limpio y encuadre compacto (máximo 15.5rem en escritorio, 14rem en tablet y 12rem en móvil) para que no compita con el nombre.
 - Bloque inferior `Herramientas y entornos`:
   - Tecnologías: `Python`, `SQL`, `React`.
@@ -230,7 +230,7 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 - **Sin botón en Savio AI:** no existe repositorio ni demo públicos de la investigación.
 - **Sin botones en GyR Barber y Próximo proyecto:** son desarrollos en progreso del dueño; se muestran con badge `En progreso` y maqueta decorativa.
 - **SIPIIT con datos y URL reales:** es el único proyecto con repositorio público; conserva su portada real.
-- **`Descargar CV` abre el diálogo de impresión:** no existe PDF público que descargar.
+- **`Descargar CV` descarga `assets/cv-jesus-velasquez.pdf`:** PDF ATS de 1 página generado solo con los datos públicos aprobados.
 - **Entornos como aprendizaje:** Linux, macOS y Windows se presentan como exploración, no como experiencia verificada.
 - **Certificaciones con nombres completos reales** de `content.md`, no los abreviados de la referencia.
 - **h1 = nombre completo en el hero**, como en la referencia 01; el `title`, el JSON-LD, la tarjeta de perfil y el pie conservan el nombre.

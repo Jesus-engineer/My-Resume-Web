@@ -1,6 +1,6 @@
 // Interacciones del sitio: tema, cabecera, menu movil, navegacion activa,
-// impresion del CV, filtros de certificaciones, revelado por scroll y visor
-// accesible de certificados. Sin dependencias.
+// filtros de certificaciones, revelado por scroll y visor accesible de
+// certificados. Sin dependencias.
 
 const raiz = document.documentElement;
 const cabecera = document.querySelector('#cabecera');
@@ -35,13 +35,6 @@ if (botonTema) {
 }
 
 actualizarBotonTema();
-
-/* ---------- Descargar CV: dialogo de impresion del navegador ---------- */
-
-const botonCv = document.querySelector('.boton-cv');
-if (botonCv) {
-  botonCv.addEventListener('click', () => window.print());
-}
 
 /* ---------- Cabecera compacta al hacer scroll ---------- */
 

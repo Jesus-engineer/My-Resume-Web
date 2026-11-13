@@ -33,17 +33,28 @@ python -m http.server 8765
 
 Luego visita `http://127.0.0.1:8765/`.
 
+### Deck de presentación (independiente)
+
+El sitio incluye una presentación independiente construida con **Reveal.js**
+(MIT, vendorizado en `vendor/reveal/`) sin enlace desde `index.html`:
+
+- Abrir directamente: `deck/index.html` (o `/deck/` en GitHub Pages).
+- Exportar a PDF: añadir `?print-pdf` (`deck/index.html?print-pdf`) y usar la
+  opción de imprimir/guardar como PDF del navegador.
+
 ## Estructura
 
 ```text
 index.html                 Página única con las cinco secciones
 styles.css                 Sistema visual, responsive, temas e impresión A4
 app.js                     Tema, navegación, filtros, revelado y visor de certificados
+deck/                      Presentación independiente con Reveal.js (?print-pdf)
+vendor/reveal/             Reveal.js 6.0.2 vendorizado localmente (licencia MIT)
 assets/fonts/              Inter y JetBrains Mono en WOFF2 + licencias OFL
 assets/certificados/       Seis certificados reales en WebP
 assets/proyectos/          Portada real de SIPIIT
-assets/fondos/             Fondos WebP derivados de las guias HTML del dueno
-docs/diseno.md             Brief y decisiones de diseño
+assets/fondos/             Fondos WebP derivados de las guías HTML del dueño
+docs/diseno.md             Brief, decisiones finales y pendientes para merge a main
 docs/referencias/          Imágenes del dueño (locales, ignoradas por Git)
 docs/codigoshtml/          Código de apoyo del dueño (local, ignorado por Git)
 ```
@@ -62,12 +73,16 @@ exacta en el HTML, para que funcionen igual en Windows, Linux y GitHub Pages.
 - Verificación manual: abrir `index.html`, revisar la consola y recorrer las cinco
   anclas.
 
-Evidencia de la última revisión (2026-11-11):
+Evidencia de la última revisión y handoff (2026-11-12):
 
-- Lighthouse: performance 98, accessibility 100, best practices 100, SEO 100.
-- axe: 0 violaciones en oscuro 1440/390 y claro 1440.
-- Sin desborde horizontal entre 360 y 1920 px.
-- Impresión A4 en 3 páginas con las seis certificaciones y las URLs de contacto.
+- Paridad visual validada en las cinco secciones (incluidos los fondos WebP de Certificaciones y Contacto en `assets/fondos/`).
+- Sin errores de consola ni respuestas HTTP `>= 400` en `index.html` y `deck/index.html`.
+- Sin desborde horizontal en `360`, `390`, `768`, `1023`, `1024`, `1440` y `1920` px.
+- Filtros de certificaciones (`Todos`: 6, `Programación`: 2, `Datos e IA`: 4) y enlaces externos verificados.
+- Deck Reveal.js (7 diapositivas) verificado en HTTP, `file://` y exportación `?print-pdf`.
+- Revisión previa (2026-11-11): Lighthouse 98/100/100/100, axe 0 violaciones e impresión A4 en 3 páginas.
+
+El detalle de decisiones y pendientes previos al merge a `main` está en `docs/diseno.md`.
 
 ## Contenido y privacidad
 

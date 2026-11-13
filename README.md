@@ -100,6 +100,7 @@ certificados, capturas ni métricas inventadas.
 
 - Sitio previsto: https://jesus-engineer.github.io/My-Resume-Web/
 - Backlog (issues y milestones): https://github.com/Jesus-engineer/My-Resume-Web/issues y https://github.com/Jesus-engineer/My-Resume-Web/milestones
+- Backlog (issues y milestones): https://github.com/Jesus-engineer/My-Resume-Web/issues y https://github.com/Jesus-engineer/My-Resume-Web/milestones
 - GitHub: https://github.com/Jesus-engineer
 - LinkedIn: https://www.linkedin.com/in/jesus-david-velasquez-mercado-dev
 

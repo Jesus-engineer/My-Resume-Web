@@ -1,10 +1,14 @@
 # My-Resume-Web
 
-Hoja de vida personal de **Jesús David Velásquez Mercado**, estudiante de
-Ingeniería de Sistemas en la Universidad Tecnológica de Bolívar. El sitio presenta
-su perfil backend, los proyectos en los que trabaja, sus certificaciones y sus
-canales de contacto. Está pensado para reclutadores técnicos y líderes de
-ingeniería que revisan el perfil en menos de un minuto.
+Esta es mi hoja de vida web. Me llamo **Jesús David Velásquez Mercado**, soy
+estudiante de Ingeniería de Sistemas en la Universidad Tecnológica de Bolívar y
+me enfoco en desarrollo backend con Python, SQL y APIs, además de construir
+interfaces con React.
+
+En este sitio presento mi perfil técnico, los proyectos en los que trabajo, mis
+certificaciones y mis canales de contacto. Lo diseñé para que reclutadores
+técnicos y líderes de ingeniería puedan revisar mi trayectoria en menos de un
+minuto.
 
 ## Stack
 
@@ -16,7 +20,7 @@ ingeniería que revisan el perfil en menos de un minuto.
 
 ## Cómo abrirlo
 
-Abre `index.html` directamente en el navegador. También puedes usar un servidor
+Puedes abrir `index.html` directamente en el navegador o levantar un servidor
 local para probar rutas y fuentes con el mismo origen:
 
 ```bash
@@ -35,8 +39,9 @@ Luego visita `http://127.0.0.1:8765/`.
 
 ### Deck de presentación (independiente)
 
-El sitio incluye una presentación independiente construida con **Reveal.js**
-(MIT, vendorizado en `vendor/reveal/`) sin enlace desde `index.html`:
+El repositorio también incluye una presentación independiente construida con
+**Reveal.js** (MIT, vendorizado en `vendor/reveal/`) sin enlace desde
+`index.html`:
 
 - Abrir directamente: `deck/index.html` (o `/deck/` en GitHub Pages).
 - Exportar a PDF: añadir `?print-pdf` (`deck/index.html?print-pdf`) y usar la
@@ -53,10 +58,10 @@ vendor/reveal/             Reveal.js 6.0.2 vendorizado localmente (licencia MIT)
 assets/fonts/              Inter y JetBrains Mono en WOFF2 + licencias OFL
 assets/certificados/       Seis certificados reales en WebP
 assets/proyectos/          Portada real de SIPIIT
-assets/fondos/             Fondos WebP derivados de las guías HTML del dueño
+assets/fondos/             Fondos WebP derivados de mis guías HTML
 docs/diseno.md             Brief, decisiones finales y pendientes para merge a main
-docs/referencias/          Imágenes del dueño (locales, ignoradas por Git)
-docs/codigoshtml/          Código de apoyo del dueño (local, ignorado por Git)
+docs/referencias/          Mis imágenes de referencia (locales, ignoradas por Git)
+docs/codigoshtml/          Código de apoyo local (ignorado por Git)
 ```
 
 Las rutas son relativas y los nombres de archivo van en minúsculas, con la grafía
@@ -86,15 +91,17 @@ El detalle de decisiones y pendientes previos al merge a `main` está en `docs/d
 
 ## Contenido y privacidad
 
-`content.md` es la fuente local de datos reales y no se publica. Las imágenes de
+`content.md` es mi fuente local de datos reales y no se publica. Las imágenes de
 `docs/referencias/`, el código de `docs/codigoshtml/`, `AGENTS.md`, `content.md`,
-`foto_950kb.jpg` y `Profile*.pdf` están ignorados por Git. No se inventan enlaces,
-certificados, capturas ni métricas.
+`foto_950kb.jpg` y `Profile*.pdf` están ignorados por Git. No incluyo enlaces,
+certificados, capturas ni métricas inventadas.
 
-## URLs
+## Enlaces y backlog
 
 - Sitio previsto: https://jesus-engineer.github.io/My-Resume-Web/
+- Backlog (issues y milestones): https://github.com/Jesus-engineer/My-Resume-Web/issues y https://github.com/Jesus-engineer/My-Resume-Web/milestones
+- Backlog (issues y milestones): https://github.com/Jesus-engineer/My-Resume-Web/issues y https://github.com/Jesus-engineer/My-Resume-Web/milestones
 - GitHub: https://github.com/Jesus-engineer
 - LinkedIn: https://www.linkedin.com/in/jesus-david-velasquez-mercado-dev
 
-El push y el merge a `main` los hace el dueño del repositorio.
+El push y el merge a `main` los gestiono directamente como dueño del repositorio.

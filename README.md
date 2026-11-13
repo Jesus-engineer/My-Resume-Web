@@ -59,6 +59,7 @@ assets/fonts/              Inter y JetBrains Mono en WOFF2 + licencias OFL
 assets/certificados/       Seis certificados reales en WebP
 assets/proyectos/          Portada real de SIPIIT
 assets/fondos/             Fondos WebP derivados de mis guías HTML
+assets/cv-jesus-velasquez.pdf  Hoja de vida ATS de 1 página en PDF para descarga directa
 docs/diseno.md             Brief, decisiones finales y pendientes para merge a main
 docs/referencias/          Mis imágenes de referencia (locales, ignoradas por Git)
 docs/codigoshtml/          Código de apoyo local (ignorado por Git)

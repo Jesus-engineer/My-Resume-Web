@@ -228,7 +228,7 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 ## 8. Decisiones de integridad
 
 - **Sin botón en Savio AI:** no existe repositorio ni demo públicos de la investigación.
-- **Sin botones en Finanzas personales y StudyPlanner:** son ideas en desarrollo del dueño; se muestran con badge `En progreso` y maqueta decorativa.
+- **Sin botones en GyR Barber y Próximo proyecto:** son desarrollos en progreso del dueño; se muestran con badge `En progreso` y maqueta decorativa.
 - **SIPIIT con datos y URL reales:** es el único proyecto con repositorio público; conserva su portada real.
 - **`Descargar CV` abre el diálogo de impresión:** no existe PDF público que descargar.
 - **Entornos como aprendizaje:** Linux, macOS y Windows se presentan como exploración, no como experiencia verificada.
@@ -249,7 +249,7 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 - [x] Impresión A4 sin ondas, navegación, maquetas ni botones.
 - [x] Sin contenido inventado: todo texto sale de `content.md` o de las imágenes del dueño.
 - [x] Tema claro alternativo funcional.
-- [ ] Aprobación visual del dueño contra las cinco referencias.
+- [x] Aprobación visual del dueño contra las cinco referencias (validado en D11 `#53` y revalidado en D9 `#50`).
 
 ## 10. Referencias
 
@@ -258,6 +258,7 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 - `bchiang7/v4` (MIT): superada por estas imágenes; su crédito se retira del pie y queda en el historial del repositorio.
 - Inter: OFL-1.1 (`github.com/rsms/inter`).
 - JetBrains Mono: OFL-1.1 (`github.com/JetBrains/JetBrainsMono`).
+- Reveal.js 6.0.2 (MIT): vendorizado localmente en `vendor/reveal/` para el deck independiente en `deck/` (`D10 #52`).
 - Skills: `frontend-design` (Apache 2.0), `ui-ux-pro-max` (MIT), `taste-skill`, `web-design`, `web-interface-guidelines` en `.claude/skills/`.
 
 ## 11. Alternativas descartadas
@@ -269,19 +270,17 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 
 ## 12. Estado de las tareas
 
+- D0 #41: cerrado (ideas del 2026-11-10 absorbidas en `8d9251e`, `7d75607`, `5c3b020` y `e34cce0` / `#53`).
 - D1 #42: cerrado.
-- D2 #43 a D7 #48: implementados en el sitio; se cierran con evidencia.
-- D8 #49: QA técnica completa; la comparación visual se absorbe en D11.
-- D11 #53: paridad estructural con las cinco referencias y capa de animaciones; es la tarea de cierre.
-- D9 #50: aprobación y handoff, después de D11.
-- D10 #52: deck con Reveal.js, independiente del sitio.
-- D0 #41: bandeja de ideas, abierta.
+- D2 #43 a D8 #49: cerrados con evidencia.
+- D11 #53: cerrado tras aprobación visual del dueño (`e34cce0`).
+- D10 #52: cerrado (deck independiente con Reveal.js en `deck/`, vendorizado en `vendor/reveal/`, con `?print-pdf`).
+- D9 #50: aprobación y handoff completados (restauración de `assets/fondos/*.webp`, verificación visual y documental).
 
-## 13. Pendientes
+## 13. Pendientes previos al merge a `main` y publicación
 
-- Aprobación visual del dueño sobre la implementación.
-- Capturas 360/390/768/1023/1024/1440/1920 en claro y oscuro, comparadas con las cinco referencias.
-- Evidencia técnica: axe 0 en oscuro 1440/390 y claro 1440; sin desborde 360-1920; impresión A4 en 3 páginas; Lighthouse 98/100/100/100.
-- Regenerar OG y favicon si la paleta final cambia.
+- Revisión final local del dueño sobre `index.html` y `deck/index.html`, `git push` de `desarrollador` y merge a `main`.
+- Épica E5 / E6: activar GitHub Pages en `main` / raíz (`#32`), verificación post-despliegue (`#33`) y cierre de tareas administrativas de repo (`#27`, `#30`, `#31`, opcionales `#34`, `#35`).
+- Versión en inglés del sitio (`E7-02`, fuera del alcance de Épica D).
 - Las cinco imágenes de referencia viven en `docs/referencias/`, están ignoradas por Git y no se publican.
 - `docs/codigoshtml/` está ignorado por Git y no se publica.

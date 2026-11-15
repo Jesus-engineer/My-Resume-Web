@@ -1,0 +1,17 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "attr-case": "off",
+    "attr-quotes": "off",
+    "attr-spacing": "off",
+    "attribute-boolean-style": "off",
+    "attribute-empty-style": "off",
+    "doctype-style": "off",
+    "element-case": "off",
+    "long-title": "off",
+    "no-inline-style": "off",
+    "no-self-closing": "off",
+    "no-trailing-whitespace": "off",
+    "void-style": "off"
+  }
+}

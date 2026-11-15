@@ -7,7 +7,10 @@
   "scripts": {
     "dev": "echo \"Abre index.html en tu navegador\"",
     "build": "echo \"No hay paso de build (sitio estático)\"",
-    "review:ui": "echo \"Revisa con las skills de .claude/skills\""
+    "review:ui": "echo \"Revisa con las skills de .claude/skills\"",
+    "validate:html": "html-validate index.html deck/index.html"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "html-validate": "^11.21.1"
+  }
 }

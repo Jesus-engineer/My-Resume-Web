@@ -78,6 +78,14 @@ exacta en el HTML, para que funcionen igual en Windows, Linux y GitHub Pages.
 - Impresión A4 sin ondas, navegación, maquetas ni botones.
 - Verificación manual: abrir `index.html`, revisar la consola y recorrer las cinco
   anclas.
+- Validación HTML en local (y en CI vía `.github/workflows/validate.yml` en
+  `push` a `main` y `pull_request`, usando reglas de `.htmlvalidate.json` para
+  detectar errores reales de HTML sin paso de build):
+
+```bash
+pnpm install
+pnpm run validate:html
+```
 
 Evidencia de la última revisión y handoff (2026-11-12):
 

@@ -27,3 +27,6 @@ docs/referencias/*
 
 # Codigo HTML de apoyo del dueno: solo local, no es parte del sitio
 docs/codigoshtml/
+
+# Capturas y galeria generadas por la auditoria visual local
+artifacts/ui/

@@ -1,4 +1,4 @@
-// Interacciones del sitio: tema, cabecera, menu movil, navegacion activa,
+// Interacciones del sitio: cabecera, menu movil, navegacion activa,
 // filtros de certificaciones, revelado por scroll y visor accesible de
 // certificados. Sin dependencias.
 
@@ -7,34 +7,6 @@ const cabecera = document.querySelector('#cabecera');
 const botonMenu = document.querySelector('.cabecera__menu');
 const navegacion = document.querySelector('#navegacion');
 const enlacesNav = [...document.querySelectorAll('.cabecera__enlace')];
-
-/* ---------- Tema oscuro canonico / claro alternativo ---------- */
-
-const botonTema = document.querySelector('.tema-toggle');
-
-function temaEfectivo() {
-  return raiz.dataset.theme === 'light' ? 'light' : 'dark';
-}
-
-function actualizarBotonTema() {
-  if (!botonTema) return;
-  const oscuro = temaEfectivo() === 'dark';
-  botonTema.setAttribute('aria-label', oscuro ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
-  botonTema.textContent = oscuro ? 'Tema claro' : 'Tema oscuro';
-}
-
-if (botonTema) {
-  botonTema.addEventListener('click', () => {
-    const siguiente = temaEfectivo() === 'dark' ? 'light' : 'dark';
-    raiz.dataset.theme = siguiente;
-    try {
-      localStorage.setItem('tema', siguiente);
-    } catch (error) {}
-    actualizarBotonTema();
-  });
-}
-
-actualizarBotonTema();
 
 /* ---------- Cabecera compacta al hacer scroll ---------- */
 

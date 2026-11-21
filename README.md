@@ -51,8 +51,8 @@ El repositorio también incluye una presentación independiente construida con
 
 ```text
 index.html                 Página única con las cinco secciones
-styles.css                 Sistema visual, responsive, temas e impresión A4
-app.js                     Tema, navegación, filtros, revelado y visor de certificados
+styles.css                 Sistema visual oscuro, responsive e impresión A4
+app.js                     Navegación, filtros, revelado y visor de certificados
 deck/                      Presentación independiente con Reveal.js (?print-pdf)
 vendor/reveal/             Reveal.js 6.0.2 vendorizado localmente (licencia MIT)
 assets/fonts/              Inter y JetBrains Mono en WOFF2 + licencias OFL
@@ -61,6 +61,8 @@ assets/proyectos/          Portada real de SIPIIT
 assets/fondos/             Fondos WebP derivados de mis guías HTML
 assets/cv-jesus-velasquez.pdf  Hoja de vida ATS de 1 página en PDF para descarga directa
 docs/diseno.md             Brief, decisiones finales y pendientes para merge a main
+docs/auditorias/           Evidencia y métricas de revisiones visuales
+scripts/audit_ui.py        Auditoría visual opcional con capturas de escritorio y móvil
 docs/referencias/          Mis imágenes de referencia (locales, ignoradas por Git)
 docs/codigoshtml/          Código de apoyo local (ignorado por Git)
 ```
@@ -74,7 +76,7 @@ exacta en el HTML, para que funcionen igual en Windows, Linux y GitHub Pages.
 - Skip link, foco visible, navegación por teclado, menú móvil con `Escape` y
   visor de certificados con retorno de foco.
 - `prefers-reduced-motion` respetado; fallback sin JavaScript.
-- Contraste AA en tema oscuro y claro.
+- Diseño oscuro con contraste de texto y foco visible sobre los fondos de color.
 - Impresión A4 sin ondas, navegación, maquetas ni botones.
 - Verificación manual: abrir `index.html`, revisar la consola y recorrer las cinco
   anclas.
@@ -97,6 +99,29 @@ Evidencia de la última revisión y handoff (2026-11-12):
 - Revisión previa (2026-11-11): Lighthouse 98/100/100/100, axe 0 violaciones e impresión A4 en 3 páginas.
 
 El detalle de decisiones y pendientes previos al merge a `main` está en `docs/diseno.md`.
+
+### Auditoría visual de E7
+
+La [línea base de E7-01 (#61)](docs/auditorias/e7-01/README.md), realizada el
+2026-11-21, registra ocho tamaños de pantalla en los dos temas, 152 capturas,
+métricas de las cinco secciones y el orden de ajustes para #63 a #67.
+
+El sitio conserva únicamente el diseño oscuro por decisión del dueño. La línea
+base anterior se mantiene como evidencia histórica. Para auditar el estado
+actual, instala una vez las dependencias opcionales de Python y Chromium:
+
+```bash
+python -m pip install -r scripts/requirements-ui.txt
+python -m playwright install chromium
+python scripts/audit_ui.py
+```
+
+El script inicia y cierra su servidor local y guarda la galería en
+`artifacts/ui/actual/index.html`, con ocho pantallas del diseño oscuro. Las
+capturas están ignoradas por Git. Estas
+herramientas son opcionales para revisar el sitio; abrir `index.html` sigue sin
+requerir instalación ni build. En PowerShell, si la política bloquea
+`pnpm.ps1`, la validación HTML se puede ejecutar con `pnpm.cmd run validate:html`.
 
 ## Contenido y privacidad
 

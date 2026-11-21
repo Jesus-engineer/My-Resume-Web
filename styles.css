@@ -1,6 +1,6 @@
 /* Hoja de vida: sistema visual "Portfolio nocturno con ondas de luz".
    Producto final: las cinco imagenes de docs/referencias/.
-   Tema canonico oscuro; tema claro alternativo con contraste AA.
+   Tema oscuro unico, con los fondos originales de color.
    Familias: Inter (texto) y JetBrains Mono (etiquetas y datos). */
 
 @font-face {
@@ -86,40 +86,6 @@
   --alto-cabecera: 5rem;
   --fuente-principal: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --fuente-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-}
-
-/* ---------- Tema claro alternativo ---------- */
-
-:root[data-theme="light"] {
-  color-scheme: light;
-  --color-fondo: #f5f7fc;
-  --color-superficie: #ffffff;
-  --color-superficie-2: #eef1f9;
-  --color-texto: #0b1220;
-  --color-plata: #334155;
-  --color-suave: #475569;
-  --color-azul: #1d4ed8;
-  --color-azul-hover: #1e40af;
-  --color-azul-claro: #1d4ed8;
-  --color-oro: #a16207;
-  --color-coral: #be123c;
-  --color-verde: #15803d;
-  --color-borde: #d8deea;
-  --color-chip: #ffffff;
-  --color-velo: rgb(11 18 32 / 55%);
-  --sombra: 0 18px 40px -22px rgb(11 18 32 / 25%);
-  --ondas-opacidad: 0.22;
-  --hero-velo: linear-gradient(90deg, rgb(245 247 252 / 97%) 0%, rgb(245 247 252 / 82%) 46%, rgb(245 247 252 / 20%) 76%, transparent 100%);
-  --seccion-velo: linear-gradient(90deg, rgb(245 247 252 / 94%) 0%, rgb(245 247 252 / 70%) 58%, rgb(245 247 252 / 45%) 100%), linear-gradient(180deg, rgb(245 247 252 / 30%) 0%, rgb(245 247 252 / 94%) 100%);
-  --badge-curso-fondo: #e8efff;
-  --badge-curso-borde: #2563eb;
-  --badge-curso-texto: #1e3a8a;
-  --badge-terminado-fondo: #e7f6ec;
-  --badge-terminado-borde: #15803d;
-  --badge-terminado-texto: #14532d;
-  --badge-progreso-fondo: #fdf3d8;
-  --badge-progreso-borde: #a16207;
-  --badge-progreso-texto: #6b4c00;
 }
 
 /* ---------- Base ---------- */
@@ -360,24 +326,6 @@ a:hover {
   cursor: pointer;
 }
 
-.tema-toggle {
-  min-height: 44px;
-  padding: var(--space-2) var(--space-3);
-  font-family: var(--fuente-mono);
-  font-size: var(--text-xs);
-  color: var(--color-suave);
-  background: transparent;
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.tema-toggle:hover {
-  color: var(--color-texto);
-  border-color: var(--color-suave);
-}
-
 /* Sin JavaScript */
 
 html.no-js .cabecera {
@@ -387,7 +335,6 @@ html.no-js .cabecera {
 }
 
 html.no-js .cabecera__menu,
-html.no-js .tema-toggle,
 html.no-js .finder__filtros {
   display: none;
 }
@@ -487,18 +434,6 @@ html.no-js .hero {
   background:
     linear-gradient(90deg, rgb(7 11 20 / 82%) 0%, rgb(7 11 20 / 48%) 56%, rgb(7 11 20 / 18%) 100%),
     linear-gradient(180deg, rgb(7 11 20 / 20%) 0%, rgb(7 11 20 / 80%) 100%);
-}
-
-:root[data-theme="light"] .seccion--sobre-mi .seccion__fondo::after {
-  background:
-    linear-gradient(90deg, rgb(245 247 252 / 88%) 0%, rgb(245 247 252 / 55%) 56%, rgb(245 247 252 / 28%) 100%),
-    linear-gradient(180deg, rgb(245 247 252 / 20%) 0%, rgb(245 247 252 / 88%) 100%);
-}
-
-:root[data-theme="light"] .seccion--contacto .seccion__fondo::after {
-  background:
-    linear-gradient(90deg, rgb(245 247 252 / 90%) 0%, rgb(245 247 252 / 62%) 56%, rgb(245 247 252 / 32%) 100%),
-    linear-gradient(180deg, rgb(245 247 252 / 32%) 0%, rgb(245 247 252 / 90%) 100%);
 }
 
 /* ---------- Movimiento ---------- */
@@ -1978,23 +1913,11 @@ html.no-js .hero {
   color: #ffffff;
 }
 
-:root[data-theme="light"] .seccion--certificaciones .seccion__fondo::after {
-  background: linear-gradient(90deg, rgb(8 15 30 / 50%), transparent 75%);
-}
-
-:root[data-theme="light"] .seccion--contacto .seccion__fondo::after {
-  background: linear-gradient(180deg, rgb(7 15 30 / 15%), transparent 55%);
-}
-
 /* ---------- Pie ---------- */
 
 .pie {
   padding: var(--space-4) clamp(2rem, 7vw, 7rem);
   border-top: 1px solid var(--color-borde);
-  background: var(--color-fondo);
-}
-
-:root:not([data-theme="light"]) .pie {
   background: #0b1525;
 }
 
@@ -2197,15 +2120,6 @@ html.visor-abierto {
     background: linear-gradient(180deg, rgb(7 11 20 / 55%) 0%, rgb(7 11 20 / 92%) 100%);
   }
 
-  :root[data-theme="light"] .seccion__fondo::after {
-    background: linear-gradient(180deg, rgb(245 247 252 / 60%) 0%, rgb(245 247 252 / 96%) 100%);
-  }
-
-  :root[data-theme="light"] .seccion--sobre-mi .seccion__fondo::after,
-  :root[data-theme="light"] .seccion--contacto .seccion__fondo::after {
-    background: linear-gradient(180deg, rgb(245 247 252 / 60%) 0%, rgb(245 247 252 / 96%) 100%);
-  }
-
   .cabecera__menu {
     display: inline-flex;
   }
@@ -2247,10 +2161,6 @@ html.visor-abierto {
   .cabecera__enlace[aria-current="location"] {
     border-bottom-color: transparent;
     border-left-color: var(--acento-nav);
-  }
-
-  .tema-toggle {
-    align-self: flex-start;
   }
 
   .hero {
@@ -2616,8 +2526,7 @@ html.visor-abierto {
     margin: 18mm;
   }
 
-  :root,
-  :root[data-theme="light"] {
+  :root {
     color-scheme: light;
     --color-fondo: #ffffff;
     --color-superficie: #ffffff;

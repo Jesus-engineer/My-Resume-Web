@@ -3,6 +3,8 @@
 Estado: **aprobado por el dueño el 2026-11-10** (issues D1 #42 y D3 #44).
 Actualizado el 2026-11-11 para alinear el documento con las cinco imágenes de
 referencia y con la implementación de D11.
+Actualizado el 2026-11-21: el dueño decidió conservar únicamente el diseño
+oscuro original y retirar el modo claro y los paneles blancos.
 
 Producto final: las **cinco imágenes de referencia del dueño**, guardadas en
 `docs/referencias/` como material local (ignoradas por Git, no se publican):
@@ -44,7 +46,7 @@ historia: quién soy, qué construyo, qué me respalda y cómo hablar conmigo.
 - Enlaces a la derecha: `Inicio`, `Proyectos`, `Sobre mí`, `Certificaciones`, `Contacto`.
 - Estado activo: texto blanco en negrita y subrayado corto en el color de acento de la sección visible.
 - Barra fija con fondo oscuro translúcido al hacer scroll y línea divisoria inferior tenue.
-- Control de tema claro/oscuro como mejora de accesibilidad (no aparece en las referencias).
+- Un único diseño oscuro, con las ondas y fondos originales de color.
 
 ### Hero (`#inicio`) — acento azul
 
@@ -158,24 +160,16 @@ mantienen los seis documentos reales.
 | verde | `#22c55e` | punto de disponibilidad |
 | borde | `#26314a` | bordes de tarjetas y chips |
 
-### Claro (alternativa accesible, solo con el control de tema)
+### Decisión de tema (2026-11-21)
 
-| Token | Valor | Uso |
-|---|---|---|
-| papel | `#f5f7fc` | fondo |
-| superficie | `#ffffff` | tarjetas |
-| tinta | `#0b1220` | texto principal |
-| gris | `#475569` | subtítulos |
-| azul | `#1d4ed8` | acción principal |
-| oro | `#a16207` | acento de Sobre mí |
-| coral | `#be123c` | acento de Certificaciones |
-| verde | `#15803d` | disponibilidad |
-| borde | `#d8deea` | bordes |
+Se conserva únicamente el tema oscuro. El control de cambio de tema, la
+preferencia guardada y las reglas del modo claro se retiran. Los fondos,
+colores, ilustraciones y composición del diseño oscuro original se mantienen.
 
 ### Contraste medido (WCAG)
 
 Se verifica en la implementación con script sobre los pares texto/fondo y
-texto/superficie de ambos temas, incluido el texto que cruza las ondas. La regla:
+texto/superficie del diseño oscuro, incluido el texto que cruza las ondas. La regla:
 ningún par por debajo de 4.5:1. Las ondas se mantienen detrás del texto con un
 velo de contraste y los resplandores evitan las crestas más luminosas.
 
@@ -244,11 +238,11 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 - [x] Cinco anclas: inicio, proyectos, sobre-mi, certificaciones, contacto.
 - [x] Ondas de luz por sección, detrás del texto.
 - [x] Un solo `h1`; jerarquía h2/h3 correcta.
-- [x] Contraste AA en claro y oscuro, incluido el texto sobre ondas.
+- [x] Contraste AA en el diseño oscuro, incluido el texto sobre ondas.
 - [x] Teclado completo: menú móvil, filtros, visor de certificados, volver arriba.
 - [x] Impresión A4 sin ondas, navegación, maquetas ni botones.
 - [x] Sin contenido inventado: todo texto sale de `content.md` o de las imágenes del dueño.
-- [x] Tema claro alternativo funcional.
+- [x] Diseño oscuro único, por decisión del dueño el 2026-11-21.
 - [x] Aprobación visual del dueño contra las cinco referencias (validado en D11 `#53` y revalidado en D9 `#50`).
 
 ## 10. Referencias

@@ -63,12 +63,6 @@
     (function () {
       document.documentElement.classList.remove("no-js");
       document.documentElement.classList.add("js");
-      try {
-        var tema = localStorage.getItem("tema");
-        if (tema === "dark" || tema === "light") {
-          document.documentElement.dataset.theme = tema;
-        }
-      } catch (error) {}
     })();
   </script>
   <link rel="stylesheet" href="styles.css">
@@ -232,7 +226,6 @@
         <li><a class="cabecera__enlace cabecera__enlace--certificaciones" href="#certificaciones">Certificaciones</a></li>
         <li><a class="cabecera__enlace cabecera__enlace--contacto" href="#contacto">Contacto</a></li>
       </ul>
-      <button class="tema-toggle" type="button" aria-label="Cambiar a tema claro">Tema claro</button>
     </nav>
   </header>
 

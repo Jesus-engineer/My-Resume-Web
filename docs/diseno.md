@@ -46,16 +46,30 @@ historia: quién soy, qué construyo, qué me respalda y cómo hablar conmigo.
 - Enlaces a la derecha: `Inicio`, `Proyectos`, `Sobre mí`, `Certificaciones`, `Contacto`.
 - Estado activo: texto blanco en negrita y subrayado corto en el color de acento de la sección visible.
 - Barra fija con fondo oscuro translúcido al hacer scroll y línea divisoria inferior tenue.
+- Cabecera de 72 px y contenedor compartido con el hero de un máximo de 80rem
+  (1280 px). Enlaces de al menos 44 × 44 px, con fondo tenue al pasar el cursor
+  o recibir foco. Las anclas dejan 16 px bajo la cabecera.
+- Menú desplegable con fondo oscuro sólido y separación de 8 px respecto a la
+  cabecera. Admite scroll en pantallas bajas; cierra con Escape, al elegir una
+  sección, al salir con Tab o al pulsar fuera. La entrada respeta movimiento reducido.
 - Un único diseño oscuro, con las ondas y fondos originales de color.
 
 ### Hero (`#inicio`) — acento azul
 
 - Antetítulo: `ESTUDIANTE DE INGENIERÍA DE SISTEMAS`.
-- Titular: `Jesús David` y `Velásquez Mercado`, en dos líneas. Es el único `h1`.
+- Titular: `Jesús David` y `Velásquez Mercado`, en dos líneas en escritorio;
+  el apellido se adapta al ancho disponible en móvil. Es el único `h1`.
 - Subtítulo: `Me enfoco en desarrollo backend con Python, SQL y APIs. También construyo interfaces con React y sigo aprendiendo con cada proyecto.`
 - Badge de disponibilidad: punto verde + `Disponible para prácticas`.
 - Botones: `Ver proyectos ↗` (azul sólido, ancla a #proyectos) y `Descargar CV` (contorno, descarga directa de `assets/cv-jesus-velasquez.pdf` en formato ATS de 1 página).
-- Tarjeta de perfil a la derecha: foto real `assets/foto.webp` en formato 4:5, sin filtros, con retrato limpio y encuadre compacto (máximo 15.5rem en escritorio, 14rem en tablet y 12rem en móvil) para que no compita con el nombre.
+- Tarjeta de perfil a la derecha en escritorio: foto real `assets/foto.webp`
+  en formato 4:5, sin filtros y con ancho de hasta 18rem. En móvil y tablet
+  ocupa una columna de 5–7rem junto a la presentación, con disponibilidad y
+  los dos botones debajo. Los botones comparten fila y admiten texto en dos líneas.
+- En escritorio, nombre, foto, acciones, herramientas y pie caben en la primera
+  pantalla desde 1024 × 768 y 1280 × 720. El tamaño del título considera el ancho
+  y el alto disponibles. En 360 × 800, el hero español mide 850.08 px: una
+  reducción del 34.56 % frente a la línea base de E7-01.
 - Bloque inferior `Herramientas y entornos`:
   - Tecnologías: `Python`, `SQL`, `React`.
   - Sistemas operativos: `Linux`, `Windows`, `macOS`.

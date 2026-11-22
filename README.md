@@ -157,6 +157,12 @@ capturas con las dependencias anteriores:
 python scripts/audit_ui.py --lang en --output artifacts/ui/e7-02-en
 ```
 
+La [revisión de E7-03 (#63)](docs/auditorias/e7-03/README.md) recoge los ajustes
+de hero y cabecera en ES/EN, las medidas frente a la línea base y las pruebas
+de menú, teclado y navegación. Cabecera y hero comparten un ancho máximo de
+1280 px; el hero completo cabe en las pantallas de escritorio revisadas y en
+360 × 800 ocupa un 34.56 % menos de alto en español.
+
 ## Contenido y privacidad
 
 `content.md` es mi fuente local de datos reales y no se publica. Las imágenes de

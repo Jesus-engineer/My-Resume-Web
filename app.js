@@ -86,6 +86,10 @@ if (botonMenu) {
     if (!cabecera.contains(evento.target)) cerrarMenu();
   });
 
+  document.addEventListener('focusin', evento => {
+    if (menuAbierto && cabecera && !cabecera.contains(evento.target)) cerrarMenu();
+  });
+
   for (const enlace of enlacesNav) {
     enlace.addEventListener('click', () => {
       if (menuAbierto) cerrarMenu();

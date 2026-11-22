@@ -1,0 +1,877 @@
+{
+  "date": "2026-11-21",
+  "baseRevision": "f69e552dc02b2f5cef13b32c22c5050fb119cf46",
+  "uncommittedChanges": true,
+  "method": "Local HTTP, Chromium 156.0.8078.4, DPR 1, reduced motion, fonts and images loaded; mobile/touch emulation below 768px.",
+  "runs": [
+    {
+      "language": "es",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "dpr": 1
+      },
+      "heroHeight": 768,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 916.84,
+      "heroFooterBottom": 752,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 46.078125,
+          "right": 516.75,
+          "top": 255.203125,
+          "bottom": 317.203125,
+          "columnRight": 696.703125,
+          "profileLeft": 737.65625,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 183.609375,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "heroHeight": 720,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 1149.81,
+      "heroFooterBottom": 704,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 57.59375,
+          "right": 587.09375,
+          "top": 230.203125,
+          "bottom": 300.203125,
+          "columnRight": 825.59375,
+          "profileLeft": 925.8125,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 183.609375,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "heroHeight": 900,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 1280,
+      "heroFooterBottom": 884,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 72.5,
+          "right": 734.375,
+          "top": 320.203125,
+          "bottom": 407.203125,
+          "columnRight": 840.5,
+          "profileLeft": 1064.5,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 183.609375,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "dpr": 1
+      },
+      "heroHeight": 1080,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 1280,
+      "heroFooterBottom": 1064,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 312.5,
+          "right": 1018.5,
+          "top": 409.203125,
+          "bottom": 502.203125,
+          "columnRight": 1080.5,
+          "profileLeft": 1304.5,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 183.609375,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "dpr": 1
+      },
+      "heroHeight": 878.91,
+      "heroFitsFirstScreen": false,
+      "heroFooterFitsFirstScreen": false,
+      "heroContentWidth": 280,
+      "heroFooterBottom": 862.91,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 20,
+          "right": 214.71875,
+          "top": 184.59375,
+          "bottom": 277.59375,
+          "columnRight": 300,
+          "profileLeft": 20,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 183.609375,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [
+        {
+          "label": "Inicio",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "Proyectos",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "Sobre mí",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "Certificaciones",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "Contacto",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "ES",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "EN",
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 360,
+        "height": 800,
+        "dpr": 1
+      },
+      "heroHeight": 850.08,
+      "heroFitsFirstScreen": false,
+      "heroFooterFitsFirstScreen": false,
+      "heroContentWidth": 320,
+      "heroFooterBottom": 834.08,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 20,
+          "right": 230.28125,
+          "top": 188.109375,
+          "bottom": 287.625,
+          "columnRight": 340,
+          "profileLeft": 20,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 183.609375,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [
+        {
+          "label": "Inicio",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "Proyectos",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "Sobre mí",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "Certificaciones",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "Contacto",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "ES",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "EN",
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1
+      },
+      "heroHeight": 842.14,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 350,
+      "heroFooterBottom": 826.14,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 20,
+          "right": 247.8125,
+          "top": 172.265625,
+          "bottom": 279.734375,
+          "columnRight": 370,
+          "profileLeft": 20,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 183.609375,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [
+        {
+          "label": "Inicio",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "Proyectos",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "Sobre mí",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "Certificaciones",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "Contacto",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "ES",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "EN",
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 430,
+        "height": 932,
+        "dpr": 1
+      },
+      "heroHeight": 832.91,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 390,
+      "heroFooterBottom": 816.91,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 20,
+          "right": 271.171875,
+          "top": 177.546875,
+          "bottom": 296.296875,
+          "columnRight": 410,
+          "profileLeft": 20,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 183.609375,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [
+        {
+          "label": "Inicio",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "Proyectos",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "Sobre mí",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "Certificaciones",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "Contacto",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "ES",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "EN",
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "dpr": 1
+      },
+      "heroHeight": 768,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 916.84,
+      "heroFooterBottom": 752,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 46.078125,
+          "right": 516.75,
+          "top": 255.203125,
+          "bottom": 317.203125,
+          "columnRight": 696.703125,
+          "profileLeft": 737.65625,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 150,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "heroHeight": 720,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 1149.81,
+      "heroFooterBottom": 704,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 57.59375,
+          "right": 587.09375,
+          "top": 230.203125,
+          "bottom": 300.203125,
+          "columnRight": 825.59375,
+          "profileLeft": 925.8125,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 150,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "heroHeight": 900,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 1280,
+      "heroFooterBottom": 884,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 72.5,
+          "right": 734.375,
+          "top": 320.203125,
+          "bottom": 407.203125,
+          "columnRight": 840.5,
+          "profileLeft": 1064.5,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 150,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "dpr": 1
+      },
+      "heroHeight": 1080,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 1280,
+      "heroFooterBottom": 1064,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 312.5,
+          "right": 1018.5,
+          "top": 409.203125,
+          "bottom": 502.203125,
+          "columnRight": 1080.5,
+          "profileLeft": 1304.5,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 150,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "dpr": 1
+      },
+      "heroHeight": 859.11,
+      "heroFitsFirstScreen": false,
+      "heroFooterFitsFirstScreen": false,
+      "heroContentWidth": 280,
+      "heroFooterBottom": 843.11,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 20,
+          "right": 214.71875,
+          "top": 164.796875,
+          "bottom": 257.796875,
+          "columnRight": 300,
+          "profileLeft": 20,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 150,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [
+        {
+          "label": "Home",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "Projects",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "About me",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "Certifications",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "Contact",
+          "width": 238,
+          "height": 44
+        },
+        {
+          "label": "ES",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "EN",
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 360,
+        "height": 800,
+        "dpr": 1
+      },
+      "heroHeight": 844.06,
+      "heroFitsFirstScreen": false,
+      "heroFooterFitsFirstScreen": false,
+      "heroContentWidth": 320,
+      "heroFooterBottom": 828.06,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 20,
+          "right": 230.28125,
+          "top": 168.3125,
+          "bottom": 267.828125,
+          "columnRight": 340,
+          "profileLeft": 20,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 150,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [
+        {
+          "label": "Home",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "Projects",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "About me",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "Certifications",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "Contact",
+          "width": 278,
+          "height": 44
+        },
+        {
+          "label": "ES",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "EN",
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1
+      },
+      "heroHeight": 816.55,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 350,
+      "heroFooterBottom": 800.55,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 20,
+          "right": 247.8125,
+          "top": 172.265625,
+          "bottom": 279.734375,
+          "columnRight": 370,
+          "profileLeft": 20,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 150,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [
+        {
+          "label": "Home",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "Projects",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "About me",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "Certifications",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "Contact",
+          "width": 308,
+          "height": 44
+        },
+        {
+          "label": "ES",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "EN",
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 430,
+        "height": 932,
+        "dpr": 1
+      },
+      "heroHeight": 832.91,
+      "heroFitsFirstScreen": true,
+      "heroFooterFitsFirstScreen": true,
+      "heroContentWidth": 390,
+      "heroFooterBottom": 816.91,
+      "horizontalOverflow": false,
+      "heroTitle": [
+        {
+          "text": "Velásquez Mercado",
+          "left": 20,
+          "right": 271.171875,
+          "top": 177.546875,
+          "bottom": 296.296875,
+          "columnRight": 410,
+          "profileLeft": 20,
+          "exceedsColumn": false,
+          "overlapsProfile": false
+        }
+      ],
+      "targetsBelow44": [],
+      "skipLink": {
+        "width": 150,
+        "height": 44,
+        "outline": "solid"
+      },
+      "menuTargets": [
+        {
+          "label": "Home",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "Projects",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "About me",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "Certifications",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "Contact",
+          "width": 348,
+          "height": 44
+        },
+        {
+          "label": "ES",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "EN",
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "consoleErrors": [],
+      "failedRequests": []
+    }
+  ],
+  "additionalChecks": {
+    "layout": 26,
+    "menu": 8,
+    "fallbacks": 6
+  }
+}

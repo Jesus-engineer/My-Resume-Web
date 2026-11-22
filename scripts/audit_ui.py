@@ -38,7 +38,9 @@ CONTRAST_METHOD = ('Nine background samples per text bounding box with only the 
 
 MEASURE_HERO_TITLE = r"""() => {
   const profile = document.querySelector('.hero__perfil').getBoundingClientRect();
-  const column = document.querySelector('.hero__texto').getBoundingClientRect();
+  const text = document.querySelector('.hero__texto');
+  const column = (getComputedStyle(text).display === 'contents'
+    ? document.querySelector('.hero__titulo') : text).getBoundingClientRect();
   return [...document.querySelectorAll('.hero__titulo span')].map(e => {
     const range = document.createRange();
     range.selectNodeContents(e);

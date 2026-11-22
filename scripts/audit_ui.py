@@ -2,6 +2,7 @@
 
 Requires Python 3, playwright (with Chromium installed), and Pillow.
 From the repository root: python scripts/audit_ui.py
+English route: python scripts/audit_ui.py --lang en --output artifacts/ui/actual-en
 Generated screenshots and the HTML gallery stay in artifacts/ui/ (gitignored).
 """
 
@@ -358,6 +359,7 @@ def source_inventory():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT / 'artifacts/ui/actual')
+    parser.add_argument('--lang', choices=['es', 'en'], default='es')
     args = parser.parse_args()
     output = args.output.resolve()
     if not output.is_relative_to(ROOT):
@@ -367,6 +369,7 @@ def main():
     report = {
         'date': datetime.now(timezone(timedelta(hours=-5))).isoformat(timespec='seconds'),
         'timezone': 'America/Bogota', 'revision': revision,
+        'language': args.lang,
         'method': 'Local HTTP, Chromium, DPR 1, reduced motion, fonts and images loaded; mobile emulation below 768px.',
         'contrastMethod': CONTRAST_METHOD,
         'tooling': {'python': sys.version.split()[0], 'playwright': version('playwright'), 'Pillow': version('Pillow')},
@@ -389,7 +392,7 @@ def main():
                     'status': response.status}) if response.status >= 400 else None)
                 page.on('requestfailed', lambda request: failed_requests.append({
                     'url': request.url.replace(url, '/'), 'failure': request.failure}))
-                run = capture(page, url, output, width, height, theme)
+                run = capture(page, url + ('en/' if args.lang == 'en' else ''), output, width, height, theme)
                 run['consoleErrors'], run['failedRequests'] = errors, failed_requests
                 report['runs'].append(run)
                 context.close()

@@ -8,6 +8,24 @@ const botonMenu = document.querySelector('.cabecera__menu');
 const navegacion = document.querySelector('#navegacion');
 const enlacesNav = [...document.querySelectorAll('.cabecera__enlace')];
 
+/* ---------- Idioma de la pagina e interacciones compartidas ---------- */
+
+const idiomaIngles = raiz.lang.toLowerCase().startsWith('en');
+const textos = idiomaIngles
+  ? { certificado: 'Certificate', certificacion: 'certification', certificaciones: 'certifications' }
+  : { certificado: 'Certificado', certificacion: 'certificación', certificaciones: 'certificaciones' };
+
+// Las anclas compartidas conservan la seccion al cambiar entre rutas ES / EN.
+const enlacesIdioma = [...document.querySelectorAll('[data-idioma]')]
+  .map(enlace => ({ enlace, ruta: enlace.getAttribute('href') }));
+
+function actualizarEnlacesIdioma() {
+  for (const { enlace, ruta } of enlacesIdioma) enlace.setAttribute('href', ruta + window.location.hash);
+}
+
+window.addEventListener('hashchange', actualizarEnlacesIdioma);
+actualizarEnlacesIdioma();
+
 /* ---------- Cabecera compacta al hacer scroll ---------- */
 
 let frameCabecera = null;
@@ -176,7 +194,7 @@ function aplicarFiltro(categoria) {
   }
 
   if (estadoFiltro) {
-    estadoFiltro.textContent = visibles === 1 ? '1 certificación' : `${visibles} certificaciones`;
+    estadoFiltro.textContent = `${visibles} ${visibles === 1 ? textos.certificacion : textos.certificaciones}`;
   }
 }
 
@@ -253,7 +271,7 @@ if (visorCertificado && typeof visorCertificado.showModal === 'function') {
       evento.preventDefault();
       const tarjeta = enlace.closest('.certificacion');
       const encabezado = tarjeta ? tarjeta.querySelector('h3') : null;
-      const nombre = encabezado ? encabezado.textContent.trim() : 'Certificado';
+      const nombre = encabezado ? encabezado.textContent.trim() : textos.certificado;
       enlaceOrigen = enlace;
       if (titulo) titulo.textContent = nombre;
       if (original) original.href = enlace.href;

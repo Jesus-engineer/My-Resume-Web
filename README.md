@@ -37,6 +37,30 @@ python -m http.server 8765
 
 Luego visita `http://127.0.0.1:8765/`.
 
+### Español e inglés
+
+El selector **ES / EN** está en la cabecera de escritorio y dentro del menú
+móvil. Cada idioma tiene su propio HTML: `index.html` y
+[`en/index.html`](en/index.html). También puedes abrir cualquiera directamente
+desde archivo. Ambas versiones comparten los fondos oscuros, los estilos y las
+interacciones; los enlaces de idioma conservan el ancla de la sección actual.
+
+Cada página declara su idioma, metadatos sociales, URL canónica y enlaces
+`hreflang`. Los textos, las etiquetas accesibles y los estados de las
+interacciones están traducidos. Los certificados conservan sus imágenes
+originales y cada idioma descarga su propio CV ATS de una página.
+
+Para regenerar y auditar el PDF en inglés:
+
+```bash
+python .agents/skills/ats-resume-engineer/scripts/build_ats_cv.py --lang en
+python .agents/skills/ats-resume-engineer/scripts/audit_ats_pdf.py assets/cv-jesus-velasquez-en.pdf --lang en
+```
+
+El generador conserva `--lang es` como opción por defecto. Los dos PDF se
+guardan en rutas independientes. La validación HTML revisa las versiones
+española e inglesa y el deck con el mismo comando `pnpm run validate:html`.
+
 ### Deck de presentación (independiente)
 
 El repositorio también incluye una presentación independiente construida con
@@ -51,6 +75,7 @@ El repositorio también incluye una presentación independiente construida con
 
 ```text
 index.html                 Página única con las cinco secciones
+en/index.html              Versión en inglés con sus metadatos y enlaces de idioma
 styles.css                 Sistema visual oscuro, responsive e impresión A4
 app.js                     Navegación, filtros, revelado y visor de certificados
 deck/                      Presentación independiente con Reveal.js (?print-pdf)
@@ -60,6 +85,7 @@ assets/certificados/       Seis certificados reales en WebP
 assets/proyectos/          Portada real de SIPIIT
 assets/fondos/             Fondos WebP derivados de mis guías HTML
 assets/cv-jesus-velasquez.pdf  Hoja de vida ATS de 1 página en PDF para descarga directa
+assets/cv-jesus-velasquez-en.pdf  CV ATS en inglés de 1 página
 docs/diseno.md             Brief, decisiones finales y pendientes para merge a main
 docs/auditorias/           Evidencia y métricas de revisiones visuales
 scripts/audit_ui.py        Auditoría visual opcional con capturas de escritorio y móvil
@@ -122,6 +148,14 @@ capturas están ignoradas por Git. Estas
 herramientas son opcionales para revisar el sitio; abrir `index.html` sigue sin
 requerir instalación ni build. En PowerShell, si la política bloquea
 `pnpm.ps1`, la validación HTML se puede ejecutar con `pnpm.cmd run validate:html`.
+
+La [verificación de E7-02 (#62)](docs/auditorias/e7-02/README.md) documenta la
+versión inglesa, las pruebas de navegación ES/EN y el CV ATS. Para generar sus
+capturas con las dependencias anteriores:
+
+```bash
+python scripts/audit_ui.py --lang en --output artifacts/ui/e7-02-en
+```
 
 ## Contenido y privacidad
 

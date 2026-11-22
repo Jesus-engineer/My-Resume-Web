@@ -275,6 +275,8 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 
 - Revisión final local del dueño sobre `index.html` y `deck/index.html`, `git push` de `desarrollador` y merge a `main`.
 - Épica E5 / E6: activar GitHub Pages en `main` / raíz (`#32`), verificación post-despliegue (`#33`) y cierre de tareas administrativas de repo (`#27`, `#30`, `#31`, opcionales `#34`, `#35`).
-- Versión en inglés del sitio (`E7-02`, fuera del alcance de Épica D).
+- E7-02: versión inglesa implementada en `en/index.html`, con selector ES/EN,
+  metadatos propios y CV ATS en inglés. Verificación local en
+  `docs/auditorias/e7-02/README.md`.
 - Las cinco imágenes de referencia viven en `docs/referencias/`, están ignoradas por Git y no se publican.
 - `docs/codigoshtml/` está ignorado por Git y no se publica.

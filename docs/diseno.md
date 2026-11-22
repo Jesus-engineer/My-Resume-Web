@@ -114,7 +114,8 @@ decorativas (`aria-hidden`), nunca capturas presentadas como reales.
     1. `Formación` — `Ingeniería de Sistemas · UTB`.
     2. `Investigación` — `Personalización de contenido en Savio`.
     3. `Comunidad` — `Mentor TEPAYA`.
-- Columna derecha: pingüino Ubuntu vectorial, decorativo (`aria-hidden`), con líneas doradas.
+- Columna derecha: pingüino Ubuntu vectorial, decorativo (`aria-hidden`), con líneas doradas (ancho máximo `25rem` en escritorio; en `<= 1023 px` aparece después de la historia y `Mi camino`, escalado a `14rem` en tablet y `11.5rem` en móvil).
+- Contenedor compartido `--ancho-contenido` (`80rem` / `1280 px`) alineado con cabecera, hero y proyectos.
 - Subsección inferior: titular `Entornos que estoy explorando` y tres tarjetas: `Linux — Terminal y herramientas`, `Windows — Entorno de trabajo`, `macOS — Exploración del ecosistema`.
 - Fondo: facetas vino, coral y violeta inspiradas en el wallpaper de Ubuntu.
 
@@ -147,12 +148,13 @@ mantienen los seis documentos reales.
   1. `Correo` — `Escríbeme directamente` — `mailto:` real.
   2. `LinkedIn` — `Conoce mi perfil profesional` — URL real.
   3. `GitHub` — `Explora mis repositorios` — URL real.
-- Fondo: ondas azul, violeta y coral con orbitas naranjas, extraidas del HTML de guia y optimizadas a WebP.
+- Fondo: ondas azul, violeta y coral con orbitas naranjas, extraidas del HTML de guia y optimizadas a WebP, con encuadre adaptativo y degradado inferior hacia `#0b1525` para enlazar limpiamente con el pie.
+- Contenedor compartido `--ancho-contenido` (`80rem` / `1280 px`) en `#contacto` y `.pie`; altura proporcionada en escritorio (`clamp(35rem, 68dvh, 43rem)`) y compacta en móvil (`649.45 px` en `360 × 800`).
 
 ### Pie de página
 
-- Línea divisoria superior.
-- `JV` a la izquierda.
+- Línea divisoria superior tenue.
+- `JV` a la izquierda (alineado a la izquierda también en móvil, manteniendo objetivo `>= 44 × 44 px`).
 - `Jesús David Velásquez Mercado` y `Desarrollo de software` separados por líneas verticales.
 - `Volver al inicio ↑` a la derecha (ancla a `#inicio`).
 

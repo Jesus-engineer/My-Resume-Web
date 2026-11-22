@@ -169,6 +169,13 @@ sin huecos huérfanos desde 1024 px (y composición horizontal de SIPIIT en
 768–1023 px), la ficha técnica real de `Savio AI`, la eliminación de textos
 `< 12 px` en `#proyectos` y la reducción del 20.71 % de altura en 360 × 800.
 
+La [revisión de E7-05 (#65)](docs/auditorias/e7-05/README.md) registra la
+alineación de `#sobre-mi`, `#contacto` y `.pie` al contenedor compartido de
+1280 px, el reordenamiento de `Sobre mí` en móvil (historia antes del pingüino
+y chips compactos, -29.02 % en 360 × 800), el encuadre y compactación de
+`#contacto` (-29.71 % en 360 × 800, contraste mínimo ≥ 8.85:1) y la alineación
+izquierda de la marca `JV` en el pie móvil.
+
 ## Contenido y privacidad
 
 `content.md` es mi fuente local de datos reales y no se publica. Las imágenes de

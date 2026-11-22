@@ -82,20 +82,21 @@ historia: quién soy, qué construyo, qué me respalda y cómo hablar conmigo.
 - Titular: `Proyectos seleccionados`.
 - Subtítulo: `Una selección de lo que estoy construyendo y aprendiendo.`
 - Fondo: cintas azules 3D en la esquina superior derecha.
+- Contenedor compartido `--ancho-contenido` (`80rem` / `1280 px`) alineado con cabecera y hero desde `1440 px`.
 
-Tarjeta destacada (ancho completo, texto izquierda ~45 %, maqueta derecha ~55 %):
+Tarjeta destacada (ancho completo, texto izquierda ~46 %, maqueta derecha ~54 %):
 
 - Título: `Savio AI` con badge de estado `Investigación en curso` (borde azul, icono de matraz).
 - Descripción: `Exploro cómo personalizar contenido académico con inteligencia artificial para el LMS de mi universidad.`
 - Chips: `IA`, `Moodle`, `Investigación`.
-- Sin botón: la investigación no tiene repositorio ni demo públicos. No se inventa el enlace.
-- Maqueta decorativa en CSS (no captura real): ventana con puntos macOS, menú lateral (`Savio AI`, `Inicio`, `Recomendaciones`, `Recursos`, `Mi curso`) y panel con `Hola, estudiante`, `Sugerencias de recursos para tu aprendizaje`, `Recursos recomendados` y tres filas (`Resumen: Redes de computadoras`, `Video: Introducción a la IA`, `Ejercicios de práctica`).
+- Ficha técnica real (`<dl>`): `Entorno` (`Savio (Moodle · UTB)`), `Enfoque` (`Recomendación de recursos académicos`) y `Acceso` (`Investigación académica · sin repositorio público`). Sin botón: no se inventa URL.
+- Maqueta decorativa en CSS (no captura real) con leyenda `Vista conceptual`: ventana con puntos macOS, menú lateral (`Savio AI`, `Inicio`, `Recomendaciones`, `Recursos`, `Mi curso`) y panel con `Hola, estudiante`, `Sugerencias de recursos para tu aprendizaje`, `Recursos recomendados` y tres filas (`Resumen: Redes de computadoras`, `Video: Introducción a la IA`, `Ejercicios de práctica`). En `<= 767 px` se simplifica a una sola columna legible (`>= 12 px`).
 
-Fila de tres tarjetas secundarias, separadas por líneas verticales como en la referencia:
+Fila de tres tarjetas secundarias (3 columnas desde `1024 px`; en tablet `768–1023 px`, SIPIIT ocupa el ancho completo en composición horizontal y las dos tarjetas en progreso comparten la segunda fila; en `<= 767 px`, 1 columna sin las dos maquetas decorativas secundarias):
 
-1. **SIPIIT** (real, `Terminado`): título completo `Intelligent IT Incident Prioritization System (SIPIIT)`, fechas reales febrero-mayo de 2026, descripción real de `content.md`, chips `Flutter`, `Dart`, `Git`, portada real `assets/proyectos/sipiit-portada.webp` completa sin recortes y enlace `Ver repositorio ↗` con URL real de GitHub.
-2. **GyR Barber** (`En progreso`): `Gestión de reservas, citas y servicios para barbería.`, chips `React`, `Python`, `Supabase`, `PostgreSQL`, `Tailwind CSS`. Sin botón: proyecto en desarrollo. Maqueta decorativa con panel `Citas de hoy` y horarios de atención.
-3. **Próximo proyecto** (`En progreso`): `Desarrollando una nueva aplicación en progreso para seguir practicando arquitectura backend, APIs e interfaces modernas.`, chips `Python`, `SQL`, `React`. Maqueta decorativa con panel `En construcción` y etapas de avance.
+1. **SIPIIT** (real, `Terminado`): título completo `Intelligent IT Incident Prioritization System (SIPIIT)`, fechas reales febrero-mayo de 2026 y rol `Interfaz Flutter`, descripción real de `content.md`, chips `Flutter`, `Dart`, `Riverpod`, `go_router`, `Git`, portada real `assets/proyectos/sipiit-portada.webp` completa sin recortes y enlace `Ver repositorio ↗` con URL real de GitHub.
+2. **GyR Barber** (`En progreso`): metadato `Aplicación web · Reservas y servicios`, descripción `Gestión de reservas, citas y servicios para barbería.`, chips `React`, `Python`, `Supabase`, `PostgreSQL`, `Tailwind CSS`, maqueta decorativa de cabecera compacta (`>= 12 px`) con panel `Citas de hoy` en `>= 768 px` y nota `Sin repositorio público`.
+3. **Próximo proyecto** (`En progreso`): metadato `Arquitectura backend · APIs e interfaz`, descripción `Nueva aplicación enfocada en arquitectura backend, diseño de APIs e interfaces modernas.`, chips `Python`, `SQL`, `React`, maqueta decorativa de cabecera compacta (`>= 12 px`) con panel `En construcción` en `>= 768 px` y nota `Sin repositorio público`.
 
 La referencia 02 muestra tres proyectos y no incluye SIPIIT; se conserva SIPIIT
 porque es el único proyecto con repositorio real. Las maquetas son ilustraciones

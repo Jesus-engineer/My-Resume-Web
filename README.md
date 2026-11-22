@@ -163,6 +163,12 @@ de menú, teclado y navegación. Cabecera y hero comparten un ancho máximo de
 1280 px; el hero completo cabe en las pantallas de escritorio revisadas y en
 360 × 800 ocupa un 34.56 % menos de alto en español.
 
+La [revisión de E7-04 (#64)](docs/auditorias/e7-04/README.md) documenta la
+alineación de `#proyectos` al ancho común de 1280 px, la grilla de tres columnas
+sin huecos huérfanos desde 1024 px (y composición horizontal de SIPIIT en
+768–1023 px), la ficha técnica real de `Savio AI`, la eliminación de textos
+`< 12 px` en `#proyectos` y la reducción del 20.71 % de altura en 360 × 800.
+
 ## Contenido y privacidad
 
 `content.md` es mi fuente local de datos reales y no se publica. Las imágenes de

@@ -1,0 +1,582 @@
+{
+  "date": "2026-11-22",
+  "baseRevision": "bc90804dac4f6b1605ebefc52283ec88b454b10d",
+  "browser": "Chromium 156.0.8078.4",
+  "tooling": {
+    "python": "3.12.10",
+    "playwright": "1.64.1",
+    "Pillow": "12.2.0"
+  },
+  "method": "Local HTTP, Chromium, DPR 1, reduced motion, fonts and images loaded; mobile emulation below 768px.",
+  "sipiitCover": {
+    "path": "assets/proyectos/sipiit-portada.webp",
+    "bytes": 40828,
+    "dimensions": [
+      1280,
+      476
+    ]
+  },
+  "tablet768LinkWidth": 122.45,
+  "runs": [
+    {
+      "language": "es",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "dpr": 1
+      },
+      "projectsHeight": 1270.22,
+      "previousProjectsHeight": 1523.97,
+      "heroContentWidth": 916.84,
+      "featuredWidth": 916.84,
+      "gridWidth": 916.84,
+      "projectCards": [
+        {
+          "width": 305.61,
+          "height": 540.89,
+          "y": 1415.42
+        },
+        {
+          "width": 305.61,
+          "height": 540.89,
+          "y": 1415.42
+        },
+        {
+          "width": 305.63,
+          "height": 540.89,
+          "y": 1415.42
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "projectsHeight": 1267.67,
+      "previousProjectsHeight": 1163.02,
+      "heroContentWidth": 1149.81,
+      "featuredWidth": 1149.81,
+      "gridWidth": 1149.81,
+      "projectCards": [
+        {
+          "width": 383.27,
+          "height": 508.89,
+          "y": 1376.39
+        },
+        {
+          "width": 383.27,
+          "height": 508.89,
+          "y": 1376.39
+        },
+        {
+          "width": 383.28,
+          "height": 508.89,
+          "y": 1376.39
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "projectsHeight": 1286.52,
+      "previousProjectsHeight": 1202.48,
+      "heroContentWidth": 1280,
+      "featuredWidth": 1280,
+      "gridWidth": 1280,
+      "projectCards": [
+        {
+          "width": 426.66,
+          "height": 485.64,
+          "y": 1585.69
+        },
+        {
+          "width": 426.67,
+          "height": 485.64,
+          "y": 1585.69
+        },
+        {
+          "width": 426.66,
+          "height": 485.64,
+          "y": 1585.69
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "dpr": 1
+      },
+      "projectsHeight": 1337.14,
+      "previousProjectsHeight": 1259.14,
+      "heroContentWidth": 1280,
+      "featuredWidth": 1280,
+      "gridWidth": 1280,
+      "projectCards": [
+        {
+          "width": 426.66,
+          "height": 508.89,
+          "y": 1780.25
+        },
+        {
+          "width": 426.67,
+          "height": 508.89,
+          "y": 1780.25
+        },
+        {
+          "width": 426.66,
+          "height": 508.89,
+          "y": 1780.25
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "dpr": 1
+      },
+      "projectsHeight": 1961.8,
+      "previousProjectsHeight": 2493.38,
+      "heroContentWidth": 280,
+      "featuredWidth": 280,
+      "gridWidth": 280,
+      "projectCards": [
+        {
+          "width": 280,
+          "height": 524.23,
+          "y": 1741.28
+        },
+        {
+          "width": 280,
+          "height": 283.06,
+          "y": 2265.52
+        },
+        {
+          "width": 280,
+          "height": 252.13,
+          "y": 2548.58
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 360,
+        "height": 800,
+        "dpr": 1
+      },
+      "projectsHeight": 1809.08,
+      "previousProjectsHeight": 2281.55,
+      "heroContentWidth": 320,
+      "featuredWidth": 320,
+      "gridWidth": 320,
+      "projectCards": [
+        {
+          "width": 320,
+          "height": 527.11,
+          "y": 1620.86
+        },
+        {
+          "width": 320,
+          "height": 251.06,
+          "y": 2147.97
+        },
+        {
+          "width": 320,
+          "height": 220.13,
+          "y": 2399.03
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1
+      },
+      "projectsHeight": 1757.28,
+      "previousProjectsHeight": 2162.41,
+      "heroContentWidth": 350,
+      "featuredWidth": 350,
+      "gridWidth": 350,
+      "projectCards": [
+        {
+          "width": 350,
+          "height": 515.02,
+          "y": 1596.47
+        },
+        {
+          "width": 350,
+          "height": 251.06,
+          "y": 2111.48
+        },
+        {
+          "width": 350,
+          "height": 196.88,
+          "y": 2362.55
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "es",
+      "viewport": {
+        "width": 430,
+        "height": 932,
+        "dpr": 1
+      },
+      "projectsHeight": 1631.63,
+      "previousProjectsHeight": 2122.14,
+      "heroContentWidth": 390,
+      "featuredWidth": 390,
+      "gridWidth": 390,
+      "projectCards": [
+        {
+          "width": 390,
+          "height": 450.3,
+          "y": 1549.55
+        },
+        {
+          "width": 390,
+          "height": 227.81,
+          "y": 1999.84
+        },
+        {
+          "width": 390,
+          "height": 196.88,
+          "y": 2227.66
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "dpr": 1
+      },
+      "projectsHeight": 1250.02,
+      "previousProjectsHeight": 1525.08,
+      "heroContentWidth": 916.84,
+      "featuredWidth": 916.84,
+      "gridWidth": 916.84,
+      "projectCards": [
+        {
+          "width": 305.61,
+          "height": 540.89,
+          "y": 1395.22
+        },
+        {
+          "width": 305.61,
+          "height": 540.89,
+          "y": 1395.22
+        },
+        {
+          "width": 305.63,
+          "height": 540.89,
+          "y": 1395.22
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "dpr": 1
+      },
+      "projectsHeight": 1278.06,
+      "previousProjectsHeight": 1188.09,
+      "heroContentWidth": 1149.81,
+      "featuredWidth": 1149.81,
+      "gridWidth": 1149.81,
+      "projectCards": [
+        {
+          "width": 383.27,
+          "height": 519.28,
+          "y": 1376.39
+        },
+        {
+          "width": 383.27,
+          "height": 519.28,
+          "y": 1376.39
+        },
+        {
+          "width": 383.28,
+          "height": 519.28,
+          "y": 1376.39
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "projectsHeight": 1309.77,
+      "previousProjectsHeight": 1202.48,
+      "heroContentWidth": 1280,
+      "featuredWidth": 1280,
+      "gridWidth": 1280,
+      "projectCards": [
+        {
+          "width": 426.66,
+          "height": 508.89,
+          "y": 1585.69
+        },
+        {
+          "width": 426.67,
+          "height": 508.89,
+          "y": 1585.69
+        },
+        {
+          "width": 426.66,
+          "height": 508.89,
+          "y": 1585.69
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "dpr": 1
+      },
+      "projectsHeight": 1337.14,
+      "previousProjectsHeight": 1259.14,
+      "heroContentWidth": 1280,
+      "featuredWidth": 1280,
+      "gridWidth": 1280,
+      "projectCards": [
+        {
+          "width": 426.66,
+          "height": 508.89,
+          "y": 1780.25
+        },
+        {
+          "width": 426.67,
+          "height": 508.89,
+          "y": 1780.25
+        },
+        {
+          "width": 426.66,
+          "height": 508.89,
+          "y": 1780.25
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 320,
+        "height": 568,
+        "dpr": 1
+      },
+      "projectsHeight": 1909.66,
+      "previousProjectsHeight": 2491.55,
+      "heroContentWidth": 280,
+      "featuredWidth": 280,
+      "gridWidth": 280,
+      "projectCards": [
+        {
+          "width": 280,
+          "height": 527.69,
+          "y": 1665.89
+        },
+        {
+          "width": 280,
+          "height": 283.06,
+          "y": 2193.58
+        },
+        {
+          "width": 280,
+          "height": 252.13,
+          "y": 2476.64
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 360,
+        "height": 800,
+        "dpr": 1
+      },
+      "projectsHeight": 1733.02,
+      "previousProjectsHeight": 2178.94,
+      "heroContentWidth": 320,
+      "featuredWidth": 320,
+      "gridWidth": 320,
+      "projectCards": [
+        {
+          "width": 320,
+          "height": 507.31,
+          "y": 1558.58
+        },
+        {
+          "width": 320,
+          "height": 251.06,
+          "y": 2065.89
+        },
+        {
+          "width": 320,
+          "height": 220.13,
+          "y": 2316.95
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1
+      },
+      "projectsHeight": 1703.92,
+      "previousProjectsHeight": 2132.97,
+      "heroContentWidth": 350,
+      "featuredWidth": 350,
+      "gridWidth": 350,
+      "projectCards": [
+        {
+          "width": 350,
+          "height": 518.47,
+          "y": 1514.06
+        },
+        {
+          "width": 350,
+          "height": 251.06,
+          "y": 2032.53
+        },
+        {
+          "width": 350,
+          "height": 196.88,
+          "y": 2283.59
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "language": "en",
+      "viewport": {
+        "width": 430,
+        "height": 932,
+        "dpr": 1
+      },
+      "projectsHeight": 1614.28,
+      "previousProjectsHeight": 2082.66,
+      "heroContentWidth": 390,
+      "featuredWidth": 390,
+      "gridWidth": 390,
+      "projectCards": [
+        {
+          "width": 390,
+          "height": 450.3,
+          "y": 1508.95
+        },
+        {
+          "width": 390,
+          "height": 251.06,
+          "y": 1959.25
+        },
+        {
+          "width": 390,
+          "height": 196.88,
+          "y": 2210.31
+        }
+      ],
+      "projectsTextBelow12": [],
+      "targetsBelow44": [],
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "failedRequests": []
+    }
+  ]
+}

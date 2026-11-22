@@ -397,6 +397,20 @@
             <li class="chip"><svg class="icono" aria-hidden="true"><use href="#icono-birrete"/></svg>Moodle</li>
             <li class="chip"><svg class="icono" aria-hidden="true"><use href="#icono-matraz"/></svg>Investigación</li>
           </ul>
+          <dl class="proyecto-ficha">
+            <div class="proyecto-ficha__item">
+              <dt>Entorno</dt>
+              <dd>Savio (Moodle · UTB)</dd>
+            </div>
+            <div class="proyecto-ficha__item">
+              <dt>Enfoque</dt>
+              <dd>Recomendación de recursos académicos</dd>
+            </div>
+            <div class="proyecto-ficha__item">
+              <dt>Acceso</dt>
+              <dd>Investigación académica · sin repositorio público</dd>
+            </div>
+          </dl>
         </div>
         <div class="proyecto-destacado__mockup" aria-hidden="true">
           <div class="mockup">
@@ -425,24 +439,29 @@
               </div>
             </div>
           </div>
+          <p class="mockup__leyenda">Vista conceptual</p>
         </div>
       </article>
 
       <div class="proyectos__grid">
-        <article class="proyecto revelar" aria-labelledby="proyecto-sipiit-titulo">
-          <div class="proyecto__cabecera">
-            <h3 id="proyecto-sipiit-titulo">Intelligent IT Incident Prioritization System (SIPIIT)</h3>
-            <span class="badge badge--terminado">
-              <svg class="icono" aria-hidden="true"><use href="#icono-check"/></svg>Terminado
-            </span>
+        <article class="proyecto proyecto--con-imagen revelar" aria-labelledby="proyecto-sipiit-titulo">
+          <div class="proyecto__cuerpo">
+            <div class="proyecto__cabecera">
+              <h3 id="proyecto-sipiit-titulo">Intelligent IT Incident Prioritization System (SIPIIT)</h3>
+              <span class="badge badge--terminado">
+                <svg class="icono" aria-hidden="true"><use href="#icono-check"/></svg>Terminado
+              </span>
+            </div>
+            <p class="proyecto__meta"><time datetime="2026-02">febrero de 2026</time> - <time datetime="2026-05">mayo de 2026</time> · Interfaz Flutter</p>
+            <p class="proyecto__descripcion">Sistema de gestión y priorización inteligente de incidentes IT (ITSM) con backend en Python. Diseñé y desarrollé la interfaz Flutter: pantallas, componentes y navegación por rol.</p>
+            <ul class="chips" aria-label="Tecnologías del proyecto">
+              <li class="chip">Flutter</li>
+              <li class="chip">Dart</li>
+              <li class="chip">Riverpod</li>
+              <li class="chip">go_router</li>
+              <li class="chip">Git</li>
+            </ul>
           </div>
-          <p class="proyecto__meta"><time datetime="2026-02">febrero de 2026</time> - <time datetime="2026-05">mayo de 2026</time></p>
-          <p class="proyecto__descripcion">Sistema de gestión y priorización inteligente de incidentes IT (ITSM) con backend en Python. Diseñé y desarrollé la interfaz Flutter: pantallas, componentes y navegación por rol.</p>
-          <ul class="chips" aria-label="Tecnologías del proyecto">
-            <li class="chip">Flutter</li>
-            <li class="chip">Dart</li>
-            <li class="chip">Git</li>
-          </ul>
           <div class="proyecto__visual proyecto__visual--imagen">
             <img src="assets/proyectos/sipiit-portada.webp" alt="Portada de promoción del proyecto SIPIIT" width="1280" height="476" loading="lazy" decoding="async">
           </div>
@@ -450,20 +469,23 @@
         </article>
 
         <article class="proyecto revelar" aria-labelledby="proyecto-gyr-titulo">
-          <div class="proyecto__cabecera">
-            <h3 id="proyecto-gyr-titulo">GyR Barber</h3>
-            <span class="badge badge--progreso">
-              <svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>En progreso
-            </span>
+          <div class="proyecto__cuerpo">
+            <div class="proyecto__cabecera">
+              <h3 id="proyecto-gyr-titulo">GyR Barber</h3>
+              <span class="badge badge--progreso">
+                <svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>En progreso
+              </span>
+            </div>
+            <p class="proyecto__meta">Aplicación web · Reservas y servicios</p>
+            <p class="proyecto__descripcion">Gestión de reservas, citas y servicios para barbería.</p>
+            <ul class="chips" aria-label="Tecnologías del proyecto">
+              <li class="chip">React</li>
+              <li class="chip">Python</li>
+              <li class="chip">Supabase</li>
+              <li class="chip">PostgreSQL</li>
+              <li class="chip">Tailwind CSS</li>
+            </ul>
           </div>
-          <p class="proyecto__descripcion">Gestión de reservas, citas y servicios para barbería.</p>
-          <ul class="chips" aria-label="Tecnologías del proyecto">
-            <li class="chip">React</li>
-            <li class="chip">Python</li>
-            <li class="chip">Supabase</li>
-            <li class="chip">PostgreSQL</li>
-            <li class="chip">Tailwind CSS</li>
-          </ul>
           <div class="proyecto__mockup" aria-hidden="true">
             <div class="mockup mockup--compacto">
               <div class="mockup__barra">
@@ -489,21 +511,25 @@
               </div>
             </div>
           </div>
+          <p class="proyecto__nota">Sin repositorio público</p>
         </article>
 
         <article class="proyecto revelar" aria-labelledby="proyecto-proximo-titulo">
-          <div class="proyecto__cabecera">
-            <h3 id="proyecto-proximo-titulo">Próximo proyecto</h3>
-            <span class="badge badge--progreso">
-              <svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>En progreso
-            </span>
+          <div class="proyecto__cuerpo">
+            <div class="proyecto__cabecera">
+              <h3 id="proyecto-proximo-titulo">Próximo proyecto</h3>
+              <span class="badge badge--progreso">
+                <svg class="icono" aria-hidden="true"><use href="#icono-calendario"/></svg>En progreso
+              </span>
+            </div>
+            <p class="proyecto__meta">Arquitectura backend · APIs e interfaz</p>
+            <p class="proyecto__descripcion">Nueva aplicación enfocada en arquitectura backend, diseño de APIs e interfaces modernas.</p>
+            <ul class="chips" aria-label="Tecnologías del proyecto">
+              <li class="chip">Python</li>
+              <li class="chip">SQL</li>
+              <li class="chip">React</li>
+            </ul>
           </div>
-          <p class="proyecto__descripcion">Desarrollando una nueva aplicación en progreso para seguir practicando arquitectura backend, APIs e interfaces modernas.</p>
-          <ul class="chips" aria-label="Tecnologías del proyecto">
-            <li class="chip">Python</li>
-            <li class="chip">SQL</li>
-            <li class="chip">React</li>
-          </ul>
           <div class="proyecto__mockup" aria-hidden="true">
             <div class="mockup mockup--compacto">
               <div class="mockup__barra">
@@ -529,6 +555,7 @@
               </div>
             </div>
           </div>
+          <p class="proyecto__nota">Sin repositorio público</p>
         </article>
       </div>
     </section>

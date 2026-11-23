@@ -176,6 +176,10 @@ y chips compactos, -29.02 % en 360 × 800), el encuadre y compactación de
 `#contacto` (-29.71 % en 360 × 800, contraste mínimo ≥ 8.85:1) y la alineación
 izquierda de la marca `JV` en el pie móvil.
 
+La [revisión de E7-06 (#66)](docs/auditorias/e7-06/README.md) registra la
+paginación móvil de tres certificados, la alineación del Finder al ancho común
+y el recorrido del visor dentro del filtro activo en español e inglés.
+
 ## Contenido y privacidad
 
 `content.md` es mi fuente local de datos reales y no se publica. Las imágenes de

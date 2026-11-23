@@ -190,6 +190,67 @@ def contact_contrast(page):
     return results
 
 
+def audit_finder_pagination(page, expected):
+    links = page.locator('.certificacion:visible [data-certificado]')
+    previous = page.locator('[data-finder-paso="-1"]')
+    next_button = page.locator('[data-finder-paso="1"]')
+    page_size = 3
+    pages_expected = [expected[index:index + page_size] for index in range(0, len(expected), page_size)]
+    pages_seen = [links.evaluate_all('nodes => nodes.map(e => e.href)')]
+    starts_disabled = previous.is_disabled()
+    for _ in pages_expected[1:]:
+        if next_button.is_disabled():
+            break
+        next_button.click()
+        pages_seen.append(links.evaluate_all('nodes => nodes.map(e => e.href)'))
+
+    ends_disabled = next_button.is_disabled()
+    for _ in pages_seen[1:]:
+        if previous.is_disabled():
+            break
+        previous.click()
+
+    return {
+        'visiblePerPage': [len(links) for links in pages_seen],
+        'followsFilter': pages_seen == pages_expected,
+        'stopsAtEnds': starts_disabled and ends_disabled,
+        'returnsToFirst': links.evaluate_all('nodes => nodes.map(e => e.href)') == pages_expected[0],
+    }
+
+
+def audit_filtered_viewer(page, expected):
+    origin = page.locator('.certificacion:visible [data-certificado]').first
+    image = page.locator('.visor-certificado__imagen')
+    original = page.locator('.visor-certificado__original')
+    previous = page.locator('[data-visor-paso="-1"]')
+    next_button = page.locator('[data-visor-paso="1"]')
+
+    origin.click()
+    image.wait_for(state='visible')
+    starts_disabled = previous.is_disabled()
+    visited = [original.get_attribute('href')]
+    for _ in expected[1:]:
+        if next_button.is_disabled():
+            break
+        next_button.click()
+        image.wait_for(state='visible')
+        visited.append(original.get_attribute('href'))
+
+    page.keyboard.press('ArrowRight')
+    stays_at_end = next_button.is_disabled() and original.get_attribute('href') == expected[-1]
+    if not previous.is_disabled():
+        previous.click()
+        image.wait_for(state='visible')
+    returns_to_previous = original.get_attribute('href') == expected[max(0, len(expected) - 2)]
+    page.keyboard.press('Escape')
+    return {
+        'followsFilter': visited == expected,
+        'stopsAtEnds': starts_disabled and stays_at_end,
+        'previousButtonWorks': returns_to_previous,
+        'restoresOrigin': origin.evaluate('e => document.activeElement === e'),
+    }
+
+
 def capture(page, url, output, width, height, theme):
     folder = output / f"{width}x{height}-{theme}"
     folder.mkdir(parents=True, exist_ok=True)
@@ -242,22 +303,37 @@ def capture(page, url, output, width, height, theme):
     for category in categories:
         button = page.locator(f'[data-filtro="{category}"]')
         button.click()
-        filters.append({
-            "category": category, "visible": page.locator('.certificacion:visible').count(),
+        visible_count = page.locator('.certificacion:visible').count()
+        selector = '.certificacion' if category == 'todos' else f'.certificacion[data-categoria="{category}"]'
+        expected = page.locator(f'{selector} [data-certificado]').evaluate_all('nodes => nodes.map(e => e.href)')
+        result = {
+            "category": category, "visible": visible_count,
+            "total": len(expected),
             "status": page.locator('#filtro-estado').inner_text(),
-        })
+        }
+        if page.locator('.finder__paginacion').is_visible():
+            result['pagination'] = audit_finder_pagination(page, expected)
+        if category != 'todos' and visible_count:
+            result['viewer'] = audit_filtered_viewer(page, expected)
+        filters.append(result)
     page.locator('[data-filtro="todos"]').click()
     interactions["filters"] = filters
 
     origin = page.locator('[data-certificado]').first
     origin.click()
-    page.wait_for_function("document.querySelector('.visor-certificado__imagen').naturalWidth > 0")
+    image = page.locator('.visor-certificado__imagen')
+    image.wait_for(state='visible')
     dialog = page.locator('#visor-certificado')
     screenshot(page, folder / 'visor-abierto.png')
-    interactions["modal"] = dialog.evaluate("e => ({width:e.getBoundingClientRect().width, "
-        "height:e.getBoundingClientRect().height, top:e.getBoundingClientRect().top, "
-        "imageHeight:e.querySelector('img').getBoundingClientRect().height, "
-        "title:e.querySelector('h2').innerText})")
+    interactions["modal"] = dialog.evaluate("""e => {
+        const dialog = e.getBoundingClientRect();
+        const image = e.querySelector('img');
+        const { width, height } = image.getBoundingClientRect();
+        const scale = Math.min(width / image.naturalWidth, height / image.naturalHeight);
+        return {width: dialog.width, height: dialog.height, top: dialog.top, imageHeight: height,
+          renderedImageWidth: image.naturalWidth * scale, renderedImageHeight: image.naturalHeight * scale,
+          title: e.querySelector('h2').innerText};
+    }""")
     interactions["modal"]["initialFocus"] = page.locator('.visor-certificado__cerrar').evaluate(
         'e => document.activeElement === e')
     page.keyboard.press('Shift+Tab')
@@ -266,16 +342,28 @@ def capture(page, url, output, width, height, theme):
     page.keyboard.press('Tab')
     interactions["modal"]["tabTrap"] = page.locator('.visor-certificado__cerrar').evaluate(
         'e => document.activeElement === e')
+    steps = []
+    for _ in range(2):
+        page.keyboard.press('Tab')
+        steps.append(page.evaluate('document.activeElement.dataset.visorPaso'))
+    interactions["modal"]["tabVisitsNavigation"] = steps == ['-1', '1']
     first_title = page.locator('#visor-certificado-titulo').inner_text()
     page.keyboard.press('ArrowRight')
-    interactions["modal"]["arrowNavigation"] = page.locator('#visor-certificado-titulo').inner_text() != first_title
+    image.wait_for(state='visible')
+    moved_forward = page.locator('#visor-certificado-titulo').inner_text() != first_title
+    page.keyboard.press('ArrowLeft')
+    image.wait_for(state='visible')
+    interactions["modal"]["arrowNavigation"] = moved_forward and page.locator('#visor-certificado-titulo').inner_text() == first_title
+    page.keyboard.press('ArrowRight')
+    image.wait_for(state='visible')
     page.keyboard.press('Escape')
     interactions["modal"]["escapeAndFocusReturn"] = not dialog.is_visible() and origin.evaluate(
         'e => document.activeElement === e')
     origin.click()
-    page.wait_for_function("document.querySelector('.visor-certificado__imagen').naturalWidth > 0")
+    image.wait_for(state='visible')
     page.mouse.click(1, 1)
-    interactions["modal"]["backdropCloses"] = not dialog.is_visible()
+    interactions["modal"]["backdropCloses"] = not dialog.is_visible() and origin.evaluate(
+        'e => document.activeElement === e')
     metrics["interactions"] = interactions
     metrics['contactContrast'] = contact_contrast(page)
     metrics["screenshots"] = [str(p.relative_to(output)).replace('\\', '/') for p in sorted(folder.glob('*.png'))]

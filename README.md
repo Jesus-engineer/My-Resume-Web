@@ -180,6 +180,10 @@ La [revisión de E7-06 (#66)](docs/auditorias/e7-06/README.md) registra la
 paginación móvil de tres certificados, la alineación del Finder al ancho común
 y el recorrido del visor dentro del filtro activo en español e inglés.
 
+La [auditoría de E7-07 (#67)](docs/auditorias/e7-07/README.md) documenta las
+mediciones de Lighthouse, la entrega de imágenes responsivas y el costo de la
+navegación al desplazar la página en escritorio y móvil.
+
 ## Contenido y privacidad
 
 `content.md` es mi fuente local de datos reales y no se publica. Las imágenes de

@@ -229,8 +229,8 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 ## 7. Movimiento
 
 - Sin parallax ni scroll-jacking. El scroll sigue siendo vertical y predecible.
-- Entrada del hero con desplazamiento corto y opacidad, escalonada por bloques (máximo 0.7 s).
-- Ondas de luz con deriva lenta y continua (`translate` + `scale`, 24-28 s, alterna).
+- El nombre del hero se muestra en la primera pintura y la foto aparece cuando carga. Los demás bloques entran con desplazamiento corto y opacidad (máximo 0.7 s).
+- Las ondas de luz conservan la deriva lenta. Con JavaScript, los fondos se animan cuando están a menos de 128 px del viewport.
 - Punto de disponibilidad con pulso suave y flecha de continuar con rebote corto.
 - Tarjetas y botones con elevación de 2-4 px y borde iluminado al pasar el puntero.
 - Revelado por scroll con `IntersectionObserver`, una sola vez, solo en cabeceras, tarjetas y bloques; sin parallax y sin cambiar dimensiones.

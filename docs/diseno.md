@@ -104,7 +104,7 @@ decorativas (`aria-hidden`), nunca capturas presentadas como reales.
 
 ### 02 / Sobre mí (`#sobre-mi`) — acento dorado
 
-- Etiqueta: `02 / SOBRE MÍ` con icono de personas.
+- Etiqueta: `02 / SOBRE MÍ` con icono monocromo de pingüino Tux (`#icono-tux-marca`) y barra horizontal en acento dorado.
 - Titular: `Un poco sobre mí`.
 - Columna izquierda:
   - Párrafo 1: `Estudio Ingeniería de Sistemas en la Universidad Tecnológica de Bolívar. Me interesa entender cómo funcionan las aplicaciones y construir soluciones útiles.`
@@ -124,12 +124,14 @@ los diseñó el dueño.
 
 ### 03 / Formación (`#certificaciones`) — acento coral
 
-- Etiqueta: `03 / FORMACIÓN` con acento coral; emblema plateado decorativo junto al titulo.
+- Etiqueta: `03 / FORMACIÓN` con icono monocromo de Apple (`#icono-apple`) y barra horizontal en acento coral, unificada con `01 / PROYECTOS` y `02 / SOBRE MÍ`.
 - Titular: `Certificaciones`.
 - Subtítulo: `Cursos y programas que complementan mi formación.`
-- Ventana tipo Finder con barra de tres puntos, título `Mi formación` y filtros `Todos`, `Programación`, `Datos e IA`.
-- Seis certificaciones reales en grilla de tres columnas (dos filas), con icono de documento, título completo, emisor y enlace `Ver certificado ↗` que abre el visor accesible existente.
-- Los filtros son una mejora progresiva: sin JavaScript se muestran las seis.
+- Ventana tipo Finder alineada al contenedor compartido de `80rem`, con filtros `Todos`, `Programación` y `Datos e IA`.
+- Grilla de tres columnas desde `1024 px`, dos en tablet y una en móvil. En escritorio y tablet, las filas tienen la misma altura y los enlaces se alinean al pie de cada tarjeta.
+- En móvil se muestran hasta tres certificados por página. Las flechas y el contador del Finder permiten cambiar de página dentro del filtro activo.
+- El visor recorre todos los resultados del filtro activo con `Anterior`, `Siguiente` y las flechas del teclado. Muestra la posición, enlaza al original y devuelve el foco a la tarjeta de origen al cerrar.
+- Al abrir el sitio sin JavaScript se muestran las seis tarjetas con sus enlaces directos a las imágenes. La versión impresa también muestra las seis.
 - Fondo: paisaje costero de la guia HTML optimizado a WebP, con velo de contraste.
 
 La referencia 04 usa la marca de Apple y un certificado de "Habilidades de
@@ -212,7 +214,7 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 
 ## 6. Componentes
 
-- **Layout full-bleed:** sin `max-width` de 75 rem. El padding general es `clamp(1.25rem, 4.5vw, 4.5rem)`; Formación y Contacto usan un margen lateral mayor en escritorio para coincidir con las referencias.
+- **Layout full-bleed:** los fondos llegan a los bordes. El contenido se alinea con `--ancho-contenido` (`80rem`) y un padding lateral de `clamp(1.25rem, 4.5vw, 4.5rem)`.
 - **Hero:** dos columnas por encima de 1023 px (texto flexible + tarjeta de perfil de 20.5 rem); una columna desde 1023 px, con la tarjeta alineada a la izquierda y un máximo de 18 rem.
 - **Grillas:** proyectos 3 columnas en escritorio, 2 en tablet y 1 en móvil; certificaciones 3/2/1; entornos 3/2/1. Los párrafos conservan su ancho de lectura.
 - **Botón primario:** relleno azul con degradado, radio ~10 px, texto blanco, flecha `↗`.

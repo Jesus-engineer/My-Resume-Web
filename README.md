@@ -184,6 +184,10 @@ La [auditoría de E7-07 (#67)](docs/auditorias/e7-07/README.md) documenta las
 mediciones de Lighthouse, la entrega de imágenes responsivas y el costo de la
 navegación al desplazar la página en escritorio y móvil.
 
+La [auditoría de E7-08 (#68)](docs/auditorias/e7-08/README.md) reúne la QA
+en español e inglés, Lighthouse y axe en producción, la impresión A4, la
+exportación del deck y la verificación de GitHub Actions.
+
 ## Contenido y privacidad
 
 `content.md` es mi fuente local de datos reales y no se publica. Las imágenes de

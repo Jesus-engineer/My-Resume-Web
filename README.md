@@ -81,7 +81,7 @@ app.js                     Navegación, filtros, revelado y visor de certificado
 deck/                      Presentación independiente con Reveal.js (?print-pdf)
 vendor/reveal/             Reveal.js 6.0.2 vendorizado localmente (licencia MIT)
 assets/fonts/              Inter y JetBrains Mono en WOFF2 + licencias OFL
-assets/certificados/       Seis certificados reales en WebP
+assets/certificados/       Cinco certificados reales en WebP
 assets/proyectos/          Portada real de SIPIIT
 assets/fondos/             Fondos WebP derivados de mis guías HTML
 assets/cv-jesus-velasquez.pdf  Hoja de vida ATS de 1 página en PDF para descarga directa

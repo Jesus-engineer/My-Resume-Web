@@ -21,7 +21,6 @@ GitHub Pages, así que revisa cada archivo antes de subirlo.
 | `gci-world-2026.webp` | GCI World April 2026 (Matsuo-Iwasawa Lab, UTokyo) | nombre y fecha de emisión |
 | `supabase-baas.webp` | Curso de Supabase. Backend as a Service (BaaS) desde cero (Udemy) | número y URL de verificación |
 | `ibm-ai-literacy.webp` | AI Literacy (IBM SkillsBuild) | número y URL de verificación |
-| `binance-on-chain.webp` | On-Chain Analysis for Beginners (Binance Academy) | nombre |
 | `certificado-analisis-de-datos.webp` | Análisis de Datos Nivel Intermedio (Ministerio TIC y UTB) | cédula y QR tapados |
 | `certificado-programacion.webp` | Programación Nivel Intermedio (Ministerio TIC y UTB) | cédula y QR tapados |
 

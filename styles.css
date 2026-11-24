@@ -3336,6 +3336,7 @@ html.visor-abierto {
   .pie {
     padding: 6pt 0 0;
     border-top: 1px solid #cccccc;
+    background: var(--color-fondo);
   }
 
   .pie__interno {
@@ -3345,6 +3346,7 @@ html.visor-abierto {
   .proyecto-destacado,
   .proyecto,
   .camino__hito,
+  .seccion--certificaciones,
   .certificacion {
     break-inside: avoid;
   }

@@ -690,6 +690,11 @@ body {
     print-color-adjust: exact !important;
   }
 
+  /* La página PDF incluye márgenes fuera del área de la diapositiva. */
+  html.print-pdf .reveal .slides section {
+    height: var(--slide-height);
+  }
+
   .reveal .controls,
   .reveal .progress,
   .reveal .slide-number {

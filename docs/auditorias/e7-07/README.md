@@ -46,9 +46,9 @@ el LCP simulado pasó de 1,50 a 1,35 s en ES y de 1,50 a 1,59 s en EN. El
 elemento medido pasó del enlace de marca en la cabecera al nombre en el hero.
 Las cifras de transferencia de la tabla corresponden a HTTP local sin compresión.
 
-La versión actualmente desplegada obtuvo 100 en escritorio y 98 en móvil,
-con 100 en las otras categorías. La verificación de esta revisión en GitHub
-Pages queda pendiente de que se publique desde `main`. [Versión publicada](https://jesus-engineer.github.io/My-Resume-Web/)
+La versión publicada al iniciar esta auditoría obtuvo 100 en escritorio y 98
+en móvil, con 100 en las otras categorías. La medición posterior de estos
+cambios en GitHub Pages se registró en E7-08. [Auditoría de producción](../e7-08/README.md)
 
 ## Verificación de la interfaz
 

@@ -26,27 +26,6 @@ function actualizarEnlacesIdioma() {
 window.addEventListener('hashchange', actualizarEnlacesIdioma);
 actualizarEnlacesIdioma();
 
-/* ---------- Cabecera compacta al hacer scroll ---------- */
-
-let frameCabecera = null;
-
-function actualizarCabecera() {
-  if (!cabecera) return;
-  cabecera.classList.toggle('cabecera--compacta', window.scrollY > 8);
-}
-
-function programarCabecera() {
-  if (frameCabecera !== null) return;
-  frameCabecera = requestAnimationFrame(() => {
-    frameCabecera = null;
-    actualizarCabecera();
-  });
-}
-
-window.addEventListener('scroll', programarCabecera, { passive: true });
-window.addEventListener('load', actualizarCabecera);
-actualizarCabecera();
-
 /* ---------- Menu movil ---------- */
 
 let menuAbierto = false;
@@ -107,7 +86,7 @@ if (botonMenu) {
   }
 }
 
-/* ---------- Enlace activo segun la seccion visible ---------- */
+/* ---------- Cabecera y enlace activo durante el desplazamiento ---------- */
 
 const seccionesNavegables = enlacesNav
   .map(enlace => ({
@@ -116,46 +95,71 @@ const seccionesNavegables = enlacesNav
   }))
   .filter(({ seccion }) => seccion);
 
-let frameNavegacion = null;
+let frameDesplazamiento = null;
+let geometriaNavegacion = null;
+let altoVentana = 0;
+let enlaceActual = enlacesNav.find(enlace => enlace.getAttribute('aria-current') === 'location');
 
-function actualizarSeccionActual() {
-  if (!seccionesNavegables.length) return;
-
-  const altoCabecera = cabecera ? cabecera.getBoundingClientRect().height : 0;
-  const limite = altoCabecera + 24;
-  let actual = seccionesNavegables[0].enlace;
-
-  for (const item of seccionesNavegables) {
-    if (item.seccion.getBoundingClientRect().top <= limite) actual = item.enlace;
-  }
-
-  const alFinal = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
-  if (alFinal && window.scrollY > 0) {
-    actual = seccionesNavegables[seccionesNavegables.length - 1].enlace;
-  }
-
-  for (const { enlace } of seccionesNavegables) {
-    if (enlace === actual) enlace.setAttribute('aria-current', 'location');
-    else enlace.removeAttribute('aria-current');
-  }
+function medirNavegacion(desplazamiento) {
+  const limite = (cabecera?.getBoundingClientRect().height ?? 0) + 24;
+  geometriaNavegacion = {
+    inicios: seccionesNavegables.map(({ seccion }) => seccion.getBoundingClientRect().top + desplazamiento - limite),
+    altoDocumento: raiz.scrollHeight,
+  };
+  altoVentana = window.innerHeight;
 }
 
-function programarSeccionActual() {
-  if (frameNavegacion !== null) return;
-  frameNavegacion = requestAnimationFrame(() => {
-    frameNavegacion = null;
-    actualizarSeccionActual();
-  });
+function actualizarDesplazamiento() {
+  frameDesplazamiento = null;
+  if (observadorGeometria && !geometriaNavegacion) return;
+
+  const desplazamiento = window.scrollY;
+  if (!observadorGeometria && seccionesNavegables.length) medirNavegacion(desplazamiento);
+
+  cabecera?.classList.toggle('cabecera--compacta', desplazamiento > 8);
+  if (!geometriaNavegacion) return;
+
+  const { inicios, altoDocumento } = geometriaNavegacion;
+  const alFinal = desplazamiento > 0 && desplazamiento + altoVentana >= altoDocumento - 2;
+  let indice = 0;
+  for (let i = 1; i < inicios.length; i++) {
+    if (alFinal || desplazamiento >= inicios[i]) indice = i;
+  }
+
+  const actual = seccionesNavegables[indice].enlace;
+  if (actual === enlaceActual) return;
+  enlaceActual?.removeAttribute('aria-current');
+  actual.setAttribute('aria-current', 'location');
+  enlaceActual = actual;
 }
 
-if (seccionesNavegables.length) {
-  window.addEventListener('scroll', programarSeccionActual, { passive: true });
-  window.addEventListener('resize', programarSeccionActual);
-  window.addEventListener('hashchange', programarSeccionActual);
-  window.addEventListener('load', programarSeccionActual);
-  if (document.fonts) document.fonts.ready.then(programarSeccionActual);
-  actualizarSeccionActual();
+function programarDesplazamiento() {
+  if (frameDesplazamiento === null) frameDesplazamiento = requestAnimationFrame(actualizarDesplazamiento);
 }
+
+// ResizeObserver notifica después del layout. El scroll reutiliza estas medidas.
+const observadorGeometria = window.ResizeObserver && seccionesNavegables.length
+  ? new ResizeObserver(() => {
+    medirNavegacion(window.scrollY);
+    programarDesplazamiento();
+  }) : null;
+
+if (observadorGeometria) {
+  for (const elemento of [cabecera, document.body, ...seccionesNavegables.map(({ seccion }) => seccion)]) {
+    if (elemento) observadorGeometria.observe(elemento, { box: 'border-box' });
+  }
+} else {
+  document.fonts?.ready.then(programarDesplazamiento);
+  programarDesplazamiento();
+}
+
+window.addEventListener('scroll', programarDesplazamiento, { passive: true });
+window.addEventListener('resize', () => {
+  if (geometriaNavegacion) altoVentana = window.innerHeight;
+  programarDesplazamiento();
+});
+window.addEventListener('hashchange', programarDesplazamiento);
+window.addEventListener('pageshow', programarDesplazamiento);
 
 /* ---------- Filtros y páginas de certificaciones ---------- */
 
@@ -195,6 +199,7 @@ function mostrarPaginaCertificaciones(pagina) {
   const conteo = paginar ? `${rango} ${textos.de} ${total}` : total;
   rangoCertificaciones.textContent = paginar ? conteo : '';
   estadoFiltro.textContent = `${conteo} ${total === 1 ? textos.certificacion : textos.certificaciones}`;
+  if (!observadorGeometria) programarDesplazamiento();
 }
 
 function mostrarPaginaDelCertificado(tarjeta) {
@@ -228,7 +233,20 @@ vistaCertificacionesMovil.addEventListener('change', () => {
 });
 mostrarPaginaCertificaciones(0);
 
-/* ---------- Revelado por scroll ---------- */
+/* ---------- Movimiento al entrar en el área visible ---------- */
+
+if ('IntersectionObserver' in window) {
+  const observadorFondos = new IntersectionObserver(entradas => {
+    for (const { target, isIntersecting } of entradas) {
+      target.classList.toggle('fondo--fuera', !isIntersecting);
+    }
+  }, { rootMargin: '128px 0px' });
+
+  for (const fondo of document.querySelectorAll('.hero__fondo, .seccion__fondo')) {
+    fondo.classList.add('fondo--fuera');
+    observadorFondos.observe(fondo);
+  }
+}
 
 const elementosRevelar = [...document.querySelectorAll('.revelar')];
 const movimientoReducido = window.matchMedia('(prefers-reduced-motion: reduce)');

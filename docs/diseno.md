@@ -131,13 +131,13 @@ los diseñó el dueño.
 - Grilla de tres columnas desde `1024 px`, dos en tablet y una en móvil. En escritorio y tablet, las filas tienen la misma altura y los enlaces se alinean al pie de cada tarjeta.
 - En móvil se muestran hasta tres certificados por página. Las flechas y el contador del Finder permiten cambiar de página dentro del filtro activo.
 - El visor recorre todos los resultados del filtro activo con `Anterior`, `Siguiente` y las flechas del teclado. Muestra la posición, enlaza al original y devuelve el foco a la tarjeta de origen al cerrar.
-- Al abrir el sitio sin JavaScript se muestran las seis tarjetas con sus enlaces directos a las imágenes. La versión impresa también muestra las seis.
+- Al abrir el sitio sin JavaScript se muestran las cinco tarjetas con sus enlaces directos a las imágenes. La versión impresa también muestra las cinco.
 - Fondo: paisaje costero de la guia HTML optimizado a WebP, con velo de contraste.
 
 La referencia 04 usa la marca de Apple y un certificado de "Habilidades de
 Investigación" que no existe en `content.md`. Se toma el emblema decorativo
 de la guia para respetar el diseno, pero no se inventa el certificado: se
-mantienen los seis documentos reales.
+mantienen los cinco documentos del sitio.
 
 ### 04 / Contacto (`#contacto`) — acento azul, dos columnas
 
@@ -229,8 +229,8 @@ cubre ese registro sin añadir una tercera familia ni fuentes base64.
 ## 7. Movimiento
 
 - Sin parallax ni scroll-jacking. El scroll sigue siendo vertical y predecible.
-- Entrada del hero con desplazamiento corto y opacidad, escalonada por bloques (máximo 0.7 s).
-- Ondas de luz con deriva lenta y continua (`translate` + `scale`, 24-28 s, alterna).
+- El nombre del hero se muestra en la primera pintura y la foto aparece cuando carga. Los demás bloques entran con desplazamiento corto y opacidad (máximo 0.7 s).
+- Las ondas de luz conservan la deriva lenta. Con JavaScript, los fondos se animan cuando están a menos de 128 px del viewport.
 - Punto de disponibilidad con pulso suave y flecha de continuar con rebote corto.
 - Tarjetas y botones con elevación de 2-4 px y borde iluminado al pasar el puntero.
 - Revelado por scroll con `IntersectionObserver`, una sola vez, solo en cabeceras, tarjetas y bloques; sin parallax y sin cambiar dimensiones.

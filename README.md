@@ -81,7 +81,7 @@ app.js                     Navegación, filtros, revelado y visor de certificado
 deck/                      Presentación independiente con Reveal.js (?print-pdf)
 vendor/reveal/             Reveal.js 6.0.2 vendorizado localmente (licencia MIT)
 assets/fonts/              Inter y JetBrains Mono en WOFF2 + licencias OFL
-assets/certificados/       Seis certificados reales en WebP
+assets/certificados/       Cinco certificados reales en WebP
 assets/proyectos/          Portada real de SIPIIT
 assets/fondos/             Fondos WebP derivados de mis guías HTML
 assets/cv-jesus-velasquez.pdf  Hoja de vida ATS de 1 página en PDF para descarga directa
@@ -179,6 +179,10 @@ izquierda de la marca `JV` en el pie móvil.
 La [revisión de E7-06 (#66)](docs/auditorias/e7-06/README.md) registra la
 paginación móvil de tres certificados, la alineación del Finder al ancho común
 y el recorrido del visor dentro del filtro activo en español e inglés.
+
+La [auditoría de E7-07 (#67)](docs/auditorias/e7-07/README.md) documenta las
+mediciones de Lighthouse, la entrega de imágenes responsivas y el costo de la
+navegación al desplazar la página en escritorio y móvil.
 
 ## Contenido y privacidad
 
